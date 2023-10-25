@@ -26,6 +26,16 @@ public class PROG02_Iniciales_Ejer04 {
             }
             
             System.out.println("Usted es mayor de edad");
+
+            /*
+             * Otra opción de trabajo es el uso del operador ternario de comparación, como en este 
+             * caso no podemos usar IF, quedaría tal que así:
+             *   
+             * Scanner entrada = new Scanner (System.in);
+             * int edad;
+             * System.out.println((edad >= 18 ? "Es mayor de edad" : "No es mayor de edad"));
+             *
+             */
         }
     }
 }

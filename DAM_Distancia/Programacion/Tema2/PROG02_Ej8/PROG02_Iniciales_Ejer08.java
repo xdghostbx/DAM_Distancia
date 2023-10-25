@@ -32,17 +32,10 @@ public class PROG02_Iniciales_Ejer08 {
                     if (entrada.hasNextInt()) {
                         bases = entrada.nextInt();
                         valido = true;
-                    } else {
-                        System.out.println("Solo se pueden introducir números en este campo\n vuelve a intentarlo");
-                        entrada.nextLine();
-                    }
-                    
-                } else {
-                    System.out.println("Solo se pueden introducir números en este campo\n vuelve a intentarlo");
-                    entrada.nextLine();
+                    } 
                 }
-                
-            } else {
+            }
+            if (!valido){
                 System.out.println("Solo se pueden introducir números en este campo\n vuelve a intentarlo");
                 entrada.nextLine();
             }

@@ -14,8 +14,8 @@ public class PROG02_Iniciales_Ejer07 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         DecimalFormat formato = new DecimalFormat("#.####");
-        double C1 = 0;
-        double C2 = 0;
+        double c1 = 0;
+        double c2 = 0;
         boolean valido1 = false;
         boolean valido2 = false;
         
