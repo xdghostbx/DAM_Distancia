@@ -7,8 +7,8 @@ package dani.martinez.prog02_iniciales_ejer06;
 
 import java.util.Scanner;
 
-enum razas{
-        mastin, terrier, bulldog, pekines, caniche, galgo
+enum Razas{
+        Mastin, Terrier, Bulldog, Pekines, Caniche, Galgo
 }
 
 public class PROG02_Iniciales_Ejer06 {
