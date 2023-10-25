@@ -25,8 +25,9 @@ public class PROG02_Iniciales_Ejer01 {
     public static void main(String[] args) {
         
         
-        final int noModif = 5000;
+        final int NOMODIF = 5000;
         /*
+         * Los final van todo en mayuscula
          * usamos int porque es correcto para numeros enteros y el final porque 
          * es su valor final, no modificable
          */
@@ -45,11 +46,11 @@ public class PROG02_Iniciales_Ejer01 {
          * le agrego el if y el String respuesta para que salga como "Si" o "No"
          */
         
-        int numMes = 10;
+        byte numMes = 10;
         String nombreMes = "Octubre"; //entre " porque es texto
         
         /*
-         * Misma justificación de int para el primer caso
+         * Usamos byte al ser solo numeros del 1 a l2
          * Usamos String porque para los meses es mejor usar datos de texto
          */
         
