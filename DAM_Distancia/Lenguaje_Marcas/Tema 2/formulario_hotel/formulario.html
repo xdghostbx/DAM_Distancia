@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva de Hotel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin:10px 0 5px;
+        }
+        .a{
+            width:100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box; 
+        }
+        input, select {
+            width: 10%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .reset-button {
+            background-color: #f44336;
+        }
+
+        .reset-button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <form id="hotelForm">
+        <label for="nombre">Nombre:</label>
+        <input class="a" type="text" id="nombre" name="nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input class="a" type="text" id="apellidos" name="apellidos" required>
+
+        <label for="telefono">Teléfono de Contacto:</label>
+        <input class="a" type="tel" id="telefono" name="telefono" required>
+
+        <label for="email">E-mail:</label>
+        <input class="a" type="email" id="email" name="email" required>
+
+        <label for="noches">Número de Noches:</label>
+        <input class="a" type="number" id="noches" name="noches" required>
+
+        <label for="fechaEntrada">Fecha de Entrada:</label>
+        <select id="dia" name="dia" required>
+            <!-- Agrega opciones para el día -->
+        </select>
+        <select id="mes" name="mes" required>
+            <!-- Agrega opciones para el mes -->
+        </select>
+        
+        <label>Tipo de Habitación:</label>
+        <div class="a">
+            <label><input type="radio" name="habitacion" value="simple" required>   Simple</label>
+            <label><input type="radio" name="habitacion" value="doble"> Doble</label>
+            <label><input type="radio" name="habitacion" value="matrimonio"> Matrimonio</label>
+            <label>Servicios Adicionales:</label>
+            <label><input type="checkbox" name="servicios[]" value="desayuno"> Desayuno</label>
+            <label><input type="checkbox" name="servicios[]" value="comida"> Comida</label>
+            <label><input type="checkbox" name="servicios[]" value="cena"> Cena</label>
+            <label><input type="checkbox" name="servicios[]" value="camaSupletoria"> Cama Supletoria</label>
+        </div>
+        
+        
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <button type="submit">Enviar</button>
+        <button type="reset" class="reset-button">Limpiar</button>
+    </form>
+</body>
+</html>
