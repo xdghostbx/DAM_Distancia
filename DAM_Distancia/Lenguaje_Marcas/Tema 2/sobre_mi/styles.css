@@ -1,0 +1,62 @@
+html {
+    background-color: gainsboro;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    background-color: dimgrey;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    background-color: firebrick;
+    text-align: center;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+section {
+    margin: 20px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: firebrick;
+    color: black;
+}
+
+table {
+    width: 100%;
+    background-color: lightgrey;
+    border-spacing: 5px;
+}
+
+th {
+    background-color: firebrick;
+}
+
+th, td {
+    border: 1px solid grey;
+    padding: 8px; 
+    text-align: left; 
+}
+
