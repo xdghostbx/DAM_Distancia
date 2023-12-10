@@ -1,6 +1,11 @@
 /*
  * Copyright 2023 Módulo Programación
  * https://www.edu.xunta.gal/fpadistancia/
+ *
+ * Autor: Daniel Martínez
+ * Esta clase consta de los contructores, getters y setters. Se inicializa
+ * la clase Vehiculo con los datos que pide el enunciado en blanco o = 0
+ * A mayores, hay un metodo para calcular los años de matriculacion del coche
  */
 package PROG05_Ejerc1;
 
@@ -14,11 +19,12 @@ public class Vehiculo {
     private String descripcion = "";
     private double precio = 0;
     private String nombrePropietario = "";
-    private String dniPropietario = "";
+    private int dniPropietario = 0;
     
+    // Constructor de la clase Vehiculo para inicializar los atributos
     public Vehiculo(String marca, String matricula, int numKilometros,
             LocalDate fechaMatriculacion, String descripcion, double precio,
-            String nombrePropietario, String dniPropietario){
+            String nombrePropietario, int dniPropietario){
         this.marca = marca;
         this.matricula = matricula;
         this.numKilometros = numKilometros;
@@ -29,6 +35,7 @@ public class Vehiculo {
         this.dniPropietario = dniPropietario;
     }
     
+    // Métodos getter y setter para cada atributo del vehículo
     public String getMarca(){
         return marca;
     }
@@ -83,18 +90,20 @@ public class Vehiculo {
         this.nombrePropietario = nombrePropietario;
     }
 
-    public String getDniPropietario() {
+    public int getDniPropietario() {
         return dniPropietario;
     }
 
-    public void setDniPropietario(String dniPropietario) {
+    public void setDniPropietario(int dniPropietario) {
         this.dniPropietario = dniPropietario;
     }
     
     public int get_Anhos(){
         LocalDate fechaActual = LocalDate.now();
+        //Comparamos los años de la fecha actual y el año de matriculacion y restamos para saber los años
         int anhosTranscurridos = fechaActual.getYear() - fechaMatriculacion.getYear();
-        
+        /*Si el día introducido es mayor al de la fecha actual, significa que no pasa un año
+        por lo tanto resto 1*/
         if (fechaMatriculacion.getDayOfYear() > fechaActual.getDayOfYear()) {
             anhosTranscurridos--;
         }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agencia de Viajes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Este ejercicio práctico puntúa sobre 10 (5 para HTML y 5 para CSS) para conseguir la máxima puntuación comienza por
+         completar los 5 puntos para la estructura html añadiendo las etiquetas que se solicitan-->
+    
+        <!--(0.5 PUNTOS) INSERTA LA HOJA DE ESTILO EN MODO EXTERNO debe apuntar a styles/style.css-->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <!--(0.25 PUNTOS) Inserta la imagen de la cabecera (images/cabecera.png). Asegurate de que le añades un texto de accesibilidad con una descripción breve
+            añade un título, esta imagen en concreto no necesita ajuste de ancho ni alto-->
+        <img src="images/cabecera.png" alt="Imagen de cabecera a modo de logo">
+        <nav>
+
+           <!-- (1 PUNTO) Crea una lista desordenada con cada uno de los links del menú
+          
+               
+                (0.5 PUNTO CREAR DESTINOS) A mayores cada link tiene enlazar a una parte interna del 
+                documento:
+                  -Home nos lleva al inicio de la web #
+                  -Destinos a la sección  destinos que debes definir en esta misma página
+                  -Ofertas a la sección ofertas que debes definir en esta misma página
+                  -Testimonios al apartado testimonios que debes definir en esta misma página
+                  -Contacto al apartado contacto--> 
+                 
+                     Home  
+                     Destinos    
+                     Ofertas  
+                     Testimonios 
+                     Contactos  
+               
+        </nav>
+    </header>
+
+    <main>
+        <section><!--Sección destinos que debe linkar el menú Destinos-->
+            <!--TITULO ENCABEZADO PRINCIPAL-->Destinos Populares 
+            <div class="card-container">
+                <div class="card">
+                    <!--(0.5 PUNTOS) Inserta las imagenes adecuadas que están dentro de la carpeta images
+                            Cada imagen tiene que ser un link que abra la imagen más grande en una pestaña nueva
+                            Cada imagen incluye un titulo-->
+                          
+                           <!--link a imagen1 en grande que carga la imagen en una pestaña nueva--> 
+                           
+                           <!--imagen1 con título y descripción accesible, no hace falta que le cambies el tamaño
+                            aquí, se ajustará en la hoja css-->
+                       
+                         <p>Buceo <em>Arqueológico.</em> </p>
+                </div>
+                <div class="card">
+                           <!--link a imagen2 en grande que carga la imagen en una pestaña nueva--> 
+                           
+                           <!--imagen2 con título y descripción accesible, no hace falta que le cambies el tamaño
+                            aquí, se ajustará en la hoja css-->
+                            
+                           <p>Visita a las Ruinas de Chapaclept</p>
+                </div>
+                <div class="card">
+                           <!--link a imagen3 en grande que carga la imagen en una pestaña nueva--> 
+                           
+                           <!--imagen3 con título y descripción accesible, no hace falta que le cambies el tamaño
+                            aquí, se ajustará en la hoja css-->
+                            
+                           <p>Descripción del destino 3.</p>
+                </div>
+            </div>
+        </section>
+
+        <section><!--Sección ofertas del menú Ofertas-->
+            <!--TITULO--> Ofertas Especiales  
+            <div class="oferta">
+                <!--(1 PUNTO) Lista ordenada-->
+                 <!--titulo--> Oferta especial 1 - Día del Padre  
+                 <!--parrafo--> Descubre destinos increíbles con nuestros paquetes exclusivos:  
+                 <!--Lista ordenada-->
+                 
+                     Viaje a Cancún 
+                     Viaje a Teotihuacán   
+                     Viaje a Egipto    
+                    
+            </div>
+            <div class="oferta">
+                <!--TITULO-->   Oferta especial 2 - Día de los Enamorados 
+                <!--Parrafo--> Experiencias románticas en destinos de ensueño.  
+            </div>
+            <div class="oferta">
+                <!--TITULO--> Oferta especial 3 - Tu Cumpleaños en el Amazonas 
+                <!--Parrafo--> Una aventura inolvidable en el corazón de la selva. 
+            </div>
+        </section>
+
+        
+
+        <section><!--Sección testimonios del menú Testimonios-->
+            <!--TITULO--> Testimonios de Clientes  
+                 
+                 <!--(1 PUNTO). Crea la lista adecuada para presentar el contenido-->
+ 
+                    Marta:   
+                    No pensaba que me iba a salir tan bien de precio. Unas vacaciones estupendas.⭐⭐⭐⭐⭐
+                    <a href="ampliar.html">+info</a>  
+               
+                     Antonio  
+                     Muy recomendado un 10, buen trato y las actividades lo mejor.⭐⭐⭐<a href="ampliar.html">+info</a> 
+                    
+                     Raquel:  
+                     Guardé los bonos y me salió muy a cuenta.⭐⭐⭐⭐<a href="ampliar.html">+info</a> 
+                        
+        </section>
+
+        <section><!--Sección contacto del menú Contactos-->
+             <!--TITULO --> Contacta con Nosotros  
+            <form id="form">
+                <div class="input__container">
+                  <label for="name">Name</label>
+                    
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="input__container">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="input__container">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button>Submit</button>
+              </form>
+        </section>
+    </main>
+
+    <footer>
+        <!--(0.25 PUNTOS). Crea una lista desordenada con un link exterior a
+        Privacidad lleva a http://www.caribian.com/privacidad.html
+        Terminos lleva a http://www.caribian.com/terminos.html
+        Copyright lleva a http://www.caribian.com/copyright.html
+        -->
+       
+         Privacidad 
+         Términos de uso
+         Copyright 
+       
+    </footer>
+</body>
+</html>
+

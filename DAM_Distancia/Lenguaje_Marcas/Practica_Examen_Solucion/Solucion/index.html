@@ -1,0 +1,113 @@
+<!DOCTYPE html><!--Declaración del tipo de documento html-->
+<html  lang="es"><!--Elemento raiz html-->
+<head><!--Información para los buscadores y el navegador-->
+    <meta charset="UTF-8"><!--Tipo de codificación de caracteres-->
+    <title>Agencia de Viajes</title><!--Titulo de la página-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Responsive design para dispositivos-->
+    <link rel="stylesheet" type="text/css" href="styles/style.css"><!--Link a la hoja de estilo exterior dentro de la carpeta style-->
+</head>
+<body><!--Etiqueta cuerpo contiene el diseño web que se presenta al cliente-->
+    <header><!--Etiqueta HTML5 Semántica Cabecera-->
+        <img src="images/cabecera.png" alt="Logo de la agencia una isla paradisiaca"><!--imagen cabecera-->
+        <nav><!--Etiqueta HTML5 Semántica navegación-->
+            <ul><!--Lista desordenada-->
+                <li><a href="#">Home</a></li><!--listado de links-->
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main><!--Etiqueta HTML5 semántica Zona Principal-->
+        <section id="destinos"><!--Etiqueta HTML5 semántica sección con identificador destinos-->
+            <h1>Destinos Populares</h1><!--Encabezado más importante 1 por página-->
+            <div class="card-container"><!--Contenedor de cards (tarjetas)-->
+                <div class="card"><!--Contenedor card-->
+                    <a href="images/imagen1.jpg" target="_blank"> <!--Link para cargar imagen abriendo otra pestaña-->
+                    <img src="images/imagen1.jpg" alt="Imagen corales, galeón y buceador" title="Buceo Arqueológico"><!--Imagen con 
+                    descripcíón para accesibilidad y título--></a>
+                    <p>Buceo <em>Arqueológico.</em><!--Etiqueta semántica emfasis--> </p><!--Parrafo descriptivo-->
+                </div>
+                <div class="card">
+                    <a href="images/imagen2.jpg" target="_blank"> 
+    
+                    <img src="images/imagen2.jpg" alt="Vista pirámide maya y en primer plano dos exploradores" title="Ruinas Mayas"></a>
+                    <p>Visita a las Ruinas de Chapaclept</p>
+                </div>
+                <div class="card">
+                    <a href="images/imagen3.jpg" target="_blank"> 
+                    <img src="images/imagen3.jpg" alt="Vista parque de atracciones, montaña rusa" title="Parque atracciones"></a>
+                    <p>Parque de atracciones</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ofertas"><!--Etiqueta HTML5 semántica sección con identificador ofertas-->
+            <h2>Ofertas Especiales</h2><!--Encabezado h2-->
+            <div class="oferta"><!--contenedor clase tipo oferta, como es una clase puede haber varios-->
+                <h3>Oferta especial 1 - Día del Padre</h3><!--Encabezado h3-->
+                <p>Descubre destinos increíbles con nuestros paquetes exclusivos:</p><!--parrafo-->
+                <ol><!--Lista ordenada-->
+                    <li>Viaje a Cancún</li><!--Items-->
+                    <li>Viaje a Teotihuacán</li>
+                    <li>Viaje a Egipto</li>
+                </ol>
+            </div>
+            <div class="oferta"><!--contenedor clase tipo oferta, como es una clase puede haber varios-->
+                <h3>Oferta especial 2 - Día de los Enamorados</h3>
+                <p>Experiencias románticas en destinos de ensueño.</p>
+            </div>
+            <div class="oferta"><!--contenedor clase tipo oferta, como es una clase puede haber varios-->
+                <h3>Oferta especial 3 - Tu Cumpleaños en el Amazonas</h3>
+                <p>Una aventura inolvidable en el corazón de la selva.</p>
+            </div>
+        </section>
+
+        
+
+        <section id="testimonios"><!--Etiqueta HTML5 semántica sección con identificador testimonios-->
+            <h2>Testimonios de Clientes</h2><!--Encabezado h2-->
+            <dl><!--Lista de definición-->
+                <dt><strong>Marta:</strong> </dt><!--Termino de definición-->
+                <dd> No pensaba que me iba a salir tan bien de precio. Unas vacaciones estupendas.⭐⭐⭐⭐⭐
+                    <a href="#.html">+info</a></dd><!--Declaración-->
+               
+                    <dt><strong>Antonio:</strong> </dt> 
+                    <dd> Muy recomendado un 10, buen trato y las actividades lo mejor.⭐⭐⭐<a href="#.html">+info</a><dd>
+                        <dt><strong>Raquel:</strong> </dt>
+                        <dd> Guardé los bonos y me salió muy a cuenta.⭐⭐⭐⭐<a href="#.html">+info</a></dd>
+                    </dl>
+        </section>
+
+        <section id="contacto"><!--Etiqueta HTML5 semántica sección con identificador contacto-->
+            <h2>Contacta con Nosotros</h2><!--Encabezado h2-->
+            <form id="form"><!--formulario con id form-->
+                <div class="input__container"><!--contenedor con la clase input_container-->
+                  <label for="name">Name</label><!--etiqueta name para nombre-->
+                    
+                  <input type="text" id="name" name="name" required><!--texto input requerido-->
+                </div>
+                <div class="input__container"><!--contenedor con la clase input_container-->
+                  <label for="email">Email</label><!--etiqueta emal para email-->
+                  <input type="email" id="email" name="email" required><!--texto input requerido-->
+                </div>
+                <div class="input__container"><!--contenedor con la clase input_container-->
+                  <label for="message">Message</label><!--etiqueta mensaje para mensaje-->
+                  <textarea id="message" name="message" rows="4" required></textarea><!--area de texto  requerido-->
+                </div>
+                <button>Submit</button><!--Boton con texto Submit-->
+              </form>
+        </section>
+    </main><!--Fin del contenido principal-->
+
+    <footer><!--Inicio del footer o pie-->
+        <ul><!--Lista desordenada para el menú inferior-->
+            <li><a href="http://www.caribian.com/privacidad.html">Privacidad</a></li><!--Links externos-->
+            <li><a href="http://www.caribian.com/terminos.html">Términos de Uso</a></li>
+            <li><a href="http://www.caribian.com/copyright.html">Copyright</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+

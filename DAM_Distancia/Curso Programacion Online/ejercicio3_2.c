@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <math.h>
+//#define _USE_MATH_DEFINES
 
 void notasExamen();
 void sumaMultiplicacion();
@@ -32,6 +34,8 @@ int main() {
         printf("\n11.- Variables a, b y c");
         printf("\n0.- Salir programa\n");
 
+
+        //Busqué por internet, evita un bucle infinito en el menú
         fgets(input, sizeof(input), stdin);
         if (sscanf(input, "%i", &opcionMenu) != 1) {
             printf("Error al leer la opcion. Introduce un numero valido.\n");
@@ -144,23 +148,29 @@ void mediaExamenes(){
 }
 
 void perimetroCircunferencia(){
-    #define PI 3.1416
+    //#define PI 3.1416
     float radioCirculo;
     printf("Introduce el radio de un circulo: \n");
     scanf(" %f",&radioCirculo);
     clearInputBuffer();
-    float perimetroCirculo = 2 * PI * radioCirculo;
+    float perimetroCirculo = 2 * M_PI * radioCirculo;
     printf("El valor del perimetro es: %.2f\n",perimetroCirculo);
 }
 
 void perimetroFiguras(){
-    float ladoCuadrado, ladoTri, ladoRect, alturaRect;
+    float ladoCuadrado, ladoTri, ladoTri2, ladoTri3, ladoRect, alturaRect;
     printf("Introduce los lados de las distintas figuras: \n");
     printf("Introduce lado del cuadrado: ");
     scanf(" %f",&ladoCuadrado);
     clearInputBuffer();
-    printf("Introduce lado triangulo (suponemos los 3 iguales): ");
+    printf("Introduce lado 1 del triangulo: ");
     scanf(" %f",&ladoTri);
+    clearInputBuffer();
+    printf("Introduce lado 2 del triangulo: ");
+    scanf(" %f",&ladoTri2);
+    clearInputBuffer();
+    printf("Introduce lado 3 del triangulo: ");
+    scanf(" %f",&ladoTri3);
     clearInputBuffer();
     printf("Introduce lado rectangulo: ");
     scanf(" %f",&ladoRect);
@@ -169,12 +179,19 @@ void perimetroFiguras(){
     scanf(" %f",&alturaRect);
     clearInputBuffer();
     float perimCuad = ladoCuadrado * 4;
-    float perimTri = ladoTri * 3;
+    float perimTri = ladoTri + ladoTri2 + ladoTri3;
     float perimRect = (ladoRect * 2) + (alturaRect * 2);
+    float areaCuadrado = ladoCuadrado * ladoCuadrado;
+    float S = (ladoTri + ladoTri2 + ladoTri3)/2;
+    float areaTri =  sqrt((S)*(S-ladoTri)*(S-ladoTri2)*(S-ladoTri3));
+    float areaRectangulo = ladoRect * alturaRect;
 
     printf("El perimeto del cuadrado de lado %.0f es: %.0f\n",ladoCuadrado,perimCuad); 
-    printf("El perimeto del cuadrado de lado %.0f es: %.0f\n",ladoTri, perimTri); 
-    printf("El perimeto del cuadrado de lado %.0f y altura %.0f es: %.2f\n",ladoRect, alturaRect, perimRect); 
+    printf("El perimeto del triangulo de lados %.0f, %.0f y %.0f es: %.0f\n",ladoTri, ladoTri2,ladoTri3, perimTri); 
+    printf("El perimeto del rectangulo de lado %.0f y altura %.0f es: %.2f\n",ladoRect, alturaRect, perimRect);
+    printf("El area del cuadrado de lado %.0f es: %.0f\n",ladoCuadrado,areaCuadrado); 
+    printf("El area del triangulo de lados %.0f, %.0f y %.0f es: %.2f\n",ladoTri, ladoTri2,ladoTri3, areaTri);
+    printf("El area del rectangulo de lado %.0f y altura %.0f es: %.2f\n",ladoRect, alturaRect, areaRectangulo);  
 }
 
 void numeroAnterior(){
@@ -253,7 +270,7 @@ void variables1(){
 }
 
 void variables2(){
-    int a, b, c;
+    int a, b, c, temp;
 
     printf("Introduce tres numeros enteros: \n");
     printf("Introduce el primer numero: ");
@@ -266,14 +283,16 @@ void variables2(){
     scanf(" %i",&c);
     clearInputBuffer();
 
+    temp = a;
     a = 2 * c;
-    b = a + c;
-    c = 3 * b;
+    b = temp + c;
+    c = 3 * (b-c);
 
     printf("Valores intercambiados:\n");
     printf("a = %i\nb = %i\nc = %i\n", a, b, c);
 }
 
+//Metodo para limpiar el buffer cada vez que lo llamo
 void clearInputBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF) { }

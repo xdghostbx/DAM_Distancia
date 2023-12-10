@@ -1,0 +1,167 @@
+/* Estilos generales para el cuerpo de la página */
+body {/*FAMILIA FUENTE Aria, sin serifa*/
+    font-family: Arial, sans-serif;
+}
+ 
+h2,h3{
+     /*Color de texto cornflowerblue*/
+}
+/* Estilos para el encabezado */
+header {  
+     /* Fondo color agua marina */
+     /* Fuente del texto en blanco */
+     /* Texto alineado al centro */
+     /* Espaciado interno 10px (vertical) 0px horizontal */
+ 
+}
+/* Estilos para la navegación */
+nav ul {
+      /* tipo de estilo lista none, sin estilo la lista */
+     /* Relleno al 0 */
+     /* Familia de fuente Impact con tamaño grande */
+     /*Fuente tipo extra largo*/
+}
+
+nav ul li {
+    display: inline; /* Despliega  en línea */
+    margin: 0 30px; /* Margen entre elementos */
+}
+
+nav ul li a {
+     /* Texto color blanco */
+      /* Decoración de texto none */
+}
+nav a:visited{/*Link visitado*/
+     /* Texto color rgb(221, 217, 217)*/
+}
+nav a:focus {/*Link activo con el foco, por selección de tabulador*/
+     /* Texto color #671f1f;*/
+}
+
+nav a:hover{/*Ratón sobre el link*/
+     /* Texto color #671f1f;*/
+}
+nav a:active {/*Link presionado, cuando hacemos click*/
+     /* Texto color yellowgreen */
+}
+
+ 
+
+/* Estilos para la galería de tarjetas */
+.card-container {/*Contenedor card*/
+    display: flex; /* Uso de flexbox para alinear las tarjetas */
+    justify-content: space-around; /* Distribución del espacio alrededor de las tarjetas */
+    flex-wrap: wrap; /* Permite la envoltura de elementos */
+}
+
+.card {/*card*/
+      /* Ancho de cada tarjeta al 30% */
+      /* Margen alrededor de cada tarjeta de 10px */
+       /* Texto alineado al centro */
+}
+
+.card img {/*imagen dentro de la card*/
+      /* Ancho de la imagen al 50% */
+      /* Altura la ponemos en automática para mantener la proporción */
+      /* Bordes redondeados de la imagen al 30px */
+}
+
+/* Estilos para las secciones de la página */
+section {/*seccion general*/
+      /* Margen de la sección, 20px vertical y 0 horizontal */
+      /* Relleno interno de la sección a  20px */
+}
+
+/* Estilos específicos para secciones de destinos, ofertas, testimonios y contacto */
+#destinos {
+      /* Color de fondo para la sección destinos #f0f0f0; */
+}
+
+#ofertas {
+     /* Color de fondo para la sección ofertas #e0e0e0; */
+     /* Relleno interno al 20px*/
+}
+
+.oferta {
+     /* Color de fondo para la sección oferta #f7f7f7; */
+     /*border raidus al 10px*/
+     /*Relleno interno al 15px*/
+     /*Margen inferior al 20px*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);/*Efecto sombra de la caja offset x | offset y | blur radio |color*/
+}
+
+.oferta h3 {/*Encabezado h3 para oferta*/
+     /* Texto color #333 */
+}
+
+.oferta p {/*Parrafo dentro de la sección oferta*/
+     /*Estilo de fuente italica*/
+     /*Texto color #555*/
+}
+
+.oferta ol {/*Lista ordenada dentro de la seccion oferta*/
+    /*Margen izquierda (left) al 20px*/
+}
+#testimonios {/*Sección id testimonios*/
+     /* Color de fondo para la sección testimonios #d0d0d0;*/
+}
+
+#contacto {/*Sección id contactos*/
+      /* Color de fondo para la sección contacto #c0c0c0; */
+}
+
+/* Estilos para el formulario */
+form {/*Formulario*/
+    margin: 3rem 0; /* Margen alrededor del formulario 3rem (root em) vertical 0 horizontal*/
+    display: flex; /* Uso de flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    row-gap: 2rem; /* Espacio entre filas de 2rem (root em) */
+}
+
+.input__container {/*Contenedor input*/
+    display: flex; /* Uso de flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    row-gap: 0.5rem; /* Espacio entre filas de 0.5rem ( root em)*/
+}
+
+.input__container label {/*Etiquetas*/
+    font-size: 1.6rem; /* Tamaño de fuente para las etiquetas de 1.6 rem ( root em) */
+}
+footer {/*Sección footer*/
+    /* Color de fondo para la sección oferta #333; */
+     /*Texto color white*/
+     /* Texto alineado al centro */
+     /* Relleno interno al 10px vertical 0 horizontal*/
+}
+
+footer ul {/*Footer lista desordenada para menú*/
+     /* tipo de estilo lista none, sin estilo la lista */
+     /*Relleno interno al 0px*/
+}
+
+footer ul li {/*Footer lista desordenadad menú y listados*/
+      /* Despliega  en línea */
+      /*Margen 0 al vertical , 10px horizontal*/
+}
+
+footer ul li a {/*Decorativo links*/
+     /* Texto color blanco */
+      /* Decoración de texto none */
+}
+
+.input__container input, textarea {/*Formulario areas*/
+    padding: 1rem 2rem; /* Relleno interno para inputs y textarea */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #555; /* Borde sólido */
+    resize: none; /* Desactiva la capacidad de redimensionar el textarea */
+}
+
+button {/*Botón*/
+    align-self: flex-start; /* Alineación del botón al inicio del contenedor flex */
+    padding: 1rem 2rem; /* Relleno interno del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    border: none; /* Sin borde para el botón */
+    background: #333; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    cursor: pointer; /* Cambio del cursor al pasar por encima */
+}

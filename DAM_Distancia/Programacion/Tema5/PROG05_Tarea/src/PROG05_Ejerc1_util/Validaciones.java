@@ -23,19 +23,31 @@ import java.time.LocalDate;
 */
 
 public class Validaciones {
-    public static boolean validarDNI(String dniPropietario){
-        return dniPropietario != null && dniPropietario.length() == 9;
-    }
-    
+    //metodo para validar que los numeros introducidos por el usuario son correctos
+    public static boolean validarDNI(int dniPropietario){
+    return dniPropietario > 9999999 && dniPropietario <= 99999999;
+}
+    //metodo para comprobar que los kilometros son >0
     public static boolean validarKilometros(int numKilometros){
         return numKilometros > 0;
     }
     
+    //metodo para compribar que le fecha de matriculacion es anterior a la fecha actual
     public static boolean validarFecha(LocalDate fechaMatriculacion){
         LocalDate fechaActual = LocalDate.now();
         return fechaMatriculacion.isBefore(fechaActual);
     }
     
-    
+    //metodo que devuelve la letra del dni segun los numeros
+    public static String algoritmoDNI(int dniPropietario){
+        if (validarDNI(dniPropietario)) {
+            final String dniLetras = "TRWAGMYFPDXBNJZSQVHLCKE";
+            int indiceLetra = dniPropietario % 23;
+            char letra = dniLetras.charAt(indiceLetra);
+            return String.valueOf(dniPropietario) + letra;
+        } else {
+            return "DNI no válido";
+        }
+    }
 }
 
