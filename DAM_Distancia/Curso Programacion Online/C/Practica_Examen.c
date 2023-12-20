@@ -11,16 +11,15 @@ int main() {
 
     int ejercicio;
 
+    printf("Introduce el numero de ejercicio a ejecutar (1, 2, 3 o 4) \n");
+    printf("1.- Introducir peso, altura y edad.\n");
+    printf("2.- Introducir peso, altura y edad y calculo de IMC.\n");
+    printf("3.- Introducir marca de vehiculo.\n");
+    printf("4.- Introducir marca y modelo de vehiculo.\n");
+    printf("5.- Salir. \n");
+    scanf(" %i",&ejercicio);
+    clearInputBuffer();
     do{
-        printf("Introduce el numero de ejercicio a ejecutar (1, 2, 3 o 4) \n");
-        printf("1.- Introducir peso, altura y edad.\n");
-        printf("2.- Introducir peso, altura y edad y calculo de IMC.\n");
-        printf("3.- Introducir marca de vehiculo.\n");
-        printf("4.- Introducir marca y modelo de vehiculo.\n");
-        printf("5.- Salir. \n");
-        scanf(" %i",&ejercicio);
-        clearInputBuffer();
-        
         switch (ejercicio){
             case 1: 
                 ej1();
@@ -41,9 +40,6 @@ int main() {
                 printf("Introduce un numero de ejercicio correcto... \n");
                 break;
         }
-        
-        printf("\nPresiona Enter para continuar...");
-        while (getchar() != '\n');
     } while (ejercicio != 5);
 
     return 0;
@@ -58,11 +54,11 @@ void ej1(){
     printf("Intruduce tu edad: \n");
     scanf(" %f",&edad);
     clearInputBuffer();
-    printf("Intruduce tu altura (en cm): \n");
+    printf("Intruduce tu altura (en m): \n");
     scanf(" %f",&altura);
     clearInputBuffer();
 
-    printf("Tu peso es de %.2fKg, tu altura es de %.2fcm y tienes %.0f años.\n", peso, altura, edad);
+    printf("Tu peso es de %.2f, tu altura es de %.2f y tienes %.0f años.\n", peso, altura, edad);
 }
 
 
@@ -79,9 +75,9 @@ void ej2(){
     scanf(" %f",&altura);
     clearInputBuffer();
 
-    printf("Tu peso es de %.2fKg, tu altura es de %.2fcm y tienes %.0f años.\n", peso, altura, edad);
+    printf("Tu peso es de %.2fKg, tu altura es de %.2fm y tienes %.0f años.\n", peso, altura, edad);
 
-    imc = peso/(pow(altura, 2));
+    imc = peso/(pow(altura/100, 2));
 
     if (imc < 18.5){
         printf("Bajo peso, deberias ganar algo de peso.\n");
