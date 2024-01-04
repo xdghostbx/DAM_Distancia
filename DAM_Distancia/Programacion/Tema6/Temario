@@ -1,0 +1,72 @@
+Para escribir una cadena de caracteres usamos comillas dobles ""
+Para crear esa cadena de caracteres usamos 
+  
+  String cad = "Ejemplo de cadena":
+
+Aunque esto es solo crear una instalacia de clase String. Creamos un objeto con el operador new y el constructor
+
+  String cad = new String ("Ejemplo de cadena");
+
+Al crear cadenas de esta forma realizamos una copia en memoria de esta cadena
+
+_____________________________________________________________________________________________________________________
+Operaciones Avanzadas con cadenas de caracteres:
+
+Concatenacion (suma):
+  String cad = "!Bien" + "venido!";
+otra forma de usar la concatenacion es con el metodo concat del objeto String;
+
+  String cad = "Bien.concat("venido!");
+
+Logitud de cadena:
+
+  int length() - retorna un entero con la longitud de la cadena (cuenta el numero de caracteres)
+
+  char charAt (int pos) - devuelve el caracter que se encuentra en la posicion de la cadena. PEj:
+
+  char t = cad.charAt(5); (empieza a contar desde 0)
+
+Substring:
+
+  String substring (int beginIndex, int endIdex) - crea una subcadena de caracteres entre los parametros 
+Si por ejemplo ponemos substring(0,5), como empieza por 0, el segundo imprime hasta el 4
+
+  String subcad = cad.substring (0,2);
+
+
+
+//rellenar por aqui con mas reglas de cadenas
+
+__________________________________________________________________________________________  
+
+Crear array:
+
+int [] numeros = new int [3]; //crea un array de 3 numeros (pos 0, 1 y 2)
+
+numeros [0] = 99;
+numeros [1] = 120;
+numeros [2] = 33;
+
+se puede hacer:
+int suma = numeros[0] + numeros[1] + numeros[2];
+
+con la propiedad .length sabremos la longitud del array
+
+    int sumaarray (int[] j) {
+            int suma=0;
+            for (int i=0; i<j.length;i++)
+                suma=suma+j[i];
+            return suma; 
+    }
+
+para ahorrar lineas de codigo, si se sabe los elementos uqe lleva el array de antemano, se pueden colocar
+de la siguiente forma:
+    
+
+    int[] array = {10, 20, 30};
+
+    String[] diassemana= {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
+la inicialización solo se puede usar en ciertos casos. La inicialización anterior funciona cuando se trata de un
+tipo de dato primitivo (int, short, float, double, etc.) o un String, y algunos
+pocos casos más, pero no funcionará para cualquier objeto.
+
