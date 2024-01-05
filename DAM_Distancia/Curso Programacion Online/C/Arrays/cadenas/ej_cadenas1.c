@@ -195,6 +195,9 @@ int main() {
             printf("La longitud de la frase es: ");
             printf("%i\n", tamFrase);
             break;
+        case 4:
+            printf("Saliendo...");
+            break;
         
         default:
             printf("Introduce una opcion valida...\n");
