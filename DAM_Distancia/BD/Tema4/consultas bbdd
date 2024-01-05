@@ -1,0 +1,81 @@
+Sentencia SELECT
+----------------------------------------------------
+consta de cuatro partes básicas:
+
+    Cláusula SELECT seguida de la descripción de lo que se desea ver,
+     es decir, de los nombres de las columnas que quieres que 
+     se muestren separadas por comas simples (" , "). 
+     Esta parte es obligatoria.
+     
+    Cláusula FROM seguida del nombre de la tabla o tablas de las 
+     que proceden las columnas de arriba, es decir, de donde vas a 
+     extraer los datos. 
+     
+     Esta parte también es obligatoria.
+
+    Cláusula WHERE seguida de un criterio de selección o condición. 
+    
+     Esta parte es opcional.
+
+    Cláusula ORDER BY seguida por un criterio de ordenación. 
+
+     Esta parte también es opcional.
+
+Por tanto, una primera sintaxis quedaría de la siguiente forma:
+
+SELECT [ALL | DISTINCT] columna1, columna2, ... FROM tabla1, tabla2,...
+    WHERE condicion1, condicion2, ... ORDER BY orden;
+
+Las cláusulas ALL y DISTINCT son opcionales.
+
+    Si incluyes la cláusula ALL después de SELECT, indicarás 
+     que quieres seleccionar todas las filas estén o no repetidas. 
+     Es el valor por defecto y no se suele especificar.
+
+    Si incluyes la cláusula DISTINCT después de SELECT, se
+     suprimirán aquellas filas del resultado que tengan igual
+     valor que otras.
+-----------------------------------------------------------------------
+Cláusula SELECT
+-----------------------------------------------------------------------
+
+    Si queremos incluir todas las columnas de una tabla podemos 
+     utilizar el comodín asterisco ("*"). 
+     Quedaría así: 
+
+     SELECT * FROM NombreTabla;
+
+    También podemos ponerle alias a los nombres de las columnas. 
+     Cuando se consulta una base de datos, los nombres de las 
+     columnas se usan como cabeceras de presentación. Si éste resulta
+     largo, corto o poco descriptivo, podemos usar un alias.
+     Para ello a continuación del nombre de la columna ponemos entre
+     comillas dobles el alias que demos a esa columna. 
+     Veamos un ejemplo: 
+
+     SELECT F_Nacimiento "Fecha de Nacimiento" FROM USUARIOS;
+
+También podemos sustituir el nombre de las columnas por constantes,
+ expresiones o funciones SQL. Un ejemplo:
+
+ SELECT 4*3/100 "MiExpresión", Password FROM USUARIOS;
+
+-----------------------------------------------------------------------
+Cláusula FROM
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+Cláusula WHERE
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+Cláusula ORDER BY
+-----------------------------------------------------------------------
+
+
+Los operadores son símbolos que permiten realizar operaciones matemáticas, concatenar cadenas o hacer comparaciones.
+
+Oracle reconoce 4 tipos de operadores:
+
+    Relacionales o de comparación.
+    Aritméticos.
+    De concatenación.
+    Lógicos.
