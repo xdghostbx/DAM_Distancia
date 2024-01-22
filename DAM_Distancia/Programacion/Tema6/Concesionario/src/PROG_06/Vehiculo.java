@@ -6,7 +6,10 @@ package PROG_06;
 
 /**
  *
- * @author xdGHOSTbx
+ * @author Daniel Martinez
+ * 
+ * Esta clase consta de los contructores, getters y setters.
+ * 
  */
 public class Vehiculo {
     private String marca;
@@ -17,7 +20,8 @@ public class Vehiculo {
     private double precio;
     private String nombre;
     private String DNI;
-
+    
+    // Constructor de la clase Vehiculo para inicializar los atributos
     public Vehiculo(String marca, String matricula, int numKilometros, 
             String fechaMatriculacion, String descripcion, double precio, 
             String nombre, String DNI) {
@@ -31,7 +35,7 @@ public class Vehiculo {
         this.DNI = DNI;
 }
 
-
+    // Métodos getter y setter para cada atributo del vehículo
     public String getMarca() {
         return marca;
     }

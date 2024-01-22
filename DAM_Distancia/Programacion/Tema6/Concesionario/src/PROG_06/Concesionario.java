@@ -6,7 +6,11 @@ package PROG_06;
 
 /**
  *
- * @author Dani
+ * @author Daniel Martinez
+ * 
+ * clase concesionario, donde creo el objeto concesionario para llamarlo mas adelante
+ * tambien se crea el array para guardar los 50 vehiculos y distintos metodos
+ * para llamarlos desde el programa principal
  */
 public class Concesionario {
     private Vehiculo [] inventario;
@@ -16,7 +20,11 @@ public class Concesionario {
         this.inventario = new Vehiculo [50];
         this.cantidadVehiculos = 0;
     }
-    
+    /*
+        metodo para agregar nuevos coches, si está lleno, devuelve -1
+        si el coche es repetido, devuelve -2
+        si el coche se agrega con exito, devuelve 0
+    */
     public int agregarVehiculo(Vehiculo vehiculo) {
         if (cantidadVehiculos == 50) {
             return -1; // Concesionario lleno, devuelve -1
@@ -32,7 +40,7 @@ public class Concesionario {
         cantidadVehiculos++;
         return 0; // Vehículo agregado con éxito, devuelve 0
     }
-    
+    //metodo para mostrar todo el inventario guardado
     public void mostrarInventario() {
         System.out.println("Inventario de vehículos:");
         for (int i = 0; i < cantidadVehiculos; i++) {
@@ -46,7 +54,10 @@ public class Concesionario {
         }
     }
     
-    
+    /*
+        metodo para buscar una matricula, devuelve el inventario en la posicion
+        de donde encontro la matricuka
+    */
     public Vehiculo buscarVehiculo(String buscaMatricula) {
         for (int j = 0; j < cantidadVehiculos; j++){
             if (inventario[j].getMatricula().equalsIgnoreCase(buscaMatricula)){
@@ -55,7 +66,10 @@ public class Concesionario {
         }
         return null;
     }
-    
+    /*
+        metodo para actualizar los kilometros siempre que el numero de 
+        kilometros sea superior a 0 y encuentre la matricula
+    */
     public boolean actualizaKMs(String buscaMatricula, int nuevosKilometros) {
         for (int z = 0; z < cantidadVehiculos; z++) {
             if (inventario[z].getMatricula().equalsIgnoreCase(buscaMatricula)) {

@@ -4,17 +4,25 @@
  */
 package PROG_06;
 import java.util.Scanner;
-import javax.swing.*;
 import Validaciones.Validaciones;
 
-/**
+/*
  *
- * @author Dani
+ * @author Daniel Martinez
+ * 
+ * Esta clase muestra un menu con las opciones del concesionario
+ *      -agregar vehiculo
+ *      -ver vehiculos
+ *      -buscar vehiculos
+ *      -modificar Km
+ *      -salir
+ * Estas consultas se hacen con sus respectivos metodos
+ * se llama a la clase concesionario para verificar datos o añadirlos
  */
 public class Principal {
     
     /**
-     * @param args the command line arguments
+     * en el main se muestra el menu con sus distintas opciones
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -57,9 +65,10 @@ public class Principal {
                     System.out.println("Introduce una opcion correcta...");
                     break;
             }
-        }while (opcion != 5);
-        
+        }while (opcion != 5);  
     }    
+    
+    //metodo para pedir los datos de los nuevos coches
     private static int nuevoCoche(Scanner entrada, Concesionario concesionario){
         String matricula, DNI, nombre, fechaMatriculacion;
         boolean matriculaValida = false;
@@ -92,14 +101,14 @@ public class Principal {
                 System.out.println("Fecha no valida...");
             }
         }while(!fechaValida);
-        
+        //agregamos descripcion
         System.out.println("Introduzca la descripcion del vehiculo:");
         String descripcion = entrada.nextLine();
         System.out.println("Introduce el precio:");
         double precio = entrada.nextDouble();
         entrada.nextLine();
         
-        //validamos el nombre
+        //validamos el nombre 
         do {
             System.out.println("Introduzca el nombre del propietario:");
             nombre = entrada.nextLine();
@@ -119,14 +128,14 @@ public class Principal {
             }
         }while(!dniValido);
         
-        
+        //cargamos los datos agregados al objeto
         Vehiculo vehiculo;
         vehiculo = new Vehiculo (marca, matricula, numKilometros,
                 fechaMatriculacion, descripcion,
                 precio, nombre, DNI);
         return concesionario.agregarVehiculo (vehiculo);
     }
-    
+    //metodo para buscar la matricula, llama a concesionario
     private static void buscaMatricula(Scanner entrada, Concesionario concesionario){
         String buscaMatricula;
         boolean matriculaValida;
@@ -152,7 +161,7 @@ public class Principal {
             System.out.println("No existe vehiculo con esa matricula");
         
     }
-    
+    //metodo para actualizar los kilometros, llama a concesionario
     private static void actualizaKMs(Scanner entrada, Concesionario concesionario){
         String buscaMatricula;
         boolean matriculaValida;

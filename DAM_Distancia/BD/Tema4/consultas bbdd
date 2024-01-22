@@ -79,3 +79,43 @@ Oracle reconoce 4 tipos de operadores:
     Aritméticos.
     De concatenación.
     Lógicos.
+    Los operadores relacionales son: = , <>, !=, <=, >=, < y
+    >. Estos últimos dos tienen
+    2 formas: uno solo tiene un operador en cada lado (igualdad o
+    desigualdad) y otro tiene dos operadores separados por un espacio
+    (menor o mayor). El primero es para indicar si algo es menor o
+    igual o mayor o igual a algo. El segundo es para indicar si algo
+    es exactamente lo mismo o no lo es.
+    Los operadores aritméticos permiten realizar cálculos matemát
+    icos con las variables o campos obtenidos de las tablas. Son los
+    siguientes: + , - , * , / , MOD . La función MOD dev
+    uelve el residuo de una división entera.
+    Los operadores de concatenación se utilizan para combinar
+    valores de diferentes columnas en una sola fila. Se pueden usar
+    entre comillas simples o dobles.
+    Los operadores lógicos permiten hacer operaciones lógicas con
+    los resultados de las comparaciones anteriores. Sólo admiten
+    TRUE o FALSE como resultado. Los operadores AND y OR permiten
+    que varias condiciones se cumplan o bien una u otra. NOT permite
+    negar cualquier condición.
+    </s>
+    ### Ejercicio 5 ###
+    Utilizando consultas SQL, escriba una sentencia SELECT que muestre la descripción
+    del producto más caro de cada proveedor. Tenga en cuenta que existen
+    varios productos con el mismo precio pero con descripciones diferentes.
+    Además, debe mostrar el nombre del proveedor y su dirección completa.
+    Consulta:
+    sql
+    select p.descripcion, pr.nombre, pr.direccion from product
+    inner join provider pr on p.id_provider=pr.id
+    where p.precio=(select max(p2.precio) from product p2
+    where p2.id_provider=p.id_provider);
+    En este ejercicio se busca obtener la descripción del producto mas costoso
+    de cada proveedor, junto al nombre del proveedor y su dirección completa.
+    Para lograr esto, se realiza una subconsulta que devuelve el pre
+    cio máximo de todos los productos de un determinado proveedor. Luego,
+    se hace un INNER JOIN entre la tabla "product" y la tabla "provider",
+    relacionada mediante el campo id_provider. Con esta información, se
+    compara el precio de cada producto con el precio máximo de ese
+    mismo proveedor, y se selecciona la descripción correspondiente.
+    
