@@ -1,0 +1,10 @@
+1.- Relaciones entre clases
+    Tipos de relaciones entre clases   
+        Clientela: una clase usa objetos de otra
+        Composicion: Alguno de los atributos de una clase es objeto de otra
+        Anidamiento: se definen clases dentro de otra
+        Herencia: una clase comparte características con otra clases añadiendo alguna funcionalidad especifica
+
+
+DDdR- Tarea 7
+
