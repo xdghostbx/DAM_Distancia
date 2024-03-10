@@ -119,3 +119,24 @@ Oracle reconoce 4 tipos de operadores:
     compara el precio de cada producto con el precio máximo de ese
     mismo proveedor, y se selecciona la descripción correspondiente.
     
+
+
+
+    Funciones que aparentemente son mas utiles
+
+    Numericas:
+    -MOD (m,n): divide m entre n
+    -Round (n, decimales): n y numero de decimales que queremos que tenga
+    -Trunc (M,n): n redondea a contar desde el . decimal
+     (123.456) un valor positivo del punto a la derecha, uno negativo
+     redondea desde el punto a la izquierda
+
+    De Cadena:
+    -Contac (Cad1, cad2): igual que usar ||
+    -Lower/upper (cad1): util si no sabemos si los datos de la fila estan
+    en mayus o minus (SELECT * FROM JUEGOS WHERE UPPER(NOMBRE)='AJEDREZ';)
+
+    De fechas:
+    SYSDATE: fecha actual
+    MONTHS_BETWEEN (fecha1, fecha2): numero de meses entre las fechas
+    

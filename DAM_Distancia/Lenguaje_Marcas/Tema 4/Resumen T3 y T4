@@ -1,0 +1,35 @@
+Sindicalizacion de contenidos
+
+    La sindicalizacion de contenidos permite a un sitio utilizar los servicios
+    o contenidos ofertados por otro sitio diferente
+    La redifusion web consiste en ofrecer un contenido desde una fuente web
+    cuyo contenido esta en otra pagina web. Para leer una fuente o canal hay 
+    que suscribirse usando un agragador
+
+    Caracteristicas:
+        Para que una web se convierta en suministradora le agregamos 
+        <title> en el link del <html>
+    Ventajasd de la sindicalizacion de contenido
+            -aumenta el trafico en nuestra web
+            -ayuda que nuestros usuarios frecuenten el sitio web
+            -favorece el posicionamiento en buscadores
+            -ayuda a estableer relaciones entre distintos sitios web
+            -permite a otras personas añadir caracteristicas alos servicios del sitio web
+            -enriquece internet iy fomenta la reutilizacion
+        
+    Tecnologias de creacion de canales de contenido
+            RSS: Parte de la familia de los formatos XML que se usa para
+            compartir la informacion que se actualisa con frecuencia entre sitio web. 
+            Tambien se usa para:
+                -Conectar con sistemas de mensajeria instantanea
+                -conversion RSS en mensajes de correo electronico
+                -Transformar los enlaces de navegador den RSS
+    
+    Estructura de los canales de contenido
+        Para construir una canal de contenido es necesario crear un fichero con
+        extension rss o atom basado en xml. Luego se publica en uno de los 
+        directorio del sitio web desde el que se oferta.
+        Estaria formado por los siguientes documentos basicos:
+            -Declaracion del documento XML y definicion de la decodificacion empleada
+            -Un canal y por propia definicion esta formado por secciones
+            

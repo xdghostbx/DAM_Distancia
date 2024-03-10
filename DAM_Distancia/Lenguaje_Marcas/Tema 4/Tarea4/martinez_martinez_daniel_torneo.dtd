@@ -1,0 +1,14 @@
+<!DOCTYPE torneo [
+    <!ELEMENT torneo (participante+)> <!--Elemento torneo con minimo 1 participante obligatorio-->
+    <!ATTLIST torneo <!--Lista de atributos del elemento torneo-->
+            edicion CDATA #REQUIRED
+            anteriorGanador IDREF #REQUIRED> <!--El IDREF para poder hacer referencia al ID del ganador en el interno del documento-->
+    <!ELEMENT participante (nombre,edad,pais,cabezaDeSerie?)> <!--Elemento participante con todos sus campos obligatorios y cabezaDeSerie opcional-->
+    <!ATTLIST participante  <!--Lista de atributos del elemento participante, con su ID y IDEREF para hacer referencia al ID de la pareja en el documento interno-->
+            idP ID #REQUIRED
+            pareja IDREF #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>  <!-- Elemento nombre con PCDATA para caracteres-->
+    <!ELEMENT edad (#PCDATA)>   <!--elemento edad con PCDATA para caracteres-->
+    <!ELEMENT pais (#PCDATA)>   <!--elemento pais con PCDATA para caracteres-->
+    <!ELEMENT cabezaDeSerie EMPTY> <!--Elemento cabezaDeSerie con EMPTY porque no necesita tener contenido, con que aparezca en el participante es suficiente-->
+]>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+    <xs:element name="impresoras"> 
+        <xs:complexType> <!--creamos un tipo coplejo, impresoras, que es el padre de los siguientes complejos -->
+            <xs:sequence>
+                <xs:element name="impresora" maxOccurs="unbounded"> <!--ponemos el maximo de ocurrencias en infinito-->
+                    <xs:complexType> <!--nuevo grupo de tipos complejos-->
+                        <xs:sequence>
+                            <xs:element name="marca" type="xs:string"/> <!--marca y modelo entran como tipo de dato string-->
+                            <xs:element name="modelo" type="xs:string"/>
+                            <xs:element name="peso"> <!--peso tiene restriccion de que sea positivo y decimal con 2 cifras, se valida abajo-->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:fractionDigits value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tamaño" type="xs:string" maxOccurs="unbounded"/> <!--nuevos elementos hijos de impresora, tamano y cartucho. Tamano va como
+                            unbounded porque una impresora puede tener varios tamanos de impresion-->
+                            <xs:element name="cartucho"> <!--cartucho tiene una restriccion de carateres. debe empezar por "C-", continuar con 3 numeros y 1 o 2 letras-->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="C-[0-9]{3}[A-Z]{1,2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="enred" minOccurs="0"/> <!--elemento en red, es opcional y puede ir como elemento vacio-->
+                        </xs:sequence>
+                        <xs:attribute name="numSerie" type="xs:string" use="required"/> <!--NumeroSerie y tipo de impresora como elementos obligatorios, el tipo tiene una restriccion de datos que solo pueden ser los indicados-->
+                        <xs:attribute name="tipo" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="matricial"/>
+                                    <xs:enumeration value="láser"/>
+                                    <xs:enumeration value="tinta"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="compra" type="xs:positiveInteger" use="optional"/> <!-- compra que solo puede ser un integer positivo y es opcional-->
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

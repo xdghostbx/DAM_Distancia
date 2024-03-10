@@ -1,0 +1,129 @@
+DTD
+    Ventajas: 
+        -Especificar las estructura del documento
+        -Reflejar una restriccion de integridad referencial minima
+        -Pequeños mecanismos de abstraccion
+        -Incluir documentos externos
+    
+    Inconvenientes:
+        -Su sintaxis no es xml
+        -No soportan espacios de nombres
+        -No definen tipos de datos. Solo hay datos textuales
+        -No permite secuencias no ordenadas
+        -No esposible crear clases a partir de varios atributos o elementos
+        -Una vez definido el DTD no es posible añadir nuevos vocabularios
+
+    Declaracion de tipos de elementos terminales:
+
+        EMPTY
+        <!ElEMENT A EMPTy>
+            Indica que el elemento no es contenedor, en este ejempolo, A, no tiene nada
+        
+        <!ELEMENT A ANY>
+            Permite que el contenido del elemento sea cualquier cosa
+
+        <!ELEMENT A (#PCDATA)>
+            Indica que los datos son analizados en busca de etiquetas, el elemento no puede contener elementos, solo puede
+            contener datos de tipo caracter, exceptuando  <, &, ]], >
+
+        EJEMPLO:
+
+            Dada la siguente estructura xml 
+                <alumno> Olga Velarde Cobo </aluno>
+            Un DTD que podria ajustarse seria
+                <!ELEMENT alumno (#PCDATA)>
+
+    Declaraciones de tipos de elementos no terminales
+        Primero definimos las hojas del arbol, el ejemoplo anterior, ahora vamos a por las ramas
+        Se definen como:
+            <!ELEMENT A (B, C)>
+            El elemento A puede tener un B y/o un C como hijo
+
+            Si el elemento puede aparecer varias veces en el documento o si no puede aparecer se hacen mediante:
+                ?: Operador opcion, indica que el elemento no es obligatorio
+                    <!ELEMENT telefono (trabajo?, casa )>
+
+                +: Operador uno o mas, define un componente presente por lo menos una vez
+                    <!ELEMENT provincia (nombre, (cp, ciudad)+ )>
+
+                *: Operador cero o mas, define un componente presente cero o mas veces
+                    <!ELEMENT provincia (nombre, (cp, ciudad)* )>
+                
+                |: Operador eleccion, uando se utiliza sustituyendo las comas en la declaración de grupos indica que para formar el documento XML hay que elegir entre los elementos separados por este operador.
+                   En el ejemplo siguiente, el documento XML tendrá elementos provincia que estarán formados por el elemento nombre y el cp (código postal), o por el elemento nombre y la ciudad.
+                    <!ELEMENT provincia (nombre, (cp | ciudad) )>
+
+
+        EJEMPLO:
+        (XML)
+            <alumno>
+                <nombre>Olga</nombre> 
+                <dirección>El Percebe 13</dirección>
+            </alumno>
+        (DTD)
+            <!ELEMENT alumno (nombre, apellidos?, direccion)>
+            <!ELEMENT nombre (#PCDATA)>
+            <!ELEMENT dirección (#PCDATA)>
+
+    Declaraciones de listas de atributos para los tipos de elementos
+        Para darle modificadores a los atributos, los mas destacados son:
+            
+            -Enumeración, es decir, el atributo solo puede tomar uno de los valores determinados dentro de un paréntesis y separados por el operador |.
+                <!ATTLIST fecha dia_semana (lunes|martes|miércoles|jueves|viernes|sábado|domingo) #REQUIRED>
+
+            -CDATA, se utiliza cuando el atributo es una cadena de texto.
+            -ID, permite declarar un atributo identificador en un elemento. Hay que recordar que este valor ha de ser único en el documento. Además hay que tener en cuenta que los números no son nombres válidos en XML, por tanto no son un identificador legal de XML. Para resolverlo suele incluirse un prefijo en los valores y separarlo con un guión o una letra.
+            -IDREF, permite hacer referencias a identificadores. En este caso el valor del atributo ha de corresponder con el de un identificador de un elemento existente en el documento.
+            -NMTOKEN, permite determinar que el valor de un atributo ha de ser una sola palabra compuesta por los caracteres permitidos por XML.
+
+        ¿También hemos de declarar si el valor de un atributo es obligatorio o no? Si, para ello se usan los siguientes modificadores:
+
+            #IMPLIED, determina que el atributo sobre el que se aplica es opcional.
+            #REQUIRED, determina que el atributo tiene carácter obligatorio.
+            #FIXED, permite definir un valor fijo para un atributo independientemente de que ese atributo se defina explícitamente en una instancia del elemento en el documento XML.
+            Literal, asigna a un atributo el valor dado por una cadena entre comillas.
+
+        EJEMPLO
+
+        Si se tiene la siguiente estructura en un documento XML
+
+            <alumno edad=15>
+                <nombre>Olga</nombre> 
+                <apellidos>Velarde Cobo</apellidos>
+                <dirección>El Percebe 13</dirección>
+            </alumno>
+
+        Un DTD que podría ajustarse sería:
+
+            <!ELEMENT alumno (nombre, apellidos, direccion)>
+            <!ATTLIST alumno edad CDATA #REQUIRED>
+            <!ELEMENT nombre (#PCDATA)>
+            <!ELEMENT apellidos (#PCDATA)>
+            <!ELEMENT dirección (#PCDATA)>
+
+    Declaraciones de identidades
+        las entidades nos permiten definir constantes en una docmento XML, se limitan mediante & y ;, por ejemplo, &identidades
+        Para definir una entidad en un DTD se una el elemento <!ENTITY>
+            INTERNAS
+                Pueden ser de 4 tipos:
+                    -&it: corresponde con el simbolo <
+                    -&gt: corresponde al simbolo >
+                    -&quot: Comillas rectas dobles "
+                    -&apos: Apostrofe '
+                    -&amp: ampersand &
+                Se puede definir una entidad diferente usando la siguente sintaxis
+                    <!ENTITY nombre_entidad "valor de la entidad">
+                    EJEMPLO
+                        <!ENTITY dtd "Definiciones de TIpo de Documento">
+            EXTERNAS
+                Permiten relacionar el documento XML y otro documento a traves de su URL
+                    <!ENTITY nombre_entidad SYSTEM "http://localhost/docsxml/fichero_entidad.xml">
+            DE PARAMETRO
+                Permiten dar nombres a partes de un DTD por si se usan en varias partes del documento
+                    <!ENTITY %direccion "calle, numero?, ciudad, cp">
+                    <!ENTITY alumno (dni, %direccion;)>
+                    <!ENTITY ies (nombre, %direccion;)>
+
+
+XML SCHEMA
+    

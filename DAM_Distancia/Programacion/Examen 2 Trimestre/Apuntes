@@ -1,0 +1,16 @@
+TEMA 6 - Estructuras de almacenamiento de la informacion
+
+1.- Introduccion a las estructuras de alamacenamiento
+    Las estructuras de almacenamiento se pueden clasificar de varias formas:
+        -Si pueden almacenar datos de un solo tipo:
+            . Almacenar datos del mismo tipo: como numeros, caracteres.. Estos serian los arrays, cadenas de caracteres, listas
+            . Almacenar datos de distinto tipo: numeros, fechas, cadenas... Estas serian las clases
+        -Si pueden cambiar su tamano de forma dinamica
+            .Estructuras que su tamano se establece al momento de su creacion: Arrays y matrices (arrays multidimensionales)
+            .Tamano variable (estructuras dinamicas): listas, conjuntos, cadenas de caracteres...
+        -Diferentes tipos de estructuras   
+            .Que no se ordenan de por si: arrays
+            .Ordenadas: 
+
+2.- Cadenas de caracteres
+    3

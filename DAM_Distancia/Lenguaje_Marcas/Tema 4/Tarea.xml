@@ -1,0 +1,137 @@
+<!--Esta tarea consta de dos ejercicios.
+
+1.- Una empresa utiliza ficheros XML para realizar el inventario, entre otras cosas, de impresoras. Para cada impresora se quiere guardar su número
+ de serie, marca, modelo, peso, tamaños de papel con los que puede trabajar, el cartucho que usa, el tipo, el año de compra y si está en red o no.
+
+Un ejemplo de estos ficheros sería:-->
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+    <xs:element name="impresoras">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="impresora" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="marca" type="xs:string"/>
+                            <xs:element name="modelo" type="xs:string"/>
+                            <xs:element name="peso">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:fractionDigits value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tamaño" type="xs:string" maxOccurs="unbounded"/>
+                            <xs:element name="cartucho">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="C-[0-9]{3}[A-Z]{1,2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </element>
+                            <xs:element name="enred" minOccurs="0"/>
+                        </xs:sequence>
+                        <xs:attribute name="numSerie" type="xs:string" use="required"/>
+                        <xs:attribute name="tipo" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="matricial"/>
+                                    <xs:enumeration value="láser"/>
+                                    <xs:enumeration value="tinta"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="compra" type="xs:positiveInteger" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<impresoras>
+  <impresora numSerie="i245" tipo="láser" compra="2010">
+    <marca>Epson</marca>
+      <modelo>EPL300</modelo>
+      <peso>4.52</peso>
+      <tamaño>A4</tamaño>
+      <tamaño>A5</tamaño>
+      <cartucho>C-123BV</cartucho>
+      <enred/>
+  </impresora>
+  <impresora numSerie="i246" tipo="matricial">
+    <marca>HP</marca>
+    <modelo>LaserJet 2410</modelo>
+    <peso>3.2</peso>
+    <tamaño>A4</tamaño>
+    <cartucho>C-456P</cartucho>
+  </impresora>
+</impresoras>
+
+<!--Escribe un XML Schema para estos ficheros, eligiendo los tipos de datos más apropiados y teniendo en cuenta que:
+
+    El peso es un número positivo y no puede tener más de dos decimales.
+    Puede haber más de un tamaño.
+    El atributo tipo sólo puede tomar los valores ‘matricial’, ‘láser’ y ‘tinta’. Es obligatorio.
+    El atributo numSerie es obligatorio y hace de identificador.
+    El cartucho está formado por una C mayúscula, un guión, tres números y una o dos letras mayúsculas.
+    Todos los elementos son obligatorios, menos enred.
+    El elemento enred es opcional. De estar presente, es un elemento vacío.
+    El atributo compra, opcional, guarda el año de compra. Es un número entero positivo.
+    En cada fichero hay datos para una o más impresoras.-->
+
+<!--2.-  Un asociación de jugadores de mus utiliza ficheros XML para almacenar la información de los torneos que organiza. Para cada torneo se quiere guardar el año 
+en que se realizó, el anterior ganador (su id) y la información de los participantes. De los participantes se quiere almacenar su identificador, el de su pareja, su 
+nombre completo, edad, país y también si es cabeza de serie o no.
+
+Un ejemplo de estos ficheros sería:-->
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+    <!DOCTYPE torneo [
+    <!ELEMENT torneo (participante+)> <!--Elemento torneo con minimo 1 participante obligatorio-->
+    <!ATTLIST torneo <!--Lista de atributos del elemento torneo-->
+            edicion CDATA #REQUIRED
+            anteriorGanador IDREF #REQUIRED> <!--El IDREF para poder hacer referencia al ID del ganador en el interno del documento-->
+    <!ELEMENT participante (nombre,edad,pais,cabezaDeSerie?)> <!--Elemento participante con todos sus campos obligatorios y cabezaDeSerie opcional-->
+    <!ATTLIST participante  <!--Lista de atributos del elemento participante, con su ID y IDEREF para hacer referencia al ID de la pareja en el documento interno-->
+            idP ID #REQUIRED
+            pareja IDREF #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>  <!-- Elemento nombre con PCDATA para caracteres-->
+    <!ELEMENT edad (#PCDATA)>   <!--elemento edad con PCDATA para caracteres-->
+    <!ELEMENT pais (#PCDATA)>   <!--elemento pais con PCDATA para caracteres-->
+    <!ELEMENT cabezaDeSerie EMPTY> <!--Elemento cabezaDeSerie con EMPTY porque no necesita tener contenido, con que aparezca en el participante es suficiente-->
+    ]>
+<torneo edicion="1998" anteriorGanador="j01">
+  <participante idP="j01" pareja="j02">
+    <nombre>Manuel Pérez</nombre>
+    <edad>23</edad>
+    <pais> España</pais>
+    <cabezaDeSerie/>
+  </participante>
+  <participante idP="j02" pareja="j01">
+    <nombre>Manuel Gómez</nombre>  
+    <edad>25</edad>
+    <pais>España</pais>
+  </participante>
+  <participante idP="j03" pareja="j04">
+    <nombre>Ana Puertas</nombre>
+    <edad>22</edad>
+    <pais> E5spaña</pais>
+    <cabezaDeSerie/>
+  </participante>
+  <participante idP="j04" pareja="j03">
+    <nombre>Paco Fraile</nombre>  
+    <edad>45</edad>
+    <pais>España</pais>
+  </participante>
+</torneo>
+
+<!--Escribe un DTD adecuado para estos ficheros, teniendo en cuenta que:
+
+    Todos los atributos son obligatorios.
+    El atributo idP hace de identificador.
+    El atributo pareja es el identificador de otro participante que forzosamente debe estar presente en el fichero.
+    El elemento cabezaDeSerie es opcional, los demás son obligatorios.
+    En cada fichero hay datos para un solo torneo.
+    El torneo tiene que tener participantes.-->
