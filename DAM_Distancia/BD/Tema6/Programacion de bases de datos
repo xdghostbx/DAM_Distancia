@@ -1,0 +1,87 @@
+PL/SQL es un lenguaje procedimental estructurado en bloques para ampliar la funcionalidad de sql
+Podemos usar sentencias sql para manipular datos y sentencias de control de flujo para procesar los datos
+Combina la potencia de los lenguajes procedimentales para procesar los datos
+
+2.1- Unidades Lexicas 1
+Se clasifican en    
+    Delimitadores
+    Identificadores
+    Literales
+    Comentarios
+
+
+    Delimitadores:
+        Representan operaciones entre tipos de datos, delimitar comentarios, etc 
+
+        Simples
+
+        + Suma
+        % indicador de atributo
+        . selector
+        / division
+        () delimitadores de lista
+        : variable host
+        , separador de elementos
+        * producto
+        " delimitador de identificador acotado
+        = igual relacional
+        <> menor, mayor
+        @ indicador de acceso remoto
+        ; terminador de sentencias
+        - resta
+
+
+        Dobles:
+
+        ** exponencial
+        <> distinto
+        != distinto
+        >= <=  menor/mayor igual
+        .. rango
+        || concatenacion
+        << >> delimitadores de etiquetas
+        --comentario de una linea
+        /**/ comentario de varias lineas
+        := asignacion
+        => selector de nombre de parametro
+
+
+    Identificadores
+        Se usan para nombrar elementos de nuestros programas
+            -Letra seguida de letras, numeros o $ _ #
+            -No se pueden usar palabras reservadas
+            -permite definir identificadores acotados con "" y un maximo de 30 caracteres
+            -Tiene IF, THEN, ELSE...
+
+    Literales
+        Se usan para asignar valores concretos a los identificadores que actuan como variables o constantes
+            -literales numericos se expresan por notacion decimal o exponencial
+            -literales de cadenas con comillas simples
+            -literales logicos son true y false
+            -literal NULL  indica la ausencia de valor
+
+    Comentarios
+
+
+2.2- Tipos de datos simples, variables y constantes
+
+    Numericos:
+        -BINARY_INTEGER
+        -NUMBER
+        -PLS_INTEGER
+
+    Alfanumericos:
+        -CHAR(n)
+        -LONG
+        -RAW
+        -LONG RAW
+        -VARCHAR2(n)
+    
+    Grandes Objetos:
+        -BFILE
+        -BLOB
+        -CLOB
+
+    Otros:
+        BOOLEAN TRUE/FALSE
+        DATE

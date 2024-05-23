@@ -1,0 +1,91 @@
+create or replace PROCEDURE CambiarAgentesFamilia(
+    id_FamiliaOrigen NUMBER,
+    id_FamiliaDestino NUMBER) IS
+        NumAgentesCambiados NUMBER; --contador para almacenar el num de agentes cambiados
+        NombreFamiliaOrigen familias.nombre%TYPE;
+        nombreFamiliaDestino familias.nombre%TYPE;
+        
+        FUNCTION existe(IdFamilia NUMBER) RETURN BOOLEAN IS --creo una funcion que verifica si existe el numero de familia introducido
+            conteo NUMBER;
+            
+        BEGIN
+           conteo := 0;
+           SELECT count(*) into conteo
+           FROM familias
+           WHERE idfamilia = identificador;
+           
+            IF (conteo = 0) THEN
+                RETURN FALSE;
+            ELSE
+                RETURN TRUE;
+            END IF;
+        END;    
+BEGIN
+    --Controlamos la excepcion en caso de familias iguales
+    IF (id_FamiliaOrigen = id_FamiliaDestino) THEN
+        RAISE_APPLICATION_ERROR(-20001,('Las familias no pueden ser iguales'));
+    END IF;    
+    
+    --Controlamos la excepcion de que la familia ya existe con la funcion "Existe"
+    IF NOT existe (id_FamiliaOrigen) THEN
+        RAISE_APPLICATION_ERROR(-20002,('La familia '||id_FamiliaOrigen||' no no existe'));
+    END IF;    
+    IF NOT existe (id_FamiliaDestino) THEN
+        RAISE_APPLICATION_ERROR(-20003,('La familia '||id_FamiliaDestino||' no no existe'));
+    END IF;
+    
+    
+    SELECT count(*) INTO NumAgentesCambiados
+    FROM familias
+    WHERE identificador = id_familiaOrigen;
+    
+    IF (NumAgentesCambiados > 0) THEN
+        UPDATE agentes SET familia = id_FamiliaDestino 
+        WHERE familia = id_FamiliaOrigen;
+
+        SELECT nombre into NombreFamiliaOrigen
+        FROM familias
+        WHERE identificador = id_FamiliaOrigen;
+        
+        SELECT nombre into NombreFamiliaDestino
+        FROM familias
+        WHERE identificador = id_FamiliaDestino;
+        
+        DBMS_OUTPUT.PUT_LINE(' Se han trasladado '||NumAgentesCambiados||'  agentes de la familia  '|| NombreFamiliaOrigen || ' a la familia '||  NombreFamiliaDestino);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(' La familia  '|| NombreFamiliaOrigen || ' no tiene agentes asociados');    
+    END IF;    
+END CambiarAgentesFamilia;
+/
+
+ Execute CambiarAgentesFamilia(11111,1111);
+
+/
+numero2 := numero -1;
+for i in 2..numero2 loop
+    if MOD(numero2,i) = 0 THEN
+        'no es primo'
+        exit;
+    ELSE    
+        'es primo'
+    end if;
+end loop;
+
+
+
+
+ @FXML
+  private void visible1(ActionEvent event) {
+    tabla_dinamica.setVisible(true);
+    tabla_dinamica1.setVisible(false);
+    tf_id.setVisible(true);
+    tf_mat.setVisible(false);
+  }
+
+  @FXML
+  private void visible2(ActionEvent event) {
+    tabla_dinamica.setVisible(false);
+    tabla_dinamica1.setVisible(true);
+    tf_id.setVisible(false);
+    tf_mat.setVisible(true);
+  }

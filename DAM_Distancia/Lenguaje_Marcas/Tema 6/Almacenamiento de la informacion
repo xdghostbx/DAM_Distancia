@@ -1,0 +1,69 @@
+XML se usa para guardar y comunicar informacion sobre objetos
+Podemos pensar XML como una base de datos XML, cada documento XML representa un registro de la base de datos
+
+Pueden ser agrupados en 2 categorias generales
+    Sistemas centrados en los datos: Cuando los XML tienen una estructura bien definida y continen datos que pueden ser actualizados y usados dediversos modos
+    Sistemas centrados en los documentos: Cuando los documentos tienen a ser mas impredecibles en tamaño y contenido. Presentan mas tipos de datos
+
+
+XML permite integrar sistemas de informacion
+    Basados en documentos (ficheros) con estructura irregular, usan tipos de datos simples y dan importancia al orden
+    Basados en informacion estructurada (bases de datos relacionales) relativamente planos, usan datos complejos y poca importancia al orden
+
+    Semejanzas entre una BBDD y XML 
+    XML usa uno o mas documentos para almacenar la informacion
+    define esquemas sobre la informacion
+    Lenguaje de consulta para devolver la informacion especifica
+    Dispone de API
+
+Las bases de datos relacionales se basan en las relaciones (tablas bidimensionales) como medio para representar los datos, se asocian al lenguaje SQL
+
+Componentes edl estandar de Orientacion a Objetos:
+    Modelo de objetos
+    Lenguajes de especificacion de objetos (para definir los objetos)
+    Lenguajes de consulta de objetos
+
+
+
+
+XQuery
+es un lenguaje diseñado para escribir consultas sobre colecciones de datos expresadas en XML
+Se puede decir que XQuery es a XML lo mismo que SQL es a la BD relacionales
+Requerimientos tecnicos de XQuery   
+    Lenguaje declarativo
+    Independiente del proceso de acceso (que debe ser igual en local que consultar un servidor de bases de datos o un xml en web)
+    Consultas y resultados deben respetar el modelo XML
+    Consultas y resultados tienen que tener sorporte pra namespaces
+    Debe sorportar XML-Schemas y DTD y ser capaz de trabajar sin ellos
+    Independiente a la estructura del documento
+    Debe sorportar tipos simplos, enteros, cadenas t tipos complejos
+    Las consultas deben soportar cuantificadores universales y existenciales
+    Las consusltas deben soportar operaciones sobre jerarquias de nodos y secuencias de nodos
+    Debe ser posible combinar informacion de multiples fuentes
+    Las consultas deben ser capaces de manipular los datos independientemente del origen
+    El lenguajes de consulta debe ser independiente de la sintaxis
+
+Aplicaiones
+    Se resumen en 3
+        -Recuperar informacion a partir de conjuntos de datos XML 
+        -Transformar estructuras de daots XML en otras estructuras que organizan las info de forma diferente
+
+
+Expresiones XQuery
+
+    (: comentario :)
+    { expresion evaluada }
+    condicionales tipo if-then-else     
+    FLWOR -> equivalen a Select from where group by having order by y limit de SQL
+    En una sentencia FLWOR debe existir por lo menos una clausula FLOR o LET
+
+    Una cosulta esta formada por 2 partes: 
+        Prologo: donde se declaran los espacios de nombres, funciones, variables
+        Expresion: la consulta propiamente dicha
+
+    Clausulas:
+        FOR asocia una o mas variables con cada nodo que encuentre en la coleccion de datos
+        LET vincula variabels al resultado de una expresion
+        WHERE filtra tuplas quedando con aquellas que cumplan la condicionales
+        ORDER BY ordena las tuplas despues de que hayan sido filtradas
+        RETURN contruye el resultado de la consulta

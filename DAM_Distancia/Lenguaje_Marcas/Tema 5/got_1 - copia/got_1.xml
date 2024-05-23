@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="plantilla.xsl" type="text/xsl"?> 
+<gameOfThrones>
+    <season number="1">
+        <characters>
+            <character>
+                <name>Eddard Stark</name>
+                <house>Stark</house>
+                <title>Warden of the North</title>
+                <img>https://upload.wikimedia.org/wikipedia/en/5/52/Ned_Stark-Sean_Bean.jpg</img>
+            </character>
+            <character>
+                <name>Catelyn Stark</name>
+                <house>Stark</house>
+                <title>Lady of Winterfell</title>
+                <img>https://upload.wikimedia.org/wikipedia/en/3/3c/Michelle_Fairley_Cat_Stark_in_the_Vale.png</img>
+            </character>
+            <character>
+                <name>Jon Snow</name>
+                <house>Stark</house>
+                <title>Lord Commander of the Night's Watch</title>
+               <img>https://hips.hearstapps.com/hmg-prod/images/jon-snow-1655450297.jpg</img>
+            </character>
+            <character>
+                <name>Daenerys Targaryen</name>
+                <house>Targaryen</house>
+                <title>Khaleesi of the Great Grass Sea</title>
+               <img>https://s2.abcstatics.com/media/play/2019/05/04/daenerys-juego-tronos-kAeE--1248x698@abc.jpg</img>
+           </character>
+            <character>
+                <name>Tyrion Lannister</name>
+                <house>Lannister</house>
+                <title>Hand of the King</title>
+                <img>https://upload.wikimedia.org/wikipedia/en/5/50/Tyrion_Lannister-Peter_Dinklage.jpg</img>
+            </character>
+            <character>
+                <name>Cersei Lannister</name>
+                <house>Lannister</house>
+                <title>Queen of the Seven Kingdoms</title>
+                <img>https://static.wikia.nocookie.net/gameofthrones/images/b/b0/CERSEIBATTLEOFKINGSLANDING.PNG</img>
+            </character>
+           
+        </characters>
+    </season>
+</gameOfThrones>

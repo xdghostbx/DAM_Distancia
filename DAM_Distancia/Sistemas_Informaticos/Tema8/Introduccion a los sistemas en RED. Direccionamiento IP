@@ -1,0 +1,80 @@
+1. REDES. CARACTERISTICAS Y CLASIFICACION
+    Se define como red informatica como dos o mas dispositivos conectados para compartit componentes de su red y la informacion que pueda 
+    almacenarse entre todos ellos
+
+    Redes de Ordenadores. Ventajas
+        -Posibilidad de compartir recursos
+        -Posibilidad de compartir informacion
+        -Posibilidad de colaboracion
+        -Facilita la gestion centralizada
+        -Reduce costes
+
+    TTipos de Redes
+    Por alcance o extension: 
+        -Redes de area local (LAN)
+        -Redes de area metropolitana (MAN)
+        -Redes de area amplia (WAN)
+    Segun la funcionalidad de sus componentes   
+        -Redes de igual a igual o entre iguales
+        -redes cliente-servidor
+    Segun el tipo de conexion
+        -Redes cableadas
+        -Redes inálambricas
+    Segun el grado de difusion
+        -Internet
+        -Intranet
+
+2- Arquitectura de la red. Modelos OSI y TCP/IP
+
+    Cuando se habla de arquitectura de red se refiere a como está construida la red, con el hardware y software usado
+        Hardware: cables, equipos, conexiones
+        Protocolos, que marcan la forma de comunicarse entre dos dispositivos fisicos
+
+        La arquitectura de red tiene en cuenta 3 factores importantes
+            -Topologia: La forma de como se detectan los nodos
+            -Metodo de acceso: Medio usado para la trasmision de datos, cable o aire 
+
+        La arquitectura de red se divide en niveles o capas. La idea del modelo de capas en la arquitectura de red es
+        como organizar diferentes tareas en una fábrica donde cada piso hace un trabajo específico que ayuda a construir
+        un producto final, en este caso, la entrega de datos de un dispositivo a otro.
+
+            MODELO OSI: agrupa los procesos de comunicacion en 7 capas. Es una referencia para desarrollar arquitecturas de red
+                Capa 1, capa fisica. Se encarga de la transmisión y recepción real de los datos sin procesar a través del medio físico
+                Capa 2, capa de enlace de datos. Esta capa forma los datos en "frames" y maneja la transferencia de datos entre sistemas 
+                    que están físicamente conectados. Gestiona errores y controla quién tiene acceso al medio en cualquier momento.
+                Capa 3, capa de red.  Responsable de la transferencia de datos entre diferentes redes. Utiliza direcciones lógicas (como las IP)
+                    para enviar paquetes desde el origen hasta el destino, incluso a través de múltiples enlaces.
+                Capa 4, capa de transporte. Garantiza la entrega completa y segura de datos entre puntos finales. Controla el flujo y retransmite datos si hay errores.
+                Capa 5, capa de sesion. Administra sesiones entre aplicaciones, es decir, puede establecer, manejar y terminar sesiones entre dos puntos finales.
+                Capa 6, capa de presentacion. Traduce los datos entre el formato que usa la red y el formato que entienden las aplicaciones
+                Capa 7, capa de aplicacion. Es la capa más cercana a los usuarios. Proporciona servicios de red a las aplicaciones del usuario, como correo electrónico, 
+                    transferencia de archivos y conexión de base de datos
+
+                Las capas 1,2 y 3 estan relacionadas con el hardware
+                Las capas 5,6 y 7 estan relacionadas con el software
+                La capa 4 es una capa intermedia
+
+
+            MODELO TCP/IP:  es la arquitectura de redes más utilizada. Es la base de las comunicaciones de Internet y de los sistemas operativos modernos.
+                Nos estamos refiriendo a un conjunto de reglas generales de diseño e implementación de protocolos de red, que permiten la comunicación de los ordenadores.
+
+                La arquitectura TCP/IP está compuesta de cuatro capas o niveles que son:
+
+                    Capa de Enlace de Red: Esta capa se encarga de la conexión física entre dispositivos en una red local. Incluye todo lo necesario para que 
+                        los dispositivos puedan comunicarse entre sí a un nivel muy básico, usando cables o Wi-Fi.
+                    Capa de Internet: Es el corazón del modelo TCP/IP. Su tarea principal es hacer posible el envío de datos entre redes diferentes. Utiliza 
+                        el Protocolo de Internet (IP) para encontrar la mejor ruta para que los datos viajen desde el origen hasta el destino.
+                    Capa de Transporte: Se asegura de que los datos se envíen de manera segura y eficiente. Utiliza principalmente dos protocolos: TCP, que es 
+                        seguro y se asegura de que todos los datos lleguen correctamente, y UDP, que es más rápido pero menos confiable.
+                    Capa de Aplicación: Esta capa contiene todos los protocolos que permiten a los usuarios interactuar con la red. Algunos ejemplos incluyen 
+                        HTTP para las páginas web, FTP para la transferencia de archivos y SMTP para el correo electrónico.
+
+
+3. Tipologias de red y modos de conexion
+    Topologias de red
+        Desde el punto de vista fisico se considera la forma en la que están conectados los ordenadores en la red. 
+        Las principales son bus, anillo y estrella
+
+        Desde el punto de vista logico, nos muestra el uso de red, nobre de los ordenadores, direciones de red
+
+            En bus: usa un unico cable troncal con terminaciones en los extremos, los ordenadores se conectan directamente e la red troncal

@@ -1,0 +1,140 @@
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Aplicación Web MatchAI</title>
+				<link rel="stylesheet" href="css/style.css">
+				</head>
+				<body>
+              <!-- ************************************************************************************************ -->
+                <!-- BLOQUE 1: CABECERA de la web 3 PUNTOS EN TOTAL. Datos Header (2.5 PUNTOS) + Nav (0.5 PUNTOS)  -->
+                <!-- ************************************************************************************************ -->
+                
+                <!-- BLOQUE 1 PARTE 1 (2.5 PUNTO) DATOS GENERALES DEL PROGRAMA-->
+					<header id="inicio">
+
+						<h1>
+              <!--DATOS XML: INFORMACIÓN del programa nombre, titulo, imagen -->
+              MatchAI: Corazones Digitales
+            </h1>
+
+						<p>
+              <!--DATO XML: titulo -->
+              Descubre con quien te emprareja la inteligencia artificial. Un programa para descrubir los matchs entre tus deseos y la biografía de los demás concursantes.
+            </p>
+
+
+						<div class="header-images">
+
+              <!--DATO XML: logo (imagen) de la cabecera -->
+							<img src="./img/logo.webp" alt="Logo del programa MatchAI: Corazones Digitales">
+						
+            </div>
+
+
+            <!-- BLOQUE 1 PARTE 2 (0.5 PUNTO)  MENU SELECT DE CANDIDATOS A SELECCIONAR -->
+
+            <!--HTML NAV: menú de navegación con un formulario de selección de candidatos -->
+
+							<nav>
+                        Candidatos
+								<form id="candidateForm">
+									<select name="selectedId" id="candidateSelector">
+										<option value="">Selecciona el Candidato</option>
+                    
+                    <!--DATO XML: 
+                                     Listamos todos los Candidatos ordenados  de la A a la Z. 
+                                     El candidato seleccionado por defecto será David Fernández con el id DF05
+                                     recuerda que en HTML para que una opción de un select esté seleccionada por defecto
+                                     puedes optar por el estandar del atributo selected="selected"
+                                     <option value="" selected="selected">Opción 1</option>
+                                     o puedes optar por añadir el atributo selected al opt
+                                     <option value="" selected>Opción Seleccionada</option>
+                                -->                   
+										<option value="AP01">Antonio Pérez</option>
+										<option value="DF05" selected>David Fernández</option>
+										<option value="LR07">Laura Rodríguez</option>
+										<option value="ML03">María López</option>
+										<option value="PB04">Pedro Benito</option>
+										<option value="SM06">Sandra Martínez</option>
+
+									</select>
+									<br>
+										<button type="button"> Buscar Perfil Candidato</button>
+									</form>
+								</nav>
+							</header>
+
+
+                <!-- ************************************************************************************************ -->
+                <!-- BLOQUE 2: CARDS (3 puntos) SECTION DATOS y LISTA (2.5 PUNTOS) + CARD (0.5 PUNTOS)-->
+                <!-- ************************************************************************************************ -->
+                
+                 
+               <!-- BLOQUE 2 PARTE 1 (2.5 PUNTO) LISTA DE ETIQUETAS DEL CANDIDATO DF05-->
+
+							<section class="contenedor-80">
+								<h1>Candidato Seleccionado: 
+                        
+               
+                <!--DATO XML: id del candidato, David Fernández id DF05  -->       
+                        DF05
+                </h1>
+							</section>
+
+                <!--HTML: creamos el contenido principal  -->          
+              <main id="candidatos" class="contenedor-80">
+								<div>
+                <!--HTML: creamos una lista desordenada -->  
+									<ul>CARACTERÍSTICAS QUE VALORA
+                            
+                     <!--DATO XML: Extraemos sus etiquetas -->          
+										<li>tranquilidad</li>
+										<li>literatura clásica</li>
+										<li>introspección</li>
+										<li>música</li>
+										<li>compasión</li>
+										<li>alegría</li>
+										<li>animalista</li>
+										<li>viajar</li>
+										<li>videojuegos</li>
+
+									</ul>
+								</div>
+
+
+               <!-- BLOQUE 2 PARTE 2 (0.5 PUNTO)  LA CARD DEL CANDIDATO -->
+
+
+              <!--DATO XML:  Entre todos los candidatos del xml accedemos solo a los datos de David Fernández DF05  -->
+
+              
+              <!--HTML creamos la card-->
+								<div class="card">
+
+                  <!-- DATO XML: incluimos su edad -->
+									<h3>EDAD: 18</h3>
+
+                  <!-- HTML icono por defecto --> 
+									<i class="fa fa-heart"></i>
+
+                  <!-- HTML card imagen --> 
+									<div class="card-image">
+
+                  <!-- DATO XML: imagen del candidato --> 
+										<img src="./img/david.png" alt="David Fernández">
+									</div>
+
+
+										<div class="text">
+
+                      <!--DATO XML:  nombre, profesion ,bio-->
+											<h2>David Fernández</h2>
+											<h4>Alumno</h4>
+											<p>David Fernández es un alma introspectiva con un amor profundo por los videojuegos de estrategia y la música de orquesta. A menudo se encuentra en la biblioteca, escapando de sus acosadores mediante novelas de ciencia ficción. Desprecia las multitudes y los deportes ruidosos. Anhela encontrar a alguien que valore el silencio tanto como él y que pueda entender el poder de un buen libro o una sinfonía tranquila.
+  Viaja frecuentemente para escuchar conferencias de literatura, se considera viajero y sueña con trabajar y ser un gran empresario.</p>
+										</div>
+									</div>
+								</main>
+							</body>
+						</html>

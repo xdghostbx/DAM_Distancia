@@ -1,0 +1,205 @@
+1- Configuracion de red en Windows
+Administrar una red consiste en aplicar una serie de tecnicas que la mantengan siempre operativas, de forma optica y segura, para gestionar el usos
+eficiente de sus recursos y garantizar la calidad de los servicios que ofrece
+
+1.1 - Introduccion
+    Grupo de Trabajo y Dominio
+        Un grupo de trabajo son los pc que aparecen en el mismo grupo cuando se exploran en Mis sitios de Red o en Red. La administracion 
+        de cada PC es local e independiente
+    Dominio
+        1 ordenador principal servidor al que se le instala un controlador de dominio y el resto de los equipos se conectan a ese dominio
+        Las cuentas de usuario se crean en el dominio y se puede iniciar sesion en cualquer equipo
+
+        En el controlador de dominio se centraliza las cuentas de usuarios, grupos, equipos, directivas de seguridad, recursos compartidos
+
+
+2 - Compartir recursos en red
+Los recursos compartidos en red son carpetas, ficheros y dispositvos 
+que se encuentran en un equipo pero que de alguna forma se ponen a disposicion
+de todos los que se conencten a el a traves de una red o a disposicon de 
+algunos de ellos
+
+Para hacer un recurso compartido hay que ponerlo accesible a traves de la red.
+Una vez hecho esto, los usuarios que tengan los permisos adecuados pueden acceder 
+a su contenido (o usarlo de forma remota si es un dispositovo, como una impresora)
+
+2.1 - Solapa Compartir
+El menu contextual de la carpeta tenemos las solapas compartir y seguridad
+La UD 4 vimos la pesataña seguridad que eran los permisos NTFS
+Aqui veremos la pestaña compartir, que configura los permisos cuando accedemos
+a un equipo desde la red
+
+Particularidades:
+    Se pueden compartir carpetas e impresoras. No se pueden Compartir archivos
+    de forma individual. Se conoce como recuerso a la carpeta o impresora compartida
+
+    Al compartir un recurso, se le puede poner un nombre distinto al original
+
+    Una carpeta compartida tiene un icono de una mano que sujeta la carpeta (en
+    el explorador de windows)
+
+    Al compartir una carpeta, se le concede permiso de lectura al grupo "Todos"
+    de forma predeterminada
+
+    Una carpeta compartida no se puede mover. Si se mueve, se deja de compartir
+
+    Un recurso tiene una ruta UNC, formada por \\NombreEquipo\NombreRecurso
+
+    Se puede ocultar un recurso, para ello, se añade un $ al final del nombre
+    De esta forma no aparece en el explorador pero si se puede acceder a el si 
+    se tiene la ruta UNC
+
+    Limite de usuarios: indica el numero de usuarios simultaneas a la carpeta
+    compartida, por defecto son 20 (maximo permitido en w10)
+
+Tipos de permisos al compartir:
+Lectura, cambio y control total
+
+    Lectura:
+        Ver nombres de archivos y subcarpetas
+        Recorrer subcarpetas
+        Ver datos del archivos
+        Ejecutar archivos de programas
+
+    cambio:
+        Todos los permisos de lectura
+        Agregar archivos y subcarpetas 
+        Cambiar datos en archivos
+        Eliminar subcarpetas y archivos
+    
+    Control total:
+        Todos los permisos de lectura y cambio
+        Cambiar permisos de archivos y subcarpetas
+        Tomar posesion
+
+
+Al conectarse de forma local en NTFS, el usuario tendra la combinacion de los 
+permisos más restictivos de ambos
+PE:
+Un usuario tiene en un recurso el permiso de cambio, y de forma local tiene el 
+permiso lectura. ¿Qué permiso tiene el usuario cuando acceda desde la red?
+Respuesta: El usuario solo tendrá lectura.
+
+Como recomendacion  
+        Administrar toda la seguridad con permisos NTFS a nivel local 
+        Compartir el recurso a todos los usuarios y con control total
+    De esta forma, no tenemos conflicto al compartir y podemos modificar
+    los permisos a nivel local
+
+
+
+
+3- Servicios de redes
+Gracias a ellos los diferentes ordenadores pueden comunicarse
+
+3.1- Arquitectura de cliente servidor
+
+La arquitectura cliente servidor es un modelo de aplicacion distribuida
+en el que las tareas se reparten entre los proveedores de recursos
+conocidos como servidores, los solicitantes de estos son los clientes.
+Un cliente realiza peticiones y el servidor atiene las peticiones
+
+Todos los equipos conectados a una red tinen una direccion IP
+
+    PUERTOS
+        El numero de puertos se codifica en 16 bits
+        2^16 = 65536 puertos disponibles
+
+        Del 0 al 1023: puertos reservados para servidores
+        Del 1024 al 49151: puertos registrados por los programadores
+        Del 49152 al 65535: puertos dinamicos, para comunicaciones muy cortas
+
+        Lista de puertos más importantes
+        20: FTP
+        21: FTP
+        23: Telnet
+        25: SMTP
+        53: DNS
+        80: HTTP
+        110: POP3
+        143: IMAP 
+        119: NNTP
+
+    MONITORIZACION DE Red
+        Si la velocidad de navegacion se reduce es necesario averiguar el
+        motivo. La solucion es incrementar el control sobre la red usando
+        herramientas de analisis de red
+
+        La monitorizacion es mantenimiento preventivo
+        Algunas de las herramientas mas conocidas
+            WIRESHARK
+                analiazdor de protocolos
+                Permite ver todo el trafico
+                software libre
+            NMAP
+                codigo abierto de rastreo de puertos
+            NAGIOS
+                software libre para linux
+
+        Estas herramienas dan informacion sobre 
+            Numero de equipos conectados   
+            Tipo de trafico predominante
+            Puertos abiertos
+            Conexiones establecidas
+            Inventario de los equipos en red
+
+3.2 Servicios de infraestructura de red
+
+    Encaminamiento : permite al servidor actuar como router para permitir
+    la comunicacion entre 2 o mas redes
+    Servidor DHCP : Permite asignar direcciones IP a los equipos
+        Protocolo de configuracion de equipo dinamica, proporciona a los clientes
+            -direccion ip
+            -mascara de red
+            -puerta de enlace
+            -direccion de ip del servidor DNS
+        Incluye los metodos de asignacion IP
+            -Asignacion dinamica: Asigna direcciones ip libres en un rango establecido por el admin
+            -Reserva por direccion IP: Asigna una direccion ip a un equipo especifico, a traves de la MAC
+    que se conectan a la red de forma automatica
+    DNS : facilita la navegacion web, traduce las direcciones web en direcion ip
+
+
+3.3 Servicio TFP (protocolo de transferencia de ficheros)
+
+Para el intercambio de ficheros existen 2 opciones, a traves de servidores o a traves de FTP
+Un servidor de archivos nos permite compartir recursos a nivel local, pero el FTP nos permite conectar un equipo
+y transferir ficheros a traves de una red
+Este protocolo establece una doble conexion TCP
+    -Conexion de control: suele ser en el puerto 21 y se usa para idicarle a este las operaciones que ha de llevar a cabo
+    -Conexion de datos: suele ser el puerto 20 y se usa para la tranferencia de archivos
+Cuando un cliente FTP se quiere conectar al servidor FTP existen 2 tipos de autenticacion
+    -Anonimo: la comunicacion se realizara sin ningun tipo de identificacion y con muy pocos privilegios de servidor
+        El usuario esta confinado en un directorio publico donde puede descargar ficheros pero sin posibilidad de escribir o modificar ficheros
+        Este directorio publico suele llamarse pub
+    -Acceso autorizado: el usuario se identifica y se le conceden privilegios de servidor. El usuario tiene su directorio predeterminado y si la politica lo
+        permite, puede escribir
+
+Los servidores FTP mas usados son IIS o Filezilla
+Clintes FTP son Filecilla y los propios navegadores web
+
+3.4 Servicio WEB. Protocolo HTTP (protocolo de transferencia de hipertexto)
+
+Los servidores web mas conocidos son
+    Apache, NGINX y ISS
+
+Los clintes web son los navegadores
+
+3.5 Servicio de correo electronico
+    Es un servicio para la transferencia de mensajes
+    Servidor de correo
+        Consta de los siguientes componentes
+            -Servidor de correo saliente: Cliente a servidor, servidor a destinatario. Protocolo SMTP
+            -Servidor de correo entrante: Almacena los correos electronicos. Protocolo POP e IMAP
+    Clientes de correo
+        Los de toda la vida online o descargados en el equipo
+
+3.6 Acceso remoto
+    Los servicios de acceso remoto permiten controlar y administrar otro equipo a traves de la red
+    Para hacer esto hace falta descargar software que lo permita
+    -Acceso remoto terminal: 
+    -Acceso remoto en modo grafico
+
+4. Comandos de red
+
+    

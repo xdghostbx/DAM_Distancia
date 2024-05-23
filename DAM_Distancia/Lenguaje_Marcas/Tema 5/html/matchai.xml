@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="matchai.xsl" type="text/xsl"?>
+<citas_tv>
+  <programa>
+    <nombre>MatchAI: Corazones Digitales</nombre>
+    <titulo>Descubre con quien te emprareja la inteligencia artificial. Un programa para descrubir
+      los matchs entre tus deseos y la biografía de los demás concursantes.</titulo>
+    <imagen>./img/logo.webp</imagen>
+    <fecha_emision>2024-06-15</fecha_emision>
+  </programa>
+  <candidatos>
+    <candidato id="AP01" tipo="separado">
+      <nombre>Antonio Pérez</nombre>
+      <edad>35</edad>
+      <profesion>Profesor de Matemáticas</profesion>
+      <imagen>./img/antonio.png</imagen>
+      <bio>Antonio disfruta los desafíos intelectuales y el silencio de las bibliotecas, pero
+        desprecia las reuniones sociales bulliciosas y la falta de puntualidad.Viste de manera
+        implecable pero moderno, es meticuloso, organizado </bio>
+      <motivacion>Busca una pareja que lo haga sentir importante</motivacion>
+      <votos>145</votos>
+      <desea_pareja>
+        <etiqueta>inteligente</etiqueta>
+        <etiqueta>introvertido</etiqueta>
+        <etiqueta>puntual</etiqueta>
+        <etiqueta>deportista</etiqueta>
+        <etiqueta>activo</etiqueta>
+      </desea_pareja>
+    </candidato>
+    <candidato id="ML03" tipo="divorciada">
+      <nombre>María López</nombre>
+      <edad>28</edad>
+      <profesion>Profesora de Literatura</profesion>
+      <imagen>./img/maria.png</imagen>
+      <bio>María es amante de la poesía, los cafés tranquilos y las discusiones filosóficas, evita
+        la superficialidad y los centros comerciales ruidosos.
+        Disfruta de actividades al aire libre en solitario, como senderismo, lo que la hace
+        deportista y activa.</bio>
+      <motivacion>Busca una pareja que la haga sentir segura</motivacion>
+      <votos>165</votos>
+      <desea_pareja>
+        <etiqueta>inteligente</etiqueta>
+        <etiqueta>reflexivo</etiqueta>
+        <etiqueta>calmado</etiqueta>
+        <etiqueta>trabajador</etiqueta>
+        <etiqueta>viajero</etiqueta>
+      </desea_pareja>
+    </candidato>
+    <candidato id="LR07" tipo="pareja">
+      <nombre>Laura Rodríguez</nombre>
+      <edad>45</edad>
+      <profesion>Profesora de Inglés</profesion>
+      <imagen>./img/laura2.png</imagen>
+      <bio>Laura Rodríguez, con su contagiosa risa y energía inagotable, es el alma de todas las
+        fiestas. Además de ser una apasionada de los idiomas, disfruta organizando picnics
+        literarios y maratones de series de comedia británica. Sin embargo, detesta los spoilers y
+        la comida picante. Actualmente mantiene una relación formal con Juan García, pero busca ese
+        alguien especial que realmente entienda el arte de hacer reír.
+        Aficcionada a las bandas musicales, amante de la literatura y de la música.</bio>
+      <motivacion>Busca una pareja que la haga sentir querida</motivacion>
+      <votos>68</votos>
+      <desea_pareja>
+        <etiqueta>humorístico</etiqueta>
+        <etiqueta>extrovertido</etiqueta>
+        <etiqueta>cultural</etiqueta>
+        <etiqueta>sociable</etiqueta>
+        <etiqueta>amante de los idiomas</etiqueta>
+      </desea_pareja>
+    </candidato>
+    <candidato id="PB04" tipo="divorciado">
+      <nombre>Pedro Benito</nombre>
+      <edad>60</edad>
+      <profesion>Conserje</profesion>
+      <imagen>./img/pedro.png</imagen>
+      <bio>Pedro Benito, conocido por su amabilidad y su habilidad para arreglar cualquier problema
+        mecánico, tiene una debilidad secreta por los juegos de azar. Aunque le encanta coleccionar
+        llaveros y ver antiguas películas de acción, su pasión por el póker a veces lo lleva a
+        situaciones comprometidas. Busca una compañera que no solo comparta su amor por las
+        películas de Clint Eastwood, sino que también le ofrezca estabilidad y protección contra sus
+        propios excesos.
+        Pedro es sociable, extrovertido y tiene un gran sentido del humor</bio>
+      <motivacion>Busca una pareja que lo haga sentir protegido</motivacion>
+      <votos>71</votos>
+      <desea_pareja>
+        <etiqueta>estable</etiqueta>
+        <etiqueta>amante del cine clásico</etiqueta>
+        <etiqueta>coleccionista</etiqueta>
+        <etiqueta>protectora</etiqueta>
+        <etiqueta>comprensiva</etiqueta>
+      </desea_pareja>
+    </candidato>
+    <candidato id="DF05" tipo="soltero">
+      <nombre>David Fernández</nombre>
+      <edad>18</edad>
+      <profesion>Alumno</profesion>
+      <imagen>./img/david.png</imagen>
+      <bio>David Fernández es un alma introspectiva con un amor profundo por los videojuegos de
+        estrategia y la música de orquesta. A menudo se encuentra en la biblioteca, escapando de sus
+        acosadores mediante novelas de ciencia ficción. Desprecia las multitudes y los deportes
+        ruidosos. Anhela encontrar a alguien que valore el silencio tanto como él y que pueda
+        entender el poder de un buen libro o una sinfonía tranquila.
+        Viaja frecuentemente para escuchar conferencias de literatura, se considera viajero y sueña
+        con trabajar y ser un gran empresario.</bio>
+      <motivacion>Busca una pareja que lo haga sentir aceptado</motivacion>
+      <votos>124</votos>
+      <desea_pareja>
+        <etiqueta>tranquilidad</etiqueta>
+        <etiqueta>literatura clásica</etiqueta>
+        <etiqueta>introspección</etiqueta>
+        <etiqueta>música</etiqueta>
+        <etiqueta>compasión</etiqueta>
+        <etiqueta>alegría</etiqueta>
+        <etiqueta>animalista</etiqueta>
+        <etiqueta>viajar</etiqueta>
+        <etiqueta>videojuegos</etiqueta>
+      </desea_pareja>
+    </candidato>
+    <candidato id="SM06" tipo="soltera">
+      <nombre>Sandra Martínez</nombre>
+      <edad>19</edad>
+      <profesion>Alumna</profesion>
+      <imagen>./img/sandra.png</imagen>
+      <bio>Sandra Martínez, radiante y siempre en el centro de atención, domina tanto las redes
+        sociales como las pistas de baile. Su amor por los festivales de música y las tendencias de
+        moda es sólo superado por su aversión a la desorganización y la impuntualidad. Ella busca a
+        alguien que no sólo admire su estilo, sino que también le brinde la seguridad y el respaldo
+        para seguir brillando en su camino hacia el estrellato.
+        Coleccionista de vestidos vintage y revistas de moda, amante del cine clásico,
+        coleccionista.</bio>
+      <motivacion>Busca una pareja que la haga sentir segura</motivacion>
+      <votos>87</votos>
+      <desea_pareja>
+        <etiqueta>moderno</etiqueta>
+        <etiqueta>seguro</etiqueta>
+        <etiqueta>social</etiqueta>
+        <etiqueta>fashionista</etiqueta>
+        <etiqueta>organizado</etiqueta>
+        <etiqueta>oriente</etiqueta>
+      </desea_pareja>
+    </candidato>
+  </candidatos>
+</citas_tv>
+  

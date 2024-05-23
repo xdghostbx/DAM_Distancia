@@ -1,0 +1,7 @@
+1,Juan Pérez,12345678A
+2,María García,98765432B
+3,Pedro López,56789012C
+4,Laura Martínez,45678901D
+5,Carlos Rodríguez,23456789E
+6,Ana Sánchez,34567890F
+2,María García,98765432B

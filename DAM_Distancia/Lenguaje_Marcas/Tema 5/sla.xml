@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="plantilla.xsl" type="text/xsl"?> 
+<stormlightArchive>
+    <book number="1">
+        <characters>
+            <character>
+                <name>Dalinar Kholin</name>
+                <house>Kholin</house>
+                <title>Blackthorn</title>
+                <img>https://static.wikia.nocookie.net/stormlightarchive/images/c/ca/Dalinar_Kholin.jpg</img>
+            </character>
+            <character>
+                <name>Kaladin</name>
+                <house>-</house>
+                <title>Stormblessed</title>
+                <img>https://static.wikia.nocookie.net/stormlightarchive/images/6/64/LighteyedKaladin.jpg</img>
+            </character>
+            <character>
+                <name>Shallan Davar</name>
+                <house>Davar</house>
+                <title>Brightness</title>
+               <img>https://static.wikia.nocookie.net/stormlightarchive/images/c/c7/SbC_CS.jpg</img>
+            </character>
+            <character>
+                <name>Szeth</name>
+                <house>-</house>
+                <title>Truthless</title>
+               <img>https://static.wikia.nocookie.net/stormlightarchive/images/3/30/Szeth_BMS.jpg</img>
+           </character>
+            <character>
+                <name>Adolin Kholin</name>
+                <house>Kholin</house>
+                <title>Brihtlord</title>
+                <img>https://static.wikia.nocookie.net/stormlightarchive/images/2/25/Adolin_TS.jpg</img>
+            </character>
+            <character>
+                <name>Sylphrena</name>
+                <house>Honorspren</house>
+                <title>Ancient Daughter</title>
+                <img>https://static.wikia.nocookie.net/stormlightarchive/images/6/64/Kaladin_and_syl.jpg</img>
+            </character>
+           
+        </characters>
+    </book>
+</stormlightArchive>
