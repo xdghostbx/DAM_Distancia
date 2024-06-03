@@ -19,24 +19,71 @@ public class Main {
    */
   public static void main(String[] args) {
     /*
-    Realiza un programa que pida 8 números enteros y que luego muestre esos
-    números junto con la palabra “par” o “impar” según proceda.
+    Tenemos un array multidimensional con mesas y numero de ocupantes
+    El ejercicio pide que sea de 2 dimensiones 2 filas 10 columnas
+    voy a hacer de 3 filas con "ocupado" y "libre"
     */
-    Scanner entrada = new Scanner(System.in);
     Random aleatorio = new Random();
-
-    int[] numero = new int[8];
-
-    for (int i = 0; i< numero.length;i++){
-      numero[i] = aleatorio.nextInt(50);
+    Scanner entrada = new Scanner(System.in);
+    
+    String[][] mesas = new String [3][11];
+    
+    //aplicamos el "titulo" de la posicion 0
+    mesas[0][0] = "Mesa numero";
+    mesas[1][0] = "Sillas";
+    mesas[2][0] = "Estado";
+    //ponemos los numeros de las mesas del 1 al 10
+    //aplicamos un generador random para poner el numero de comensales
+    //ponemos todas las mesas con estado libre
+    for (int i = 1;i< 11; i++){
+      mesas[0][i]=String.valueOf(i);
+      mesas[1][i] = String.valueOf(aleatorio.nextInt(4)+1);
+      mesas[2][i] = "Libre";
     }
     
-    for(int i = 0; i< numero.length;i++){
-      if(numero[i]%2==0){
-        System.out.println(numero[i]+" es par");
-      }else
-          System.out.println(numero[i]+" es impar");
-    } 
+    //imprimimos la tabla
+      for (int j = 0;j< 3; j++){
+        for (int z = 0;z < 11; z++){
+          System.out.print(mesas[j][z]+" ");
+        }
+        System.out.println();
+      }
+      
+      //menu para seleccionar la mesa segun los comensaleso
+      while (true){
+        System.out.println("Introduzca el numero de comensales:");
+        int comensales = entrada.nextInt();
+        entrada.nextLine();
+        if (comensales > 4){
+          System.out.println("El numero de comensales no puede ser superior a 4");
+        }else{
+          System.out.println("Introduzca una mesa para sentarse 1 al 10");
+          int numMesa = entrada.nextInt();
+          entrada.nextLine();
+          // Verificar si la mesa tiene suficientes sillas y está libre
+          int sillas = Integer.parseInt(mesas[1][numMesa]);
+          String estadoMesa = mesas[2][numMesa];
+
+          if (comensales <= sillas && estadoMesa.equals("Libre")) {
+              mesas[2][numMesa] = "Ocupada";
+              System.out.println("Mesa " + numMesa + " reservada para " + comensales + " comensales.");
+          } else if (!estadoMesa.equals("Libre")) {
+              System.out.println("La mesa " + numMesa + " ya está ocupada.");
+          } else {
+              System.out.println("La mesa " + numMesa + " no tiene suficientes sillas.");
+          }
+        }
+        //volvemos a imprimir la tabla para mantener la info actualizada
+        for (int j = 0;j< 3; j++){
+          for (int z = 0;z < 11; z++){
+            System.out.print(mesas[j][z]+" ");
+          }
+        System.out.println();
+      }
+      }
+      
+      
+      
   }
   /*
    * Creamos un método para el menú 

@@ -189,7 +189,185 @@ public class Arrays {
             }
     }
 
+    public static void ArrayEj10(){
+            /*
+        Escribe un programa que genere 20 números enteros aleatorios entre 0 y 100
+    y que los almacene en un array. El programa debe ser capaz de pasar todos
+    los números pares a las primeras posiciones del array (del 0 en adelante) y
+    todos los números impares a las celdas restantes. Utiliza arrays auxiliares si es
+    necesario.
+        */
+        Scanner entrada = new Scanner(System.in);
+        Random aleatorio = new Random();
+
+        int[] numero = new int[20];
+        int[] par = new int [20];
+        int[] impar = new int [20];
+        int a = 0, b = 0;
+
+        for (int i = 0; i< numero.length;i++){
+        numero[i] = aleatorio.nextInt(100);
+        }
+        for (int i = 0; i< numero.length;i++){
+        System.out.println(numero[i]);
+        }
+        System.out.println("---------------------");
+        //usar un array para los pares?
+        //otro para los impares??
+        //para estos arrays deberia usar un indice alternatico
+        //cargar los valores en el inicial?
+        for (int i = 0; i< numero.length;i++){
+        if (numero[i]%2==0){
+            par[a] = numero[i];
+            a++;
+        }else{
+            impar[b] = numero[i];
+            b++;
+        }
+        }
+        
+        for (int i = 0; i<a;i++){
+        numero[i] = par[i];
+        }
+        int aux = a;
+        for (int i = 0;i<b;i++){
+        numero[aux] = impar[i];
+        aux++;
+        }
+        
+        for (int i = 0; i< numero.length;i++){
+        System.out.println(numero[i]);
+        }
+    }
+
+    public static void ArrayEj13(){
+       /*
+    Escribe un programa que rellene un array de 100 elementos con números en-
+teros aleatorios comprendidos entre 0 y 500 (ambos incluidos). A continuación
+el programa mostrará el array y preguntará si el usuario quiere destacar el
+máximo o el mínimo. Seguidamente se volverá a mostrar el array escribiendo
+el número destacado entre dobles asteriscos
+    */
+    Random aleatorio = new Random();
+    Scanner entrada = new Scanner(System.in);
     
+    
+    int[] numero = new int[100];
+    String[] cadena = new String[100];
+    int maximo = 0, minimo = 500;
+    for (int i  = 0;i<numero.length;i++){
+      numero[i] = aleatorio.nextInt(500);
+      System.out.print(numero[i]+" ");
+      if ((i==25) ||(i == 50)|| (i==75)||i==100){
+        System.out.println();
+      }
+      
+      if (numero[i]<minimo){
+        minimo = numero[i];
+      }
+      if (numero[i]>maximo){
+        maximo = numero[i];
+      }
+    }
+    System.out.println("Seleccione que desea buscar");
+    System.out.println("1.- El numero minimo");
+    System.out.println("2.- El numero maximo");
+    int opcion = entrada.nextInt();
+    switch(opcion){
+      case 1:
+        for (int i = 0; i< numero.length;i++){
+          cadena[i] = String.valueOf(numero[i]);
+          if (numero[i] == minimo){
+            cadena[i] = "**"+numero[i]+"**";
+          }
+          System.out.print(cadena[i]+" ");
+          if ((i==25) ||(i == 50)|| (i==75)||i==100){
+            System.out.println();
+          }   
+        }
+          break;
+      case 2:
+          for (int i = 0; i< numero.length;i++){
+            cadena[i] = String.valueOf(numero[i]);
+            if (numero[i] == maximo){
+              cadena[i] = "**"+numero[i]+"**";
+            }
+            System.out.print(cadena[i]+" ");
+            if ((i==25) ||(i == 50)|| (i==75)||i==100){
+              System.out.println();
+            }
+        }
+          break;
+      default:
+          System.out.println("Instroduce una opcion correcta...");
+          break;
+    }
+
+    public static void ArrayEj15(){
+        /*
+    Tenemos un array multidimensional con mesas y numero de ocupantes
+    El ejercicio pide que sea de 2 dimensiones 2 filas 10 columnas
+    voy a hacer de 3 filas con "ocupado" y "libre"
+    */
+    Random aleatorio = new Random();
+    Scanner entrada = new Scanner(System.in);
+    
+    String[][] mesas = new String [3][11];
+    
+    //aplicamos el "titulo" de la posicion 0
+    mesas[0][0] = "Mesa numero";
+    mesas[1][0] = "Sillas";
+    mesas[2][0] = "Estado";
+    //ponemos los numeros de las mesas del 1 al 10
+    //aplicamos un generador random para poner el numero de comensales
+    //ponemos todas las mesas con estado libre
+    for (int i = 1;i< 11; i++){
+      mesas[0][i]=String.valueOf(i);
+      mesas[1][i] = String.valueOf(aleatorio.nextInt(4)+1);
+      mesas[2][i] = "Libre";
+    }
+    
+    //imprimimos la tabla
+      for (int j = 0;j< 3; j++){
+        for (int z = 0;z < 11; z++){
+          System.out.print(mesas[j][z]+" ");
+        }
+        System.out.println();
+      }
+      
+      //menu para seleccionar la mesa segun los comensaleso
+      while (true){
+        System.out.println("Introduzca el numero de comensales:");
+        int comensales = entrada.nextInt();
+        entrada.nextLine();
+        if (comensales > 4){
+          System.out.println("El numero de comensales no puede ser superior a 4");
+        }else{
+          System.out.println("Introduzca una mesa para sentarse 1 al 10");
+          int numMesa = entrada.nextInt();
+          entrada.nextLine();
+          // Verificar si la mesa tiene suficientes sillas y está libre
+          int sillas = Integer.parseInt(mesas[1][numMesa]);
+          String estadoMesa = mesas[2][numMesa];
+
+          if (comensales <= sillas && estadoMesa.equals("Libre")) {
+              mesas[2][numMesa] = "Ocupada";
+              System.out.println("Mesa " + numMesa + " reservada para " + comensales + " comensales.");
+          } else if (!estadoMesa.equals("Libre")) {
+              System.out.println("La mesa " + numMesa + " ya está ocupada.");
+          } else {
+              System.out.println("La mesa " + numMesa + " no tiene suficientes sillas.");
+          }
+        }
+        //volvemos a imprimir la tabla para mantener la info actualizada
+        for (int j = 0;j< 3; j++){
+          for (int z = 0;z < 11; z++){
+            System.out.print(mesas[j][z]+" ");
+          }
+          System.out.println();
+        }
+      }
+    }
 
 }
 
