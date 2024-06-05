@@ -78,8 +78,8 @@ public class Main {
           for (int z = 0;z < 11; z++){
             System.out.print(mesas[j][z]+" ");
           }
-        System.out.println();
-      }
+          System.out.println();
+        }
       }
       
       
