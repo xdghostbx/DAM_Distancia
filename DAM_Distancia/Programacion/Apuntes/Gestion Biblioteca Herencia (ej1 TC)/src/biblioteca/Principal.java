@@ -87,7 +87,7 @@ public class Principal {
           biblioteca.devolverLibro(titulo);
           break;
         case 6://buscar material por titulo
-          System.out.println("Introduce el titulo del libro a devolver");
+          System.out.println("Introduce el titulo del libro para comprobar su estado");
           titulo = e.nextLine();
           biblioteca.consultarMaterial(titulo);
           break;
@@ -106,7 +106,7 @@ public class Principal {
   public static void menu(){
     System.out.println("Introduce una de las opciones siguentes");
     System.out.println("1.- Agregar un nuevo material al inventario");
-    System.out.println("2.´-Ver listado de material disponible");
+    System.out.println("2.-Ver listado de material disponible");
     System.out.println("3.- Buscar informacion por ISBN");
     System.out.println("4.- Prestar material a un usuario");
     System.out.println("5.- Devolver material prestado");
