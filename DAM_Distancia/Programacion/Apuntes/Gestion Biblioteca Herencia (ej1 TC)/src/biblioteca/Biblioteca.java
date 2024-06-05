@@ -29,7 +29,7 @@ public class Biblioteca {
   
   public MaterialBibliografico buscarISBN(String isbn){
     for(MaterialBibliografico material : materiales){
-      if (material.getIsbn() == isbn){
+      if (material.getIsbn().equals(isbn)){
         System.out.println("Libro encontrado");
         return material;
       }
@@ -38,40 +38,47 @@ public class Biblioteca {
   }
   
   public void prestarMaterial(String titulo, Usuario usuario){
+    boolean encontrado = false;
     for(MaterialBibliografico material : materiales){
-      if (material.getTitulo() == titulo){
-        if(material.getEstado() == true){
+      if (material.getTitulo().equals(titulo)){
+        if(material.getEstado()){
           material.prestamo(usuario);
+          encontrado = true;
         }else{
           System.out.println("Libro en prestamo");
         }
-      }else{
-        System.out.println("No se puedo encontrar el titulo");
       }
     }
+    if (!encontrado)
+        System.out.println("No se ha encontrado el libro");
   }
   
   public void devolverLibro(String titulo){
+    boolean encontrado = false;
     for(MaterialBibliografico material : materiales){
-      if (material.getTitulo() == titulo){
-        if(material.getEstado() == false){
+      if (material.getTitulo().equals(titulo)){
+        if(!material.getEstado()){
           material.devolucion();
-        }else{
-          System.out.println("No se ha podido devolver el titulo");
+          encontrado = true;
+          break;
         }
-      }else{
-        System.out.println("No se puedo encontrar el titulo");
       }
     }
+    if (!encontrado)
+        System.out.println("No se ha encontrado el libro");
   }
   
   public void consultarMaterial(String titulo){
+    boolean encontrado = false;
     for(MaterialBibliografico material : materiales){
-      if (material.getTitulo() == titulo){
+      if (material.getTitulo().equals(titulo)){
+        encontrado = true;
         System.out.println(material.getEstado() ? "Disponible" : "Prestado");
-      }else{
-        System.out.println("No se puedo encontrar el titulo");
+        break;
       }
     }
+    if(!encontrado){
+        System.out.println("No se puedo encontrar el titulo");
+      }
   }
 }
