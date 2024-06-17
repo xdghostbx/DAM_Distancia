@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="326.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalculadoraController">
+   <children>
+      <AnchorPane prefHeight="370.0" prefWidth="284.0" style="-fx-background-color: #3399ff; -fx-border-radius: 0 0 10 10; -fx-border-color: blue; -fx-border-width: 3;">
+         <children>
+            <TextField fx:id="pantalla" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="35.0" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: #B4BFB8; -fx-border-width: 2; -fx-border-color: #726D6D;" />
+            <Pane layoutX="5.0" layoutY="85.0" prefHeight="265.0" prefWidth="269.0">
+               <children>
+                  <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="7" textFill="#fffafa" />
+                  <Button layoutX="71.0" layoutY="15.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="8" textFill="#fffafa" />
+                  <Button layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="9" textFill="#fffafa" />
+                  <Button layoutX="15.0" layoutY="76.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="4" textFill="#fffafa" />
+                  <Button layoutX="71.0" layoutY="76.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="5" textFill="#fffafa" />
+                  <Button layoutX="126.0" layoutY="76.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="6" textFill="#fffafa" />
+                  <Button layoutX="15.0" layoutY="140.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="1" textFill="#fffafa" />
+                  <Button layoutX="71.0" layoutY="140.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="2" textFill="#fffafa" />
+                  <Button layoutX="126.0" layoutY="140.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="3" textFill="#fffafa" />
+                  <Button layoutX="15.0" layoutY="201.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="0" textFill="#fffafa" />
+                  <Button layoutX="126.0" layoutY="199.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="C" textFill="#fffafa" />
+                  <Button layoutX="71.0" layoutY="199.0" mnemonicParsing="false" onAction="#igual" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="=" textFill="#fffafa">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="CENTER" layoutX="206.0" layoutY="140.0" maxHeight="40.0" maxWidth="40.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operacion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="/" textFill="#fffafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="206.0" layoutY="76.0" maxHeight="40.0" maxWidth="40.0" mnemonicParsing="false" onAction="#operacion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="-" textFill="#fffafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="206.0" layoutY="15.0" maxHeight="40.0" maxWidth="40.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operacion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="+" textFill="#fffafa">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="206.0" layoutY="199.0" mnemonicParsing="false" onAction="#operacion" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #444444;" text="X" textFill="#fffafa" />
+               </children>
+            </Pane>
+            <Button alignment="TOP_LEFT" layoutX="14.0" layoutY="330.0" mnemonicParsing="false" onAction="#generarNumero" prefHeight="40.0" prefWidth="166.0" style="-fx-background-color: #3399ff;" text="nata by MIilan" textFill="#fffafa">
+               <font>
+                  <Font name="Ebrima" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
