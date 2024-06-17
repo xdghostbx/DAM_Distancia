@@ -1,0 +1,145 @@
+Administracion Basica Sistema Windows
+-Administracion de usuarios y grupos
+    Para la administracion de usuarios y grupos, en windows, existen 2
+    2 programas gráficos:
+        .Cuentas de Usuario: desde el panel de control (existe en todas las
+        versiones de windows)
+        .Usuarios y grupos: desde Administracion de equipos. Es más completo
+        pero no se incluye en las versiones Home. Se usa por defecto en
+        las versiones Profesionales
+
+    CUENTAS DE USUARIO EN EL PANES DE CONTROL  
+        Tipos de cuenta:
+            .Usuario estandart:
+                Privilegios limitados
+                puede usar la mayoria de programas pero no puede instalar ni
+                    desinstalar, eliminar archivos necesarios o cambiar
+                    opciones que afecten a otros usuarios
+                
+            .Cuenta de Administrador
+                Maximo control sobre el equipo
+                Puede realizar cambios que afecten a otros usuarios
+
+            
+    USUARIOS Y GRUPOS DESDE ADMINISTRACION DE EQUIPOS
+        Puede abrirse mediante lusrmg.msc
+        Se pueden crear usuarios desde el menu Accion/Usuario nuevo
+
+        GRUPOS EN WINDOWS
+            Los grupos facilitan la administracion de cuentas de usuario.
+            Existen 3 tipos de grupos
+                .Creados por el administrador
+                .Intregrados (automaticamente creados en la instalacion de win2)
+                .Grupos de seguridad integrados o especiales: no aparecen
+                explicitamente pero se pueden asignar en carpetas o ficheros
+
+        Cambiar nombre o contraseña de un usuario
+            Desde el menu propiedades de usuario, 3 solapas
+                .General (Nombre completo de usr y breve descripcion)
+                    opcines de contraseña:
+                        -Cambio de contraseña al proximo inicio de sesion
+                        -El usuario no puede cambiar la contraseña
+                        -Cambio de contraseña en el primer login
+                        -Caducidad de contraseña
+                    por ultimo, se puede habilitar o deshabilitar la cuenta
+                
+                .Miembro de 
+                    Desde aqui vemos todos los grupos a los que pertenece el usuario. Se puede añadir o eliminar usuarios de los distintos grupos
+
+                    Desde la ventana grupos, se pueden crear, eliminar asi como añadir o quitar usuarios de los distintos grupos
+
+-Seguridad local. Permisos localoes o NTFS
+    .Solapa Seguridad
+        Para establecer permisos locales el disto tiene que ser una particion NTFS
+        Si es ese tipo de particion, desde los menus de las carpetas o ficheros aparece la solapa Seguridad, y compartir
+
+        Compartir: permisos para cuando se accede desde la red
+        Seguridad: local
+
+        Normas sobre permisos locales:
+            -Configurables en carpetas o ficheros
+            -Se heredan los permisos de la carpeta padre
+            -Los permisos se conceden a usuarios y grupos
+            -Todos los objetos tienen un propietario, por defecto, el que los crea
+            -Los permisos los pueden cambiar los admins y propietarios
+            -Un admin se puede hacer propietario de cualquier objeto
+
+        Modificar permisos estandar. Boton editar de la solapa Seguridad
+            -Mostrar contenido de la carpeta
+                Ver nombres de archivos y subcarpetas
+            -Lectura
+                Ver contenido de la carpeta o fichero y ver propietarios y permisos
+            -Lectura y ejecucion
+                lectura y navegar por toda la carpeta o ejecutar el archivo(exe, bat, etc)
+            -Escritura
+                lectura y ejecucion y permite crear archivos, subcarpetas, modificar atributos
+                en archivos permite cambiar el contenido
+            -Modificar
+                lectura , ejecucion y escritura y ademas permite borrar carpetas y archivos
+            -Control total
+                todos los permisos y a mayores cambiar propietarios
+
+        Tenemos 3 categorias:  
+            Lectura y ejecucion
+                Asiganmos permisos Lectura y ejecucion, mostrar contenido y lectura
+
+            Modificar
+                esos y a mayores modificar y escritura
+
+            control total
+                todos y control total
+
+        Calculo de permisos
+            2 reglas
+                1: Miramos los permisos de usuarios y grupos. Si tiene alguno denegado, la denegacion manda
+
+                2: si no hay negacion, se miran los permisos permitidos y el usuario tendra el maximo de permisos permitidos
+    
+    Recomendaciones
+        Evitar en lo posible denegar permisos
+        Administar grupos es preferible a usuarios
+        Permisos en carpetas en vez de archivos
+
+    Mover o copiar carpetas
+        Al copiar se crea un objeto nuevo entonces hereda los permisos de la carpeta destino
+
+        Al mover dentro de la misma particion conserva los permisos
+        Si movemos a otra particion, hereda los permisos de la carpeta destino
+
+-Regristro de WIndows. Directivas de grupo y seguridad local
+    Directivas de grupo o politica local
+        Para abrir el editor se usa el programa gpedit.msc como admin
+        Usando las directivas podemos:
+            -Modificar politicas o directivas (deshabilitar administracion de equipos, desativar configuracion de red, obligar un fondo de escritorio)
+            -Asignar archivos o scripts ejecutables cuando se cumplan condiciones
+            -Opciones especiales de seguridad
+
+        Existen 2 opciones en las directivas de grupo local
+            -Configuracion de equipo
+            -Configuracion de usuario
+
+            Las de equipo siempre tienen preferencia en caso de conflicto
+
+    Directivas de seguridad local
+        rectricciones de seguridad sobre la cuentas y contraseñas
+        Se pueden llegar a ellas de 3 formas
+            -SecPol.msc
+            -Abrir Directiva de Seguridad Local
+
+        2 tipos de directivas, de contaseña y bloqueo de cuentas
+
+        Directivas de contraseña
+            -Exigir historal de contraseña: impide que se cambie la contraseña pro una que usara antes
+            -Requerimientos de seguridad: obliga a cumplir los requerimientos
+            -Longitud minima 
+            -Vigencia maxima: tiempo hasta que caduque y el sistema obligue a cabiarla
+            -Vigencia minima: tiempo que debe pasar hasta que el usuario puede cambiar la contraseña
+
+        Directiva de bloqueo de cuentas
+            bloqueo de cuenta si se usa contraseña incorrecta
+            -Duracion del bloqueo
+            -restablecer bloqueo de cuenta despues de: cada cuanto tiempo se pone el contador de intentos a 0
+            -Umbral de bloqueo: numero de intentos erroneos antes de bloquear la cuenta
+
+
+-Cuotas de disco (ampliar porque zzzZZZzzz)  

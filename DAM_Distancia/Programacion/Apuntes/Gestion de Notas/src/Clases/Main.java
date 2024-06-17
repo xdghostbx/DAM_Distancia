@@ -32,6 +32,9 @@ public class Main {
     
     System.out.println("media de dani");
     System.out.println(gestion.calcularPromedioEstudiante(1));
+    
+    System.out.println("");
+    System.out.println(gestion.buscarPorNombre("Daniel"));
   }
   
 }

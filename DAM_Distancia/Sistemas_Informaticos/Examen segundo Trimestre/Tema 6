@@ -1,0 +1,129 @@
+Administracion basica del Sistema Linux
+-Administracion de usuarios y grupos
+    Para crear un nuevo usuario se usa el comando 
+        adduser nombre_usuario
+
+        Lo que hace este comando es crear un usuario con ese nombre 
+        Crea un grupo con ese nombre
+        Inserta al usuario en ese grupo 
+
+        Al crear pide la contraseña y datos extra que son opcionales
+        Como nombre completo, telefono etc
+
+    Para crear un nuevo grupo se usa el comando
+        addgroup nombre_grupo
+
+    Para crear un nuevo usuario en un grupo existente se usa
+        adduser nombre -ingroup nombre_grupo
+
+    Para cambiar la contraseña se usa
+        passwd nombre_usuario
+
+    Al crear usuarios y grupos escribrimos la informacion en el fichero
+        /etc/passwd: linea para cada usuario
+        /etc/shadow: contraseñas de cada usuario, encriptadas
+        /etc/group: una linea para cada grupo
+
+    Ejemplo de una linea de /etc/passw
+    juana:x:1004:1003:JuanaGarcia,,765432198,:/home/juana:/bin/bash 
+        juana: nombre de usuario
+        x: contraseña encriptada y usuario habilitado
+        1004: id de usuario (uid)
+        1003: id de grupo (gid)
+        JuanaGarcia,,765432198,: datos completos del usuario
+        /home/juana: directorio home del usuario
+        /bin/bash: shell por defecto
+
+    Ejemplo de una linea en /etc/group
+    electricista:x:1003: 
+        electricista: nombre del grupo
+        x: contraseña encriptada y grupo habilitado
+        1003: id de grupo (gid)
+        el ultimo campo son los usuarios que perteneces al grupo si algun
+        usuario pertenece a varios grupos
+
+    Para eliminar un usuario
+        #userdel nombre_usuario: no borra el home
+        #userdel -r nombre_usuario:  borra usr y home
+    
+    Para eleminar un grupo
+        #groupdel nombre_grupo: solo borra si no tiene usuarios
+            dentro del grupo
+
+    Para cambiar un usuario de grupo o su home
+        usermod[-dgm] nombre_usuario
+            -d: cambia el directorio home
+            -g: cambia el grupo principal
+            -m: cambia el grupo principal y mueve el home
+
+    Para introducir usuarios en otros grupos
+        #adduser usuario grupo
+
+    Para cambiar al usuario propietarioç
+        chown [-R] nuevoPropietario fichero/directorio
+            -R: para cambiar todo el arbol de propietario
+    
+    Para cambiar de grupo propietario
+        chgrp [-R] grupoPropietario fichero/directorio
+
+    Paracambiar todo
+        chown [-R] nuevoPropietario:grupoPropietario fichero/direct
+
+-Montaje de dispositivos de almacenamiento
+    Nomenclatura
+        primer disco: sda
+        segundo: sdb (tercero sdc, etc)
+
+        Particiones: las primarias del 1 al 4, 5 a delante son logicas
+            ej: sdb7 es la tercera part logica del segundo disco
+
+        Disquetera: fd0
+        dvd: sr0
+
+    Denominaciones de los sitemas de ficheros de unidad logica
+        ext2,ext3,ext4 los propios de linux
+        msdos: fat16
+        vfat: fat32
+        ntfs
+        iso9660
+
+-Permisos de ficheros y directorios
+    Los 9 caracteres son 3 grupos de 3 caracteres cada uno. (rwxrwxrwx)
+    Significado de los 3 caracteres rwx
+
+    r: significa permiso de lectura (read)
+    w: significa permiso de escritura (write)
+    x: significa permiso de ejecución (execute)
+    -: no se tiene ese permiso
+
+    ¿Por qué son 3 grupos de letras? Cada grupo va dirigido a unos usuarios:
+
+        Primer grupo: (user) permisos del usuario propietario del fichero.
+        Segundo grupo: (group) permisos del grupo propietario del fichero 
+        excluido el propietario, que puede incluso no pertenecer al grupo.
+        Tercer grupo: (other) permisos del resto de usuarios
+
+    Cmbiar permisos con el comando #chmod
+        2 formas
+        -Octal
+            Asignamos un valor de 
+                4: lectura
+                2: escritura
+                1: ejecución
+                0: sin permiso
+            #chmod 671 archivo.txt 
+                daría los permisos 
+                    rw- rwx --x al archivo
+        
+        -Simbolica
+            Por letras
+                u: usuario
+                g: grupo
+                o: otros usuarios
+
+                - + = de permisos
+
+                rwx 
+            
+            #chmod u+x archivo.txt da al usuario el permiso de ejecucion
+

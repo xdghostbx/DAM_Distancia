@@ -1,0 +1,48 @@
+INSTALACION Y EXPLOTACION DE UN SISTEMA LINUX
+-Unix y Gnu/Linux. Historia. Distribuciones.Libro
+    Distribuciones de GNU Linux
+        Una distribucion tiene 2 partes
+            -Kernel: nucleo del sistema operativo
+            -Software: que acompaña la distribucion
+
+        Existen 3 distribuciones principales
+            RED HAT, DEBIAN, SLACKWARE
+
+            De red hat deriva fedora
+            De debian deriva ubunto
+            De Slackware deriva Suse
+        
+        Entornos graficos o GUI
+            KDE
+            GNOME
+            XFCE
+
+            Ubuntu usa Gnome
+        
+    Interfaz grafica
+        El explorador de archivos se llama nautilus
+
+    Directorios más importantes de Linux
+        /bin y /usr/bin: ficheros ejecutables y comandos
+        /etc: ficheros de configuracion del sistema
+        /home: directorio de los usuarios
+        /root: directorio del usuario root
+        /usr: donde se instalan las aplicaciones de los usuarios
+        /tmp y /usr/tmp: ficheros temporales
+        /boot: ficheros para el arranque de sistema
+        /dev: ficheros de dispositivos (drivers)
+        /mnt y /media monta los dispositivos de almacenamiento
+        /var: archivos de informacion del sistema
+
+Comandos Linux
+
+
+
+
+    
+    
+https://www.daypo.com/sistemas-informaticos-tema-6-1.html#test tema 4 alguna
+
+    https://www.daypo.com/sistemas-informaticos-tema-5.html#test
+
+    https://www.daypo.com/tema-6-sistemas-informaticos-1.html#test
