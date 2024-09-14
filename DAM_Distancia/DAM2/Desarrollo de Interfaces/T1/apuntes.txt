@@ -1,0 +1,24 @@
+1. Elaboracion de interfaces de Usuario
+    La interfaz de usuario es el elemento de una aplicacion
+    informatica que permite al usuario comunicarse con ella
+
+    Existen diferentes tipos de interfaces de usuario:
+        -Textuales
+        -Graficas
+        -Táctiles
+
+2. Componentes
+    Algunos de los componentes (elementos gráficos que tienen sus
+    propias características y funciones) más tipicos son:
+        -Etiquetas: texte no interactivo en la interfaz
+        -Campos de Texto: cuadros de una sola linea en la que podemos escribir algun dato
+        -Areas de Texto: cuadros de varias lineas en las que se pueden escribir parrafos
+        -Botones: areas rectangulares que se pueden pulsar para llevar a cabo alguna aplicacion
+        -Botones de radio: botones circulares para realizar una sola seleccion entre varios elementosç
+        -Cuadros de verificacion: Cuadro de tick
+        -Imagenes: añadir info gráfica a la interfaz
+        -Password: cuadro de txt donde los caracteres aparecen ocultos
+        -Listas: conjunto de datos, se pueden elegir uno o varios
+        -Listas desplegables: conjunto de datos, se pueden elegir uno o varios
+            permanece oculta y puede ser desplegada
+
