@@ -31,6 +31,6 @@ Este repositorio incluye las tareas, temas y proyectos del ciclo formativo de DA
 Estoy abierto a colaborar en proyectos y aprender de la comunidad de desarrolladores. Si tienes algún consejo o proyecto interesante, ¡no dudes en contactarme!
 
 ## 📫 Contacto
+[Visita mi perfil de LinkedIn](https://www.linkedin.com/in/jdanielmartinezm/)
 
-    [Visita mi perfil de LinkedIn](https://www.linkedin.com/in/jdanielmartinezm/)
-    [Visita mi perfil de GitHub](https://github.com/xdghostbx)
+[Visita mi perfil de GitHub](https://github.com/xdghostbx)
