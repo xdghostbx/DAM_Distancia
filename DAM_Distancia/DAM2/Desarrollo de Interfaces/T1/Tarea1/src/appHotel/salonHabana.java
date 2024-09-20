@@ -63,11 +63,10 @@ public class salonHabana extends javax.swing.JFrame {
     si = new javax.swing.JRadioButton();
     no = new javax.swing.JRadioButton();
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-    setTitle("Reserva Salón");
-    setResizable(false);
+    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     BTcancelar.setText("Cancelar");
+    BTcancelar.setToolTipText("vovler atras");
     BTcancelar.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTcancelarActionPerformed(evt);
@@ -75,6 +74,8 @@ public class salonHabana extends javax.swing.JFrame {
     });
 
     BTreserva.setText("Reservar");
+    BTreserva.setToolTipText("realizar reserva");
+    BTreserva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
     BTreserva.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTreservaActionPerformed(evt);
@@ -84,14 +85,17 @@ public class salonHabana extends javax.swing.JFrame {
     jLabel1.setText("Nombre");
 
     TFnombre.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+    TFnombre.setToolTipText("espacio para introducir el nombre");
 
     jLabel2.setText("Tlf Contacto");
 
     TFtlf.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+    TFtlf.setToolTipText("espacio para introducir el num telefonico");
 
     jLabel3.setText("e-mail");
 
     TFmail.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+    TFmail.setToolTipText("espacio para introducir el mail");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -132,6 +136,7 @@ public class salonHabana extends javax.swing.JFrame {
     jLabel4.setText("Fecha del Evento");
 
     SPfecha.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1726325580000L), null, null, java.util.Calendar.DAY_OF_MONTH));
+    SPfecha.setToolTipText("fecha del evento");
 
     jLabel5.setText("Tipo de Evento");
 
@@ -168,6 +173,7 @@ public class salonHabana extends javax.swing.JFrame {
     jLabel7.setText("Asistentes");
 
     SPasistentes.setModel(new javax.swing.SpinnerNumberModel(1, null, 50, 1));
+    SPasistentes.setToolTipText("numero de asistentes");
 
     jLabel6.setText("Tipo de Cocina");
 
@@ -194,6 +200,7 @@ public class salonHabana extends javax.swing.JFrame {
     jornadas.setEnabled(false);
 
     SPjornadas.setModel(new javax.swing.SpinnerNumberModel(1, null, 50, 1));
+    SPjornadas.setToolTipText("numero de jornadas");
     SPjornadas.setEnabled(false);
 
     hab.setText("Habitaciones para asistentes?");

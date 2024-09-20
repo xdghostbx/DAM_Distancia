@@ -45,14 +45,13 @@ public class Menu extends javax.swing.JFrame {
     jMSobreNosotros = new javax.swing.JMenu();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-    setTitle("Gestión Hotelera");
-    setResizable(false);
 
     jLabel1.setFont(new java.awt.Font("Noto Serif", 3, 24)); // NOI18N
     jLabel1.setText("GESTION HOTELERA");
 
     BTCuba.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     BTCuba.setText("Salón Cuba");
+    BTCuba.setToolTipText("reserva sala Cuba");
     BTCuba.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTCubaActionPerformed(evt);
@@ -61,6 +60,7 @@ public class Menu extends javax.swing.JFrame {
 
     BTHabana.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     BTHabana.setText("Salón Habana");
+    BTHabana.setToolTipText("reserva sala Habana");
     BTHabana.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTHabanaActionPerformed(evt);
@@ -69,6 +69,7 @@ public class Menu extends javax.swing.JFrame {
 
     BTMadrid.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     BTMadrid.setText("Salón Madrid");
+    BTMadrid.setToolTipText("reserva sala Madrid");
     BTMadrid.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTMadridActionPerformed(evt);
@@ -77,6 +78,7 @@ public class Menu extends javax.swing.JFrame {
 
     BTBarcelona.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
     BTBarcelona.setText("Salón Barcelona");
+    BTBarcelona.setToolTipText("reserva sala Barcelona");
     BTBarcelona.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTBarcelonaActionPerformed(evt);
@@ -113,6 +115,7 @@ public class Menu extends javax.swing.JFrame {
     );
 
     BTSalir.setText("Salir");
+    BTSalir.setToolTipText("Salir de la aplcación");
     BTSalir.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         BTSalirActionPerformed(evt);
@@ -120,6 +123,7 @@ public class Menu extends javax.swing.JFrame {
     });
 
     jMArchivo.setText("Archivo");
+    jMArchivo.setToolTipText("Opciones de la aplicaicon");
     jMArchivo.addMouseListener(new java.awt.event.MouseAdapter() {
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         jMArchivoMouseClicked(evt);
@@ -133,8 +137,10 @@ public class Menu extends javax.swing.JFrame {
     jMenuBar1.add(jMArchivo);
 
     jMReseva.setText("Reservas");
+    jMReseva.setToolTipText("Seccion de reservas");
 
     jMeReservarHotel.setText("Reservar Hotel");
+    jMeReservarHotel.setToolTipText("reserva sala Habana");
     jMeReservarHotel.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jMeReservarHotelActionPerformed(evt);
@@ -145,6 +151,7 @@ public class Menu extends javax.swing.JFrame {
     jMenuBar1.add(jMReseva);
 
     jMSobreNosotros.setText("Sobre Nosotros");
+    jMSobreNosotros.setToolTipText("Informacion sobre la cadena hotelera");
     jMSobreNosotros.addMouseListener(new java.awt.event.MouseAdapter() {
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         jMSobreNosotrosMouseClicked(evt);

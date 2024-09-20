@@ -7,6 +7,7 @@
         <Menu class="javax.swing.JMenu" name="jMArchivo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Archivo"/>
+            <Property name="toolTipText" type="java.lang.String" value="Opciones de la aplicaicon"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMArchivoMouseClicked"/>
@@ -16,11 +17,13 @@
         <Menu class="javax.swing.JMenu" name="jMReseva">
           <Properties>
             <Property name="text" type="java.lang.String" value="Reservas"/>
+            <Property name="toolTipText" type="java.lang.String" value="Seccion de reservas"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMeReservarHotel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reservar Hotel"/>
+                <Property name="toolTipText" type="java.lang.String" value="reserva sala Habana"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMeReservarHotelActionPerformed"/>
@@ -31,6 +34,7 @@
         <Menu class="javax.swing.JMenu" name="jMSobreNosotros">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sobre Nosotros"/>
+            <Property name="toolTipText" type="java.lang.String" value="Informacion sobre la cadena hotelera"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMSobreNosotrosMouseClicked"/>
@@ -157,6 +161,7 @@
               <Font name="Dialog" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sal&#xf3;n Cuba"/>
+            <Property name="toolTipText" type="java.lang.String" value="reserva sala Cuba"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTCubaActionPerformed"/>
@@ -168,6 +173,7 @@
               <Font name="Dialog" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sal&#xf3;n Habana"/>
+            <Property name="toolTipText" type="java.lang.String" value="reserva sala Habana"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTHabanaActionPerformed"/>
@@ -179,6 +185,7 @@
               <Font name="Dialog" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sal&#xf3;n Madrid"/>
+            <Property name="toolTipText" type="java.lang.String" value="reserva sala Madrid"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTMadridActionPerformed"/>
@@ -190,6 +197,7 @@
               <Font name="Dialog" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sal&#xf3;n Barcelona"/>
+            <Property name="toolTipText" type="java.lang.String" value="reserva sala Barcelona"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTBarcelonaActionPerformed"/>
@@ -202,6 +210,7 @@
     <Component class="javax.swing.JButton" name="BTSalir">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
+        <Property name="toolTipText" type="java.lang.String" value="Salir de la aplcaci&#xf3;n"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTSalirActionPerformed"/>
