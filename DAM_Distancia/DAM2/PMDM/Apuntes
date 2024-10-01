@@ -1,0 +1,6 @@
+Cilo de vida de los activity: si estamos en la app y me salgo, en que estado se queda la aplicacion (no se llega a cerrar y podemos hacer algo para que se cierre)
+
+Activity es la ventana de la aplicación, hay asignada una parte de codigo y una parte de diseño gráfico
+
+Un context es una calse abstracta de android que va atado/asignado a un activity. Un activity siempre tiene un context
+

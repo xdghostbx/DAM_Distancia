@@ -1,0 +1,12 @@
+Consideraciones:
+	-Imagen de fondo en menu:
+		Está colocada por probar como funcionaba lo de insertar imagenes via Swing
+		En lo personal, no me gusta como queda, por eso el propio formulario no tiene
+	-Alertas:
+		Existen alertas de "Funcionalidad aun no añadida" en los botones del menu
+		para evitar errores de usuario (posible usuario final), existiendo estos
+		botones, se mantiene la composición y si las proximas tareas consisten en
+		trabajar sobre esta, ya están
+	-Formulario:
+		Como había comentado, es un formulario sobrio, sin imagenes. Siendo de un hotel
+		veo correcto que sea algo más serio

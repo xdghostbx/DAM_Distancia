@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hola Mundo</string>
+    <string name="ver_imagen">Ver Imagen</string>
 </resources>
