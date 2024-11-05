@@ -10,34 +10,43 @@ import java.lang.Process;
  */
 import java.lang.Runtime;
 
+import java.io.IOException;
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        crearNuevoEditor();
-
-        Process a;
-        a = new ProcessBuilder("cmd.exe").start();
-    }
-
-    public static void crearNuevoEditor(){
-        Process nuevoProceso; //se define una variable de tipo Process
         try{
-            //Obtener el nombre del sistema operativo
-            String sistemaOperativo = System.getProperty("os.name");
-            //Si el sistema operativo es Windows
-            if(sistemaOperativo.toUpperCase().contains("WIN")){
-                nuevoProceso = Runtime.getRuntime().exec("notepad.exe");
-                nuevoProceso = new ProcessBuilder("notepad.exe").start();
-            }else{
-                //Si el sistema operativo es Linux
-                nuevoProceso = Runtime.getRuntime().exec("gedit");
-            }
-        } catch (SecurityException ex){
-            System.out.println("Error de seguridad al ejecutar el comando");
-        } catch (Exception ex){
-            System.out.println("Error al ejecutar el comando: "+ex.toString());
+            ejecutarEditorText();
+            ejecutarConsolaComandos();
+        }catch(IOException e){
+            System.err.println("Error al ejecutar el proceso: ");
+            System.err.println(e.getMessage());
+        }catch(SecurityException e){
+            System.err.println("Error de seguridad al ejecutar el proceso: ");
+            System.err.println(e.getMessage());
+        }catch(UnsupportedOperationException e){
+            System.err.println(e.getMessage());
         }
     }
+
+    public static void ejecutarEditorText() throws IOException{
+        //Obtener el nombre del sistema operativo y guardarlo en una variable
+        String osName = System.getProperty("os.name").toUpperCase();
+        if (osName.contains("WIN")){
+            ejecutarProceso("notepad.exe");
+        }else if (osName.contains("LINUX")){
+            ejecutarProceso("gedit");
+        }else{
+            throw new UnsupportedOperationException("Sistema operativo no soportado");
+        }
+    }
+
+    public static void ejecutarConsolaComandos() throws IOException{
+        ejecutarProceso("cmd.exe");
+    }
+
+    public static void ejecutarProceso(String comando) throws IOException{
+        new ProcessBuilder(comando).start();
+    }
 }
+
 
 

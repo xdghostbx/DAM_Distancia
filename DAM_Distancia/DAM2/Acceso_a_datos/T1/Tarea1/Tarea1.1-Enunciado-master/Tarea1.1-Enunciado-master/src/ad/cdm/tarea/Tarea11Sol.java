@@ -41,7 +41,7 @@ public class Tarea11Sol {
             RandomAccessPersistencia rap = new RandomAccessPersistencia();
             Persona found = rap.leerPersona(posicion, PERSONAS_ORIGEN_PATH_RAN.toString());
             if (found != null) {
-                System.out.println("Atopouse a persoa da posición " + posicion + " cos seguintes datos: " + found);
+                System.out.println("Atopouse a persoa da posicion " + posicion + " cos seguintes datos: " + found);
             }
 
         } catch (NotFoundPersonaException e) {
@@ -59,7 +59,7 @@ public class Tarea11Sol {
         boolean valida = false;
         int posicion = -1;
         do {
-            System.out.println("Introduzca la posicin de la persona que quiera leer (Entero del 0 al 5)");
+            System.out.println("Introduzca la posicion de la persona que quiera leer (Entero del 0 al 5)");
 
             try {
                 numeroString = reader.readLine();

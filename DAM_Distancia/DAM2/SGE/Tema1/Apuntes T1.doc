@@ -18,4 +18,95 @@ Identificación de sistemas ERP-CRM
                     Se puede considerar como una rama de la IA
 
         1.2- Organización de una empresa y sus relaciones externas
-                 
+            Una empresa necesita relacionarse con su entorno empresarial para desarrollar correctamente su actividad. Entre las distintas clasificaciones de los entornos que afectan a la empresa podemos encontrar:
+                -Entorno proximo:
+                    los factores de produccion y distribucion (mano de obra, entidades financieras, proveedores) o organismos oficiales que tengan que ver con la actividad economica
+                -Entorno general:
+                    Los que tienen efecto directo e indirecto en la gestion general de la empresa
+            Por esto la empresa necesita disponer de un sistema que proporcione de forma rapida y eficioente toda la formacion del entorno que la rodea. Una opcion adecuada puede ser la instalacion de un sistema de gestion de la informacion, tambien conocidos como sistema de planificacion de recursos empresariales (ERP)
+
+    2. ERP - CRM
+        Los sistemas de planificacion de recursos empresariales (ERP, del ingles Enterprise Resource Planning) son sistemas de gestión de información que intregran y automatizan aspectos operativos o productivos de una emrpesa eliminando complejas conexiones entre sistemas de distintos proveedores.
+
+        Estos sistemas suelen estar formados por una arquitectura modular, donde cada modulo gestiona cada una de las funciones del ambito empresarial (nominas, finanzas, gestion de proyectos, gestión geográfica, contabilidad, logistica). Estas areas que realizan funciones diferentes, se relacionan entre si compartiendo informacion
+
+        2.1 Revisión de ERP actuales
+            Actualmente el mercado de los ERP está dominado por SAP, Oracle y Micorsoft.
+            En España destacamos Microsoft Dynamics NAV y Microsoft Dynamics AX.
+            La mayoría de los proveedores optan por Windows para desarrollas los ERP, pero Linux se está potenciando cada vez más, sobretodo en las grandes empresas.
+            Por eso se pueden clasificar los ERP actuales en los que requieren pago de licencia (propietarios) y los de software libre
+
+                -propietarios
+                    SAP, Microsoft, Solmicro
+
+                -software libre
+                    Openbravo, Odoo, Abanq
+
+            Está apareciendo una nueva tendencia en ERP que se denomina SaaS o Software como servicio, que es aplicable a propietarios como open source, proporcionando a los clientes el acceso al software a través de la red (suscripcion?)
+
+        2.2 Características de los ERP
+            -Integración
+                Integra todos los procesos de la empresa, considerandolos una serie de areas que se relacionan entre si para conseguir una mayor eficiencia.
+                Los datos se ingresan una sola vez, formando una base de datos centralizada y facilitando el flujo entre los distintos módulos
+
+            -Modularidad
+                Cada modulo se corresponde con un area funcional de la empresa. Gracias a la base de datos los modulos comparten informacion entre si, facilitando la adaptabilidad, personalizacion e integración.
+                Es habitual que cada módulo use un software especifico para su funcionalidad
+
+            -Adaptabilidad
+                (zZz)
+
+        2.3 Ventajas e inconvenientes de los ERP
+            -Ventajas
+                .Resolver problemas derivados del tratamiento de la informacion con los sistemas anteriores
+                .Aumento de eficiencia operativa
+                .Mejora relacion entre empresa y agentes
+                .Facilita acceso a la informacion
+                .Reduce costes empresariales
+                .Facilidad de configuracion de sistemas empresariales
+                .Mejora del entorno de integracion
+                .Mejora de las herramientos para el tratamiento de informacion
+            
+            -inconvenientes
+                .Se requieren recursos para la implantacion del sistema ERP y consultoría previa. Tambien costes de mantenimiento y actualizacion
+                .Prepraracion para el cambio en la forma de hacer negocios, trabajar y organizarse dentro de la empresa
+
+        2.4 Concepto CRM
+            CRM es fostware para el manejo de las relaciones con el clientes
+            Incide positivamente en los siguientes aspectos
+            - Disminuye costes de interaccion con los clientes
+            -Promueve cierta bidireccionalidad en la comunicacion
+            -Mayor eficacia y eficiencia de las acciones de comunicacion
+
+        2.5 Revisión de CRM actuales
+            Actualmente se pueden dividir en:
+
+                -Aplicaiones electrónicas para los canales de distribucion de la empresa: 
+                    Proporciona a canales de distribución las herramientas tech para mejorar y coordinar relaciones con los clientes
+                -Centros de atencion telefónica
+                    Facilitan ayuda telefonica para resolver problemas y dudas a clientes
+                -Autoservicion hacia los clientes
+                    Proporciona una gestion directa de sus propios requerimientos
+                -Gestión electrónica de las actividades que afectan a clientes y ventas 
+                    Proporcionan informacion para conocer mejor las necesidades del cliente
+
+        2.6 Características de los CRM
+
+        2.7 Ventajas e inconvenientes de los CRM
+            -Ventajas
+                .Reducir costes y mejorar ofertas
+                .Identificar clientes potenciales que mayor beneficio generen
+                .Mejorar la informacion del cliente
+                .MEjorar servicio al cliente
+                .Personalizar y optimizar los procesos
+                .Aumentar la couota de gasto de los clientes
+                .Localizar nuevas oportunudades de negocios
+                .Aumentar las tasas de retencion de clientes
+                .Incremento de ventas
+
+        2.8 Requisitos de los sistemas ERP-CRM
+            Analisis Previo 
+                Se definen los objetivos, recursos necesario, coste total, necesidades
+            
+            Proyecto propio de implantacion:
+                Desarrollo de software necesario, formacion a los empleados

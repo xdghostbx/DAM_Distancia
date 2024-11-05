@@ -1,0 +1,2 @@
+pruebaConsumidores.ejemplo1.VelocidadAcceso
+pruebaConsumidores.ejemplo1.Buffer
