@@ -6,8 +6,7 @@ package filosofosSemaphore;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -31,7 +30,7 @@ public class Filosofo implements Runnable {
         try {
             usarPalillo();
         } catch (InterruptedException ex) {
-            Logger.getLogger(Filosofo.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error: "+ex);
         }
         
         comer();
@@ -66,6 +65,7 @@ public class Filosofo implements Runnable {
         try{
             Thread.sleep(5000);
         } catch (InterruptedException e){
+            System.out.println("Error: "+e);
         }
     }
 }

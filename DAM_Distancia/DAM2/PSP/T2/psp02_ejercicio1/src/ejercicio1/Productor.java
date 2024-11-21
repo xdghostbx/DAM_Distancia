@@ -33,7 +33,7 @@ public class Productor implements Runnable {
                 char letraAleatoria = letras[indice];
                 cola.put(letraAleatoria);
                 System.out.println("Produciendo: "+letraAleatoria);
-                Thread.sleep(100);                
+                Thread.sleep(aleatorio.nextInt(1000)+10);                
             }  
         }catch(InterruptedException e){
             Thread.currentThread().interrupt();

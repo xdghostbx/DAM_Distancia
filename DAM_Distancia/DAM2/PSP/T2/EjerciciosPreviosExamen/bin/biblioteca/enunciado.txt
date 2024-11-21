@@ -1,0 +1,7 @@
+Ejercicio 1: La Biblioteca y los Lectores
+Descripción: Una biblioteca tiene un número limitado de sillas (por ejemplo, 3). Los lectores (hilos) llegan para leer, pero solo pueden hacerlo si hay una silla libre. Si no hay sillas libres, deben esperar hasta que una silla se libere.
+Objetivo: Implementa un sistema en el que los lectores se sienten a leer si hay una silla disponible y se levanten cuando terminen, liberando la silla para otros lectores.
+Mensajes:
+"{nombreLector} ha llegado y está leyendo en una silla."
+"No hay sillas libres, {nombreLector} está esperando."
+"{nombreLector} ha terminado de leer y ha liberado una silla."

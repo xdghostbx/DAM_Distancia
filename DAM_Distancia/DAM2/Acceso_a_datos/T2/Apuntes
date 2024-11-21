@@ -1,0 +1,11 @@
+JDBC ofrece las clases e interfaces para 
+    Establecer la conexion a una base de datos
+    Ejecutar la consulta
+    Procesar los resultados
+
+Conectores de tipo 1 (Bridge JDBC-ODBC)
+    No necesitan driver especifico de cada base de datos
+    Soportado por muchos fabricantes
+
+
+Pasos realizar conexion DB desde VSCode

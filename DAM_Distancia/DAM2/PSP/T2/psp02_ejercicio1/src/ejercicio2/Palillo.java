@@ -27,7 +27,7 @@ public class Palillo {
             try {
                 wait();
             } catch (InterruptedException ex) {
-                Logger.getLogger(Palillo.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Ha ocurrido un error");
             }
         }
         usado = !false;

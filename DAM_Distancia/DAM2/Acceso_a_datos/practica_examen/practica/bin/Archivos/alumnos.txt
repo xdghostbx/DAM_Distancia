@@ -1,0 +1,171 @@
+DNI: DNI001    
+Asignatura: Matemáticas, Nota: 9.72
+Asignatura: Física, Nota: 9.13
+Asignatura: Química, Nota: 5.29
+Asignatura: Historia, Nota: 6.69
+Asignatura: Biología, Nota: 7.77
+Asignatura: Lengua, Nota: 5.68
+Asignatura: Arte, Nota: 6.8
+Asignatura: Inglés, Nota: 5.25
+Asignatura: Música, Nota: 6.02
+
+DNI: DNI002    
+Asignatura: Matemáticas, Nota: 6.51
+Asignatura: Física, Nota: 9.1
+Asignatura: Química, Nota: 7.19
+Asignatura: Biología, Nota: 7.41
+Asignatura: Inglés, Nota: 7.88
+Asignatura: Música, Nota: 9.51
+
+DNI: DNI003    
+Asignatura: Matemáticas, Nota: 7.59
+Asignatura: Física, Nota: 9.24
+Asignatura: Química, Nota: 6.3
+Asignatura: Historia, Nota: 5.91
+Asignatura: Lengua, Nota: 9.06
+Asignatura: Música, Nota: 7.19
+
+DNI: DNI004    
+Asignatura: Matemáticas, Nota: 6.72
+Asignatura: Historia, Nota: 8.28
+Asignatura: Lengua, Nota: 7.3
+Asignatura: Arte, Nota: 9.58
+Asignatura: Inglés, Nota: 8.52
+Asignatura: Música, Nota: 8.71
+
+DNI: DNI005    
+Asignatura: Matemáticas, Nota: 9.45
+Asignatura: Física, Nota: 9.78
+Asignatura: Química, Nota: 8.39
+Asignatura: Biología, Nota: 5.99
+Asignatura: Lengua, Nota: 9.57
+Asignatura: Arte, Nota: 7.52
+Asignatura: Inglés, Nota: 6.91
+Asignatura: Informática, Nota: 6.71
+
+DNI: DNI006    
+Asignatura: Matemáticas, Nota: 7.72
+Asignatura: Física, Nota: 7.64
+Asignatura: Historia, Nota: 9.43
+Asignatura: Biología, Nota: 6.6
+Asignatura: Lengua, Nota: 8.14
+Asignatura: Arte, Nota: 5.97
+Asignatura: Inglés, Nota: 9.73
+
+DNI: DNI007    
+Asignatura: Matemáticas, Nota: 9.04
+Asignatura: Química, Nota: 9.12
+Asignatura: Biología, Nota: 9.82
+Asignatura: Arte, Nota: 5.06
+Asignatura: Música, Nota: 7.51
+Asignatura: Informática, Nota: 7.62
+
+DNI: DNI008    
+Asignatura: Física, Nota: 5.92
+Asignatura: Química, Nota: 8.48
+Asignatura: Historia, Nota: 6.32
+Asignatura: Arte, Nota: 8.0
+Asignatura: Inglés, Nota: 6.68
+Asignatura: Música, Nota: 9.27
+Asignatura: Informática, Nota: 7.18
+
+DNI: DNI009    
+Asignatura: Matemáticas, Nota: 7.01
+Asignatura: Física, Nota: 5.19
+Asignatura: Química, Nota: 5.39
+Asignatura: Historia, Nota: 8.0
+Asignatura: Biología, Nota: 8.3
+Asignatura: Arte, Nota: 8.9
+Asignatura: Inglés, Nota: 5.75
+Asignatura: Música, Nota: 7.6
+Asignatura: Informática, Nota: 6.64
+
+DNI: DNI010    
+Asignatura: Matemáticas, Nota: 9.42
+Asignatura: Física, Nota: 6.84
+Asignatura: Química, Nota: 5.73
+Asignatura: Historia, Nota: 7.72
+Asignatura: Lengua, Nota: 8.38
+Asignatura: Arte, Nota: 5.93
+Asignatura: Música, Nota: 9.29
+
+DNI: DNI011    
+Asignatura: Matemáticas, Nota: 5.25
+Asignatura: Física, Nota: 6.36
+Asignatura: Lengua, Nota: 8.4
+Asignatura: Inglés, Nota: 5.55
+Asignatura: Informática, Nota: 6.4
+
+DNI: DNI012    
+Asignatura: Matemáticas, Nota: 7.68
+Asignatura: Historia, Nota: 6.41
+Asignatura: Biología, Nota: 6.95
+Asignatura: Arte, Nota: 5.93
+Asignatura: Música, Nota: 7.47
+Asignatura: Informática, Nota: 5.06
+
+DNI: DNI013    
+Asignatura: Historia, Nota: 8.51
+Asignatura: Biología, Nota: 8.31
+Asignatura: Música, Nota: 6.5
+
+DNI: DNI014    
+Asignatura: Matemáticas, Nota: 5.06
+Asignatura: Biología, Nota: 8.39
+Asignatura: Lengua, Nota: 6.61
+Asignatura: Arte, Nota: 5.2
+Asignatura: Música, Nota: 5.99
+Asignatura: Informática, Nota: 8.39
+
+DNI: DNI015    
+Asignatura: Física, Nota: 7.35
+Asignatura: Química, Nota: 9.79
+Asignatura: Historia, Nota: 7.93
+Asignatura: Biología, Nota: 7.99
+Asignatura: Inglés, Nota: 6.94
+
+DNI: DNI016    
+Asignatura: Historia, Nota: 7.64
+Asignatura: Biología, Nota: 8.82
+Asignatura: Lengua, Nota: 9.24
+Asignatura: Arte, Nota: 6.43
+Asignatura: Inglés, Nota: 7.71
+Asignatura: Música, Nota: 8.93
+
+DNI: DNI017    
+Asignatura: Matemáticas, Nota: 5.24
+Asignatura: Física, Nota: 6.16
+Asignatura: Química, Nota: 5.1
+Asignatura: Biología, Nota: 6.01
+Asignatura: Lengua, Nota: 5.97
+Asignatura: Inglés, Nota: 7.57
+Asignatura: Música, Nota: 9.22
+Asignatura: Informática, Nota: 8.04
+
+DNI: DNI018    
+Asignatura: Matemáticas, Nota: 6.35
+Asignatura: Física, Nota: 7.62
+Asignatura: Química, Nota: 5.75
+Asignatura: Historia, Nota: 6.88
+Asignatura: Biología, Nota: 6.37
+Asignatura: Lengua, Nota: 5.48
+Asignatura: Arte, Nota: 8.42
+Asignatura: Inglés, Nota: 5.42
+Asignatura: Música, Nota: 7.83
+
+DNI: DNI019    
+Asignatura: Física, Nota: 9.49
+Asignatura: Biología, Nota: 8.57
+Asignatura: Inglés, Nota: 8.06
+Asignatura: Informática, Nota: 8.65
+
+DNI: DNI020    
+Asignatura: Química, Nota: 6.48
+Asignatura: Historia, Nota: 7.97
+Asignatura: Biología, Nota: 8.1
+Asignatura: Lengua, Nota: 6.41
+Asignatura: Arte, Nota: 5.99
+Asignatura: Inglés, Nota: 8.32
+Asignatura: Música, Nota: 9.61
+Asignatura: Informática, Nota: 9.2
+

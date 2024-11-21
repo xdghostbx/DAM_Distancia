@@ -200,7 +200,7 @@ is divided into following sections:
                 <isfalse value="${javadoc.preview}"/>
             </and>
         </condition>
-        <property name="run.jvmargs" value=""/>
+        <property name="run.jvmargs" value="--module-path &quot;D:\Documentos_Ciclo\DAM_Distancia\DAM_Distancia\librerias\JavaFX23&quot; --add-modules javafx.controls,javafx.fxml -Dprism.order=sw"/>
         <property name="run.jvmargs.ide" value=""/>
         <property name="javac.compilerargs" value=""/>
         <property name="work.dir" value="${basedir}"/>

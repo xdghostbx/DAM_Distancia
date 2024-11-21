@@ -31,27 +31,31 @@ public class Urna {
         return Arrays.toString(partidos);
     }
     
-    public void vota(int numPartido){
+    public synchronized void vota(int numPartido){
         partidos[numPartido].votar();
     }
     
-    public void visualizarResultados(){
+    public synchronized void visualizarResultados(){
         ArrayList<Partido> ganadores = new ArrayList();
-        ganadores.add(partidos[0]);
-        int totalVotos = partidos[0].getVotos();
-        for(int i = 0; i<getNumPartidos();i++){
+        
+        
+        //int totalVotos = partidos[0].getVotos();
+        int totalVotos = 0;
+        int maxVotos = 0;
+        for(int i = 0; i<partidos.length;i++){
             int numVotosPartidoActual = partidos[i].getVotos();
-            int numVotosPartidoGanador = ganadores.get(0).getVotos();
-            if(numVotosPartidoActual >= numVotosPartidoGanador){
-                if(numVotosPartidoActual > numVotosPartidoGanador){
-                    ganadores.clear();
-                }
+            if(numVotosPartidoActual > maxVotos){
+                ganadores.clear();
+                ganadores.add(partidos[i]);
+                maxVotos = numVotosPartidoActual;
+            } else if (numVotosPartidoActual == maxVotos){
                 ganadores.add(partidos[i]);
             }
+            
             totalVotos += numVotosPartidoActual;
         }
         
-        System.out.println("\nTotal" + totalVotos+" votos emitidos");
+        System.out.println("\nTotal: " + totalVotos+" votos emitidos");
         if(ganadores.size()==1){
             System.out.println("Ganador: "+ganadores.get(0));
         }else {

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="254dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginBottom="515dp"
+        android:baselineAligned="false"
+        android:hint="edit_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_send"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Boton programatico: llama al metodo "onCLick" desde el editor de codigo -->
+    <Button
+
+        android:id="@+id/button_send"
+        android:layout_width="125dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="518dp"
+        android:onClick="enviarMensaje"
+        android:text="@string/escribe_tu_mensaje"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Boton no programatico: carece de metodo onCLick -->
+    <Button
+        android:id="@+id/button_send2"
+        android:layout_width="125dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="422dp"
+        android:text="@string/escribe_tu_mensaje"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

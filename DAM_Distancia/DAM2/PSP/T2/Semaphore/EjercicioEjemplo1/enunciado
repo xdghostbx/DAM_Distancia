@@ -1,0 +1,1 @@
+Ejercicio de Parqueo: Simula un estacionamiento con 10 plazas. Crea múltiples hilos que representen coches intentando aparcar. Cada coche debe obtener un permiso (plaza) antes de poder aparcar y liberarlo al salir.

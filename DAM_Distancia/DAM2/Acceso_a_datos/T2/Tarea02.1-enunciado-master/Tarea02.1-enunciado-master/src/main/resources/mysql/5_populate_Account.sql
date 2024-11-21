@@ -1,0 +1,7 @@
+USE empresa;
+
+-- Insertar en la tabla ACCOUNT para cada empleado que no tenga una cuenta
+INSERT INTO ACCOUNT (EMPNO, AMOUNT)
+SELECT DISTINCT EMPNO, 1000 + IFNULL(COMM, 0)
+FROM EMP
+WHERE EMPNO NOT IN (SELECT DISTINCT EMPNO FROM ACCOUNT);

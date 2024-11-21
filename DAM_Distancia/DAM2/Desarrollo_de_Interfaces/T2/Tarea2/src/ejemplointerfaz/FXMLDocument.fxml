@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ejemplointerfaz.FXMLDocumentController">
+    <children>
+      <Label layoutX="227.0" layoutY="167.0" text="DATOS DE LA RESERVA">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="14.0" text="DATOS DEL CLIENTE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="92.0" text="APELLIDOS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="59.0" prefHeight="17.0" prefWidth="26.0" text="DNI">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="129.0" text="LOCALIDAD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="314.0" layoutY="129.0" text="PROVINCIA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="59.0" text="NOMBRE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="71.0" layoutY="55.0" />
+      <TextField layoutX="294.0" layoutY="55.0" prefHeight="25.0" prefWidth="205.0" />
+      <TextField layoutX="117.0" layoutY="88.0" prefHeight="25.0" prefWidth="381.0" />
+      <TextField layoutX="117.0" layoutY="125.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField layoutX="390.0" layoutY="125.0" />
+      <Label fx:id="labelAviso" layoutX="263.0" layoutY="524.0" prefHeight="45.0" prefWidth="367.0" text="En virtud de la ley de sanidad se informa a los clientes de que solo&#10; podrán fumar en las habitaciones reservadas para tal fin." textFill="#ff0404" />
+      <Label layoutX="60.0" layoutY="192.0" text="Fecha de llegada:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="192.0" text="Fecha de Salida:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="58.0" layoutY="218.0" prefHeight="25.0" prefWidth="205.0">
+         <effect>
+            <Reflection />
+         </effect>
+      </DatePicker>
+      <DatePicker layoutX="348.0" layoutY="218.0">
+         <effect>
+            <Reflection />
+         </effect>
+      </DatePicker>
+      <Label layoutX="48.0" layoutY="456.0" text="Número de habitaciones">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="456.0" text="Tipo de habitación">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="506.0" text="Régimen">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkBox" layoutX="258.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleCheckBox" text="Fumador">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <RadioButton layoutX="66.0" layoutY="523.0" mnemonicParsing="false" text="Alojamiento y desayuno">
+         <toggleGroup>
+            <ToggleGroup fx:id="Opciones" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="66.0" layoutY="546.0" mnemonicParsing="false" text="Media pensión" toggleGroup="$Opciones" />
+      <RadioButton layoutX="66.0" layoutY="568.0" mnemonicParsing="false" text="Pensión completa" toggleGroup="$Opciones" />
+      <TextField layoutX="196.0" layoutY="452.0" prefHeight="25.0" prefWidth="38.0" />
+      <ComboBox fx:id="comboBox" layoutX="372.0" layoutY="452.0" prefHeight="25.0" prefWidth="205.0" />
+      <Button fx:id="btAceptar" layoutX="335.0" layoutY="573.0" mnemonicParsing="false" text="Aceptar" />
+      <Button fx:id="btCerrar" layoutX="409.0" layoutY="573.0" mnemonicParsing="false" onAction="#cerrar" text="Cancelar" />
+      
+    </children>
+</AnchorPane>

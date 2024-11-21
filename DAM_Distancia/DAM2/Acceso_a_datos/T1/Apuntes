@@ -1,0 +1,74 @@
+Unidad 1, Manejo de ficheros
+
+Clase File:
+    proporciona una representación abstracta de ficheros y directorios
+
+    Las instancias de esta clase representan nombres de archivos, no los propios archivos
+
+    Puede ser que el archivo no exista, a si que hay que manejar las excepciones
+
+    La clase puede:
+        -Renombrar archivo:     renameTo()
+        -Borrar:                delete()
+        -Crear:                 createTempFile()
+        -Modf fecha y hora      setLastModified()
+        -Crear                  mkdir()
+        -Listar directorio      list() y listFiles()
+        listar nombres          listRoots()
+
+        y proporciona los siguientes constructores para crear objetos de tipo File:
+
+        public File (String nombreFichero | path);
+        public File (String path, String nombreFIchero | path);
+        public File (File path, String nombreFichero | path);
+
+        Ejemplos de uso de los distintos constructores:
+
+        File f = new File("fichero.txt"); //fichero.txt en el directorio actual
+        File f = new File("ficheros/fichero.txt"); //fichero.txt en el directorio ficheros del directorio actual de trabajo
+        File f = new File("c:/ficheros/fichero.txt"); //fichero.txt en el directorio ficheros de la unidad C:
+
+        File f = new File("c:/ficheros", "fichero.txt"); //fichero.txt en el directorio ficheros de la unidad C:
+        //la primera parte es el path y luego el fichero
+
+        File ruta = new File("ficheros");
+        File f = new File(ruta, "fichero.txt"); //fichero.txt en el directorio ficheros del directorio actual de trabajo
+
+
+        //Ejemplo de uso de los métodos de la clase File
+        private static void main (String[] args){
+            File f = new File("fichero.txt");
+            if (f.exists()){
+                System.out.println("El fichero existe");
+            } else {
+                System.out.println("El fichero no existe");
+            }
+        }
+
+        //ejemplo de com crear un fichero
+        public static void main (String [] args){
+            try{
+                File fichero = new File("c:\\prueba\\miFichero.txt");
+                if (fichero.createNewFile()){
+                    System.out.println("Fichero creado");
+                } else {
+                    System.out.println("No se ha podido crear el fichero");
+                }
+
+                //si ahora lo queremos borrar:
+                if (fichero.exists()){
+                    if (fichero.delete()){
+                        System.out.println("Fichero borrado");
+                    } else {
+                        System.out.println("No se ha podido borrar el fichero");
+                    }
+                }
+            }catch (IOException ioe){
+                System.out.println("Error de E/S");
+                ioe.getMessage();
+            
+            }
+        }
+
+
+        

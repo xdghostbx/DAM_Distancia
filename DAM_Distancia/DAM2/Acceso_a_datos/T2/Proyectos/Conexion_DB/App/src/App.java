@@ -11,6 +11,7 @@ public class App {
         String port = "1433";
         
         try {
+            
             Connection conexion = DriverManager.getConnection("jdbc:sqlserver://localhost:"+port+";database="+dbName+";user="+user+";password="+password+";trustServerCertificate=true;");
             System.out.println("Conexion establecida");
             conexion.close();

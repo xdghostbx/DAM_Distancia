@@ -4,5 +4,10 @@
     "vscode-pets.petType": "dog",
     "vscode-pets.position": "explorer",
     "vscode-pets.theme": "none",
-    "vscode-pets.throwBallWithMouse": true
+    "vscode-pets.throwBallWithMouse": true,
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
 }

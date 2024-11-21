@@ -4,6 +4,8 @@
  */
 package ejercicio1;
 
+import java.util.Random;
+
 /**
  *
  * @author USER
@@ -11,9 +13,11 @@ package ejercicio1;
 
 import java.util.concurrent.BlockingQueue;
 
+
 public class Consumidor implements Runnable {
     private BlockingQueue<Character> cola;
     private int numProductos;
+    Random aleatorio = new Random();
     
     public Consumidor (BlockingQueue<Character> cola, int numProductos){
         this.cola = cola;
@@ -24,7 +28,7 @@ public class Consumidor implements Runnable {
     public void run(){
         try{
             for (int i = 0; i<numProductos;i++){
-                Thread.sleep(250);
+                Thread.sleep(aleatorio.nextInt(1000)+10); 
                 Character ch = cola.take();
                 System.out.println("Consumiendo: "+ch);
                 
