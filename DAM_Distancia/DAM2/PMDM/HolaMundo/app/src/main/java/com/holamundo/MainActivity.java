@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         resultado = findViewById(R.id.resultado);
     }
 
-    //metodo para realizar la suma "no programable"
+    //metodo para realizar la suma "no programatica"
     public void realizarSuma (View view) {
         try{
             int num1 = Integer.parseInt(operando1.getText().toString());

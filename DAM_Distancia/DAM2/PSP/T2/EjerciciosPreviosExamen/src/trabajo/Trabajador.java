@@ -1,6 +1,6 @@
 package trabajo;
 
-public class Trabajador implements Runnable {
+public class Trabajador extends Thread{
     private Persona persona;  
 
     public Trabajador(Persona persona) {

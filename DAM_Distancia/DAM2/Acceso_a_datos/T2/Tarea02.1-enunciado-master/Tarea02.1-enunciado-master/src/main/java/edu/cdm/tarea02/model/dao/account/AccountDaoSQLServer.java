@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import edu.cdm.tarea02.model.Account;
 import edu.cdm.tarea02.model.Empleado;
@@ -65,82 +65,81 @@ public class AccountDaoSQLServer
     }  
 
    @Override
-public int transferir(int accIdOrigen, int accIdDestino, BigDecimal amount) {
-    int id = -1; // Devuelve -1 si no se ha podido realizar la transferencia
-    LocalDate date = LocalDate.now();
-    Connection conexion = null;
+    public int transferir(int accIdOrigen, int accIdDestino, BigDecimal amount) {
+        int id = -1; // Devuelve -1 si no se ha podido realizar la transferencia
+        LocalDateTime date = LocalDateTime.now();
+        Connection conexion = null;
 
-    try {
-        conexion = this.dataSource.getConnection();
-        conexion.setAutoCommit(false);
+        try {
+            conexion = this.dataSource.getConnection();
+            conexion.setAutoCommit(false);
 
-        // Insertar el movimiento en la tabla ACCOUNT_MOVEMENT
-        try (PreparedStatement pstmt = conexion.prepareStatement(
-                "INSERT INTO ACC_MOVEMENT (ACCOUNT_ORIGIN_ID, ACCOUNT_DEST_ID, AMOUNT, DATETIME) VALUES (?,?,?,?)",
-                Statement.RETURN_GENERATED_KEYS)) {
+            //Actualizar la cuenta origen
+            try (PreparedStatement updateOrigen = conexion.prepareStatement(
+                    "UPDATE ACCOUNT SET AMOUNT = (AMOUNT - ?) WHERE ACCOUNTNO = ?")) {
 
-            pstmt.setInt(1, accIdOrigen);
-            pstmt.setInt(2, accIdDestino);
-            pstmt.setBigDecimal(3, amount);
-            pstmt.setDate(4, java.sql.Date.valueOf(date));
-            pstmt.executeUpdate();
+                updateOrigen.setBigDecimal(1, amount);
+                updateOrigen.setInt(2, accIdOrigen);
+                updateOrigen.executeUpdate();
+            }
 
-            try (ResultSet clavesResultado = pstmt.getGeneratedKeys()) {
-                if (clavesResultado.next()) {
-                    id = clavesResultado.getInt(1);
+            
+            //Actualizar la cuenta destino
+            try (PreparedStatement updateDestino = conexion.prepareStatement(
+                    "UPDATE ACCOUNT SET AMOUNT = (AMOUNT + ?) WHERE ACCOUNTNO = ?")) {
+                    
+
+                updateDestino.setBigDecimal(1, amount);
+                updateDestino.setInt(2, accIdDestino);
+                
+                updateDestino.executeUpdate();
+            }
+
+            // Insertar el movimiento en la tabla ACCOUNT_MOVEMENT
+            try (PreparedStatement pstmt = conexion.prepareStatement(
+                    "INSERT INTO ACC_MOVEMENT (ACCOUNT_ORIGIN_ID, ACCOUNT_DEST_ID, AMOUNT, DATETIME) VALUES (?,?,?,?)",
+                    Statement.RETURN_GENERATED_KEYS)) {
+
+                pstmt.setInt(1, accIdOrigen);
+                pstmt.setInt(2, accIdDestino);
+                pstmt.setBigDecimal(3, amount);
+                pstmt.setTimestamp(4, java.sql.Timestamp.valueOf(date));
+
+                pstmt.executeUpdate();
+
+                try (ResultSet clavesResultado = pstmt.getGeneratedKeys()) {
+                    if (clavesResultado.next()) {
+                        id = clavesResultado.getInt(1);
+                    }
+                }
+            }
+
+
+            // Confirmar transacción
+            conexion.commit();
+            System.out.println("Transacción completada con éxito");
+
+        } catch (SQLException ex) {
+            System.out.println("Error al transferir el movimiento de cuenta: " + ex.getMessage());
+            if (conexion != null) {
+                try {
+                    conexion.rollback();
+                    System.out.println("Transacción revertida");
+                } catch (SQLException e) {
+                    System.out.println("Error al hacer rollback: " + e.getMessage());
+                }
+            }
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.close();
+                } catch (SQLException ex) {
+                    System.out.println("Error al cerrar la conexión: " + ex.getMessage());
                 }
             }
         }
 
-        // Actualizar la cuenta origen
-        try (PreparedStatement updateOrigen = conexion.prepareStatement(
-                "UPDATE ACCOUNT SET AMOUNT = (AMOUNT - ?) WHERE EMPNO = ?")) {
-
-            updateOrigen.setBigDecimal(1, amount);
-            updateOrigen.setInt(2, accIdOrigen);
-            updateOrigen.executeUpdate();
-        }
-
-        // Actualizar la cuenta destino
-        try (PreparedStatement updateDestino = conexion.prepareStatement(
-                "UPDATE ACCOUNT SET AMOUNT = (AMOUNT + ?) WHERE EMPNO = ?")) {
-
-            updateDestino.setBigDecimal(1, amount);
-            updateDestino.setInt(2, accIdDestino);
-            updateDestino.executeUpdate();
-        }
-
-        // Confirmar transacción
-        conexion.commit();
-        System.out.println("Transacción completada con éxito");
-
-    } catch (SQLException ex) {
-        System.out.println("Error al transferir el movimiento de cuenta: " + ex.getMessage());
-        if (conexion != null) {
-            try {
-                conexion.rollback();
-                System.out.println("Transacción revertida");
-            } catch (SQLException e) {
-                System.out.println("Error al hacer rollback: " + e.getMessage());
-            }
-        }
-    } finally {
-        if (conexion != null) {
-            try {
-                conexion.close();
-            } catch (SQLException ex) {
-                System.out.println("Error al cerrar la conexión: " + ex.getMessage());
-            }
-        }
+        return id;
     }
-
-    return id;
-}
-
-
-   
-
-   
-   
 
 }

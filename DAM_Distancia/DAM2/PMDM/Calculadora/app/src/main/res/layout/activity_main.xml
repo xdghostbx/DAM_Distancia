@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:background="@color/black"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:background="@color/black">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="47dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_resultado"
+                    android:layout_width="290dp"
+                    android:layout_height="165dp"
+                    android:background="#4CAF50"
+                    android:text="0"
+                    android:textAlignment="viewEnd"
+
+                    android:textSize="40dp" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:background="#040404">
+
+            <TableRow
+                android:layout_width="400dp"
+                android:layout_height="250dp">
+
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/bt_clear"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:text="CE" />
+
+                <Button
+                    android:id="@+id/bt_borrar"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="del" />
+
+                <Button
+                    android:id="@+id/bt_porcentaje"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="%" />
+
+                <Button
+                    android:id="@+id/bt_dividir"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="/" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/bt_7"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/bt_8"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/bt_9"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/bt_multiplicar"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="x" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="200dp"
+                android:layout_height="100dp">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/bt_4"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/bt_5"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/bt_6"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/bt_restar"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="400dp"
+                android:layout_height="100dp">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/bt_1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/bt_2"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/bt_3"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/bt_suma"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="400dp"
+                android:layout_height="100dp">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/bt_0"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/bt_decimal"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="." />
+
+                <Button
+                    android:id="@+id/bt_igual"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="=" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="96dp" />
+
+        </TableLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="253dp"
+            android:background="@color/white">
+
+            <RadioGroup
+                android:id="@+id/rg_colores"
+                android:layout_width="423dp"
+                android:layout_height="254dp"
+                android:layout_marginBottom="43dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rb_verde"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:buttonTint="@color/white"
+                    android:checked="true"
+                    android:text="Color verde"
+                    android:textColor="@color/white"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_rojo"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:buttonTint="@color/white"
+                    android:text="Color rojo"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/rb_azul"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:buttonTint="@color/white"
+                    android:text="Color azul"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

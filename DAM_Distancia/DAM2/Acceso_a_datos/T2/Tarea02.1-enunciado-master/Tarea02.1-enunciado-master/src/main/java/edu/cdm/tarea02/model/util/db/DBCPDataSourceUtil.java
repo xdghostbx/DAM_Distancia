@@ -9,7 +9,7 @@ import org.apache.commons.dbcp2.BasicDataSource;
 
 public class DBCPDataSourceUtil {
 
-    private static final String DB_CONFIG_FILE = Paths.get("src", "main", "resources", "db.properties")
+    private static final String DB_CONFIG_FILE = Paths.get("Tarea02.1-enunciado-master","src", "main", "resources", "db.properties")
             .toString();
     // Las claves del fichero Properties:
     private static final String DB_DRIVER_CLASS = "_DB_DRIVER_CLASS";

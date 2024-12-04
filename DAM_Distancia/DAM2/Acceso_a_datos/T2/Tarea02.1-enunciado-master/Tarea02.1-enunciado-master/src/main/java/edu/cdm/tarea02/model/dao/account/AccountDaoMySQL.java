@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import edu.cdm.tarea02.model.Account;
 import edu.cdm.tarea02.model.Empleado;
@@ -60,7 +60,7 @@ public class AccountDaoMySQL
             }
         } catch (SQLException e){
             System.out.println("Error al buscar la cuenta por empleado ");
-            e.getStackTrace();
+            e.printStackTrace();
         }
         return cuenta;
     }   
@@ -69,12 +69,33 @@ public class AccountDaoMySQL
     @Override
     public int transferir(int accIdOrigen, int accIdDestino, BigDecimal amount) {
         int id = -1; // Devuelve -1 si no se ha podido realizar la transferencia
-        LocalDate date = LocalDate.now();
+        LocalDateTime date = LocalDateTime.now();
         Connection conexion = null;
 
         try {
             conexion = this.dataSource.getConnection();
             conexion.setAutoCommit(false);
+
+            //Actualizar la cuenta origen
+            try (PreparedStatement updateOrigen = conexion.prepareStatement(
+                    "UPDATE ACCOUNT SET AMOUNT = (AMOUNT - ?) WHERE ACCOUNTNO = ?")) {
+
+                updateOrigen.setBigDecimal(1, amount);
+                updateOrigen.setInt(2, accIdOrigen);
+                updateOrigen.executeUpdate();
+            }
+
+            
+            //Actualizar la cuenta destino
+            try (PreparedStatement updateDestino = conexion.prepareStatement(
+                    "UPDATE ACCOUNT SET AMOUNT = (AMOUNT + ?) WHERE ACCOUNTNO = ?")) {
+                    
+
+                updateDestino.setBigDecimal(1, amount);
+                updateDestino.setInt(2, accIdDestino);
+                
+                updateDestino.executeUpdate();
+            }
 
             // Insertar el movimiento en la tabla ACCOUNT_MOVEMENT
             try (PreparedStatement pstmt = conexion.prepareStatement(
@@ -84,7 +105,8 @@ public class AccountDaoMySQL
                 pstmt.setInt(1, accIdOrigen);
                 pstmt.setInt(2, accIdDestino);
                 pstmt.setBigDecimal(3, amount);
-                pstmt.setDate(4, java.sql.Date.valueOf(date));
+                pstmt.setTimestamp(4, java.sql.Timestamp.valueOf(date));
+
                 pstmt.executeUpdate();
 
                 try (ResultSet clavesResultado = pstmt.getGeneratedKeys()) {
@@ -94,23 +116,8 @@ public class AccountDaoMySQL
                 }
             }
 
-            // Actualizar la cuenta origen
-            try (PreparedStatement updateOrigen = conexion.prepareStatement(
-                    "UPDATE ACCOUNT SET AMOUNT = (AMOUNT - ?) WHERE EMPNO = ?")) {
-
-                updateOrigen.setBigDecimal(1, amount);
-                updateOrigen.setInt(2, accIdOrigen);
-                updateOrigen.executeUpdate();
-            }
-
-            // Actualizar la cuenta destino
-            try (PreparedStatement updateDestino = conexion.prepareStatement(
-                    "UPDATE ACCOUNT SET AMOUNT = (AMOUNT + ?) WHERE EMPNO = ?")) {
-
-                updateDestino.setBigDecimal(1, amount);
-                updateDestino.setInt(2, accIdDestino);
-                updateDestino.executeUpdate();
-            }
+            
+            
 
             // Confirmar transacción
             conexion.commit();

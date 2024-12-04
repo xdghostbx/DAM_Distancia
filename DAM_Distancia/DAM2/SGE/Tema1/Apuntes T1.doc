@@ -54,7 +54,7 @@ Identificación de sistemas ERP-CRM
                 Es habitual que cada módulo use un software especifico para su funcionalidad
 
             -Adaptabilidad
-                (zZz)
+                Aunque las 2 caracteristicas anteriores facilitan la adaptabilidad a las necesidades de cada empresa, algunas veces para abaratar costes se implementa una solucion mas generica
 
         2.3 Ventajas e inconvenientes de los ERP
             -Ventajas
@@ -72,7 +72,7 @@ Identificación de sistemas ERP-CRM
                 .Prepraracion para el cambio en la forma de hacer negocios, trabajar y organizarse dentro de la empresa
 
         2.4 Concepto CRM
-            CRM es fostware para el manejo de las relaciones con el clientes
+            CRM es software para el manejo de las relaciones con el clientes
             Incide positivamente en los siguientes aspectos
             - Disminuye costes de interaccion con los clientes
             -Promueve cierta bidireccionalidad en la comunicacion
@@ -91,6 +91,11 @@ Identificación de sistemas ERP-CRM
                     Proporcionan informacion para conocer mejor las necesidades del cliente
 
         2.6 Características de los CRM
+            Facilitar la toma de decisiones en tiempo real
+            Identificar clientes que compran o que no estan interesados y actuar en tiempo real
+            Famentan realaciones a largo plazo con los clientes
+            Facilitan la toma de decisiones referentes a inversiones
+            PErmiten que el usuario pueda hacer adaptaciones sin necesidad de cambiar el codigo fuente
 
         2.7 Ventajas e inconvenientes de los CRM
             -Ventajas
@@ -110,3 +115,37 @@ Identificación de sistemas ERP-CRM
             
             Proyecto propio de implantacion:
                 Desarrollo de software necesario, formacion a los empleados
+
+    3. Arquitectura de un sistema ERP-CRM 
+        Los dos elementos tecnicos mas importantes son una base de datos relaciones y una arquitectura cliente-servidor
+        Esta arquitectura consiste en que los clientes solicitan servicios al servidor cuando no puedan realizarlos por si mismos
+        Los clientes se comunican con el servidor mediante red, solicitando consultas a la base de datos. El servidor realiza las funciones de administrador de perifericos y control de acceso a la base de datos
+
+        3.1 Estructura funcional en un sistema ERP
+            Estan diseñados de forma modular y cada empresa determina que modulos se implantacion
+            La base de datos que compone el sistema por un lado trabaja captando informacion de distintas aplicaciones y por otro entregando la informacion necesaria para las distintas funciones de la empresa
+            Dependiendo de los procesos, se pueden clasificar en:
+                -Procesos de manufactura: compras, gestion de inventario, etc 
+                -Procesos de venta y marketing: herramientas de gestion y planificacion de ventas, aplicaciones de procesamiento de ordenes de venta
+                -Procesos financieros y contables: aplicaciones relacionadas con gestion y presupuesto, contabilidad, generacion de informes
+                -Procesos de recursos humanos: registro de personal, control de tiempo, calculo de remuneraciones
+
+        3.2 Extensiones referentes al sistema ERP
+            CRM: (Customer Relationship Management) 
+            HCM: (Human Capital Management) control de emplemados conociendo su rendimiento, automatizando el departamento de recursos humanos
+            SCM: (Suply Chain Management) controla las operaciones de la cadena de suministro
+            PLM: (Product Lifecycle Management) controla todo el proceso de fabricaion de productos desde la introduccion hasta lanzamiento y evolucion
+
+    4. Software compatible. configuracion
+        Existen 3 factores que se tienen en cuenta para elegir el sistema operativo para implementar el ERP
+        -Experiencia: O practica de la empresa con el sistema operativo
+        -Disponibilidad: servicios que ofrece el sistema operativo al ERP
+        -Coste: inversion para adoptar el nuevo sistema operativo
+
+
+
+
+
+
+        TAREAS:
+
