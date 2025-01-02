@@ -1,0 +1,193 @@
+//Generar un documento DOM
+
+/*
+ * 1. Crear un documento DOM
+ * 2. Crear un elemento
+ * 3. Añadir un elemento al documento
+ * 4. Añadir un atributo al elemento
+ * 5. Añadir un texto a un elemento
+ * 6. Añadir un comentario al documento
+ * 7. Añadir un nodo de texto al documento
+ * 8. Añadir un nodo de texto a un elemento
+ * 9. Añadir un nodo de texto a un comentario
+ * 10. Añadir un nodo de texto a un atributo
+ * 11. Añadir un nodo de texto a un nodo de texto
+ */
+
+//1. Crear un documento DOM
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+DocumentBuilder builder = factory.newDocumentBuilder();
+Document document = builder.newDocument();
+
+//2. Crear un elemento
+Element root = document.createElement("root");
+
+//3. Añadir un elemento al documento
+document.appendChild(root);
+
+//4. Añadir un atributo al elemento
+root.setAttribute("attr", "value");
+
+//5. Añadir un texto a un elemento
+root.appendChild(document.createTextNode("text"));
+
+//6. Añadir un comentario al documento
+Comment comment = document.createComment("comment");
+document.appendChild(comment);
+
+//8. Añadir un nodo de texto a un elemento
+Element element = document.createElement("element");
+element.appendChild(document.createTextNode("text"));
+root.appendChild(element);
+
+//10. Añadir un nodo de texto a un atributo
+Attr attr = document.createAttribute("attr");
+attr.setValue("value");
+root.setAttributeNode(attr);
+
+//11. Buscar nodos en el arbon
+NodeList elements = document.getElementsByTagName("element");
+for (int i = 0; i < elements.getLength(); i++) {
+    Element elem = (Element) elements.item(i);
+    System.out.println("Atributo: " + elem.getAttribute("attr"));
+}
+
+
+//Ejemplo
+//Generar un documento XML con un contacto de una agenda
+
+//1. Crear un documento DOM
+DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+DocumentBuilder db = dbd.newDocumentBuilder();
+Document documento = db.newDocument();
+
+//2. Crear un elemento
+Element agenda = documento.createElement("agenda");
+documento.appendChild(agenda);
+
+//3. Añadir un elemento al documento
+Element contacto = documento.createElement("contacto");
+agenda.appendChild(contacto);
+
+//4. Añadir un atributo al elemento
+Attr id = documento.createAttribute("id");
+id.setValue("1");
+contacto.setAttributeNode(id);
+
+//5. Añadir un texto a un elemento de 2 formas
+Element nombre = documento.createElement("nombre");
+Node textoNombre = documento.createTextNode("Pepe");
+nombre.appendChild(textoNombre);
+
+nombre.appendChild(documento.createTextNode("Pepe"));
+contacto.appendChild(nombre);
+
+Element telefono = documento.createElement("telefono");
+telefono.appendChild(documento.createTextNode("123456789"));
+contacto.appendChild(telefono);
+
+//6. Añadir un comentario al documento
+TransformerFactory tf = TransformerFactory.newInstance();
+Transformer transformer = tf.newTransformer();
+transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+DOMSource origen = new DOMSource(documento);
+StreamResult destino = new StreamResult(new File("agenda.xml"));
+transformer.transform(origen, destino);
+
+
+//Ejemplo de añadir elementos a un documento desde un arrayList
+
+for (Contacto c : contactos) {
+    Element contacto = documento.createElement("contacto");
+    agenda.appendChild(contacto);
+
+    Attr id = documento.createAttribute("id");
+    id.setValue(c.getId());
+    contacto.setAttributeNode(id);
+
+    Element nombre = documento.createElement("nombre");
+    nombre.appendChild(documento.createTextNode(c.getNombre()));
+    contacto.appendChild(nombre);
+
+    Element telefono = documento.createElement("telefono");
+    telefono.appendChild(documento.createTextNode(c.getTelefono()));
+    contacto.appendChild(telefono);
+}
+
+
+
+
+//SAX
+
+//1. Crear un manejador de eventos
+SAXParserFactory spf = SAXParserFactory.newInstance();
+SAXParser sp = spf.newSAXParser();
+
+//2. Crear un manejador de eventos
+DefaultHandler handler = new DefaultHandler() {
+    //aqui definimos las variables que necesitamos para el parseo, sean objeto como en el ejemplo y los metodos propios del handler 
+
+    private Hotel hotel;
+    private Direccion direccion;
+    private StringBuilder contenido;
+
+    //Como SAX no lee todo el documento, lo abre a cachos. El metodo startElement se ejecuta cada vez que se abre una etiqueta. En el ejemplo del xml hotel, como las etiquetas "padre" son hotel pero dentro de hotel hay otras etiquetas, tenemos que definir que etiqueta va a tener contenido hijo
+    @Override
+    public void startElement(String uri, String localName, String qName, org.xml.sax.Attributes attributes) throws SAXException {
+        contenido = new StringBuilder();
+        if (qName.equals("hotel")) {
+            hotel = new Hotel();
+            hotel.setId(attributes.getValue("id"));
+        } else if (qName.equals("direccion")) {
+            direccion = new Direccion();
+        }
+    }
+
+    //El metodo characters se ejecuta cada vez que se encuentra un texto dentro de una etiqueta y se guarda en el StringBuilder contenido que hemos definido en el metodo startElement 
+    @Override
+    public void characters (char [] ch, int start, int lenght) throws SAXException {
+        contenido.append(ch, start, lenght);
+    }
+
+    //El metodo endElement se ejecuta cada vez que se cierra una etiqueta. En el ejemplo del xml hotel, como las etiquetas "padre" son hotel pero dentro de hotel hay otras etiquetas, tenemos que definir que etiqueta va a tener contenido hijo
+    @Override
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        switch (qName) {
+            case "nombre":
+                //se verifica que no sea null y se carga a su atributo correspondiente
+                //importante ir viendo el xml para poner bien los atributos y etiquetas 
+                if (hotel != null) {
+                    hotel.setNombre(contenido.toString());
+                }
+                break;
+            case "direccion":
+                if (hotel != null) {
+                    hotel.setDireccion(direccion);
+                }
+                break;
+            case "calle":
+                if (direccion != null) {
+                    direccion.setCalle(contenido.toString());
+                }
+                break;
+            case "numero":
+                if (direccion != null) {
+                    direccion.setNumero(contenido.toString());
+                }
+                break;
+        }
+    }
+};
+
+//3. Parsear el documento
+sp.parse(new File("hoteles.xml"), handler);
+
+
+
+
+

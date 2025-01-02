@@ -1,0 +1,8 @@
+POJO: Instancia de una clase que no extiende ni implementa nada
+
+VO: Value Object, un objeto enfocado en la vista.
+POJO: Plain Old Java Object
+BO: Business Object, son jaba beans que se mapean a entidades de bases de datos
+
+Un ORM permite tomar un objeto Java y hacerlo persistente. Carga un objeto de la base de datos a memoria y permite hacer consultas a la base de datos
+

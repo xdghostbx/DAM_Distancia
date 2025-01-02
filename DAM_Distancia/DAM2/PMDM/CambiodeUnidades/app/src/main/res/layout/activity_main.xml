@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <!-- Selector de unidad base -->
+    <TextView
+        android:layout_width="329dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Selecciona el tipo de unidad base:"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinner_base_unit"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:entries="@array/base_units"
+        android:spinnerMode="dropdown" />
+
+    <!-- Campo de entrada para la unidad base -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Introduce el valor:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editText_input_value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/edit_text"
+        android:hint="Introduce el valor"
+        android:inputType="numberDecimal"
+        android:padding="12dp" />
+
+    <!-- Grupo de RadioButtons para la unidad inicial -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:text="Selecciona la unidad inicial:"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_initial_unit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical" />
+
+    <!-- Grupo de RadioButtons para la unidad destino -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:text="Selecciona la unidad destino:"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_target_unit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button_convert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Convertir"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:background="@color/button_color"
+            android:textColor="@color/background_color"/>
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reiniciar"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:background="@color/button_color"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+</LinearLayout>

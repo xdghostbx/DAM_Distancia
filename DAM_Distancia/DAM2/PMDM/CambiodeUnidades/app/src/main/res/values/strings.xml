@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cambio de Unidades</string>
+    <string-array name="base_units">
+        <item>Gramos</item>
+        <item>Litros</item>
+        <item>Tazas</item>
+        <item>Onzas</item>
+    </string-array>
+</resources>
+

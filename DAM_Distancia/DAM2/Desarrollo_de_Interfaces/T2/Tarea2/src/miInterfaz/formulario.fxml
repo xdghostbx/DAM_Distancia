@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miInterfaz.FormularioController">
+   <children>
+      <Button fx:id="bt1" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" onAction="#recogerDatos" text="Button" />
+      <CheckBox fx:id="cb_fumador" layoutX="81.0" layoutY="323.0" mnemonicParsing="false" onAction="#mostrarTabaco" text="Fumador" />
+      <CheckBox fx:id="cb_genero" layoutX="19.0" layoutY="49.0" mnemonicParsing="false" onAction="#mostratGeneros" text="Genero" />
+      <Label fx:id="label" layoutX="170.0" layoutY="171.0" text="Label" />
+      <RadioButton fx:id="rb_Hombre" layoutX="126.0" layoutY="49.0" mnemonicParsing="false" text="Hombre" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="genero" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rb_mujer" layoutX="126.0" layoutY="67.0" mnemonicParsing="false" text="Mujer" toggleGroup="$genero" visible="false" />
+      <RadioButton fx:id="rb_noContesta" layoutX="126.0" layoutY="92.0" mnemonicParsing="false" text="Neutro" toggleGroup="$genero" visible="false" />
+      <Spinner fx:id="sp_edad" layoutX="14.0" layoutY="129.0" />
+      <TextField fx:id="txt1" layoutX="14.0" layoutY="167.0" />
+      <TextField fx:id="txt2" layoutX="14.0" layoutY="203.0" />
+      <TextField fx:id="txt3" layoutX="14.0" layoutY="241.0" />
+      <TextField fx:id="txt4" layoutX="14.0" layoutY="279.0" />
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="267.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menu_cambio" mnemonicParsing="false" onAction="#cambiarVentana" text="Cambio de Ventana" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <RadioButton fx:id="rb_1" layoutX="163.0" layoutY="311.0" mnemonicParsing="false" selected="true" text="1 al dia" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="fumar" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rb_5" layoutX="163.0" layoutY="332.0" mnemonicParsing="false" text="5 al dia" toggleGroup="$fumar" visible="false" />
+      <RadioButton fx:id="rb_1o" layoutX="163.0" layoutY="356.0" mnemonicParsing="false" text="10 al dia" toggleGroup="$fumar" visible="false" />
+      <ComboBox fx:id="combo_box" layoutX="14.0" layoutY="88.0" prefWidth="150.0" />
+      <Button fx:id="boton" layoutX="108.0" layoutY="26.0" mnemonicParsing="false" onAction="#boton" text="Button" />
+   </children>
+</AnchorPane>

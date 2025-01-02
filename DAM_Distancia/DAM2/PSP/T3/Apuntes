@@ -1,0 +1,29 @@
+Modelo TCP/IP
+
+tiene 4 capas:
+    -Capa de host-red: Esta capa permite comunicar el ordenador con el medio que conecta el equipo a la red. Esta capa realiza un direccionamiento fisico usando las direcciones mac
+
+    -Capa de red: Permite que los equipos envien paquetes a cualquier red y viajen de forma independiente a su destino
+
+    -Capa de transporte:
+
+    -Capa de aplicación:
+
+Existen 2 tipos de conexiones:
+
+    -TCP (Transmission Control Protocol) Es un protocolo orientado a la conexion que permite un flujo de bytes se entregue sin errores en una maquina destino. Fragmenta el flujo entre bytes en mensajes y pasa cada uno a la capa de red
+
+    -UDP (User Datagram Protocol) Es un protocolo sin conexion para apps que no necesitan la asignacion de secuencia ni el control de flujo de TCP. Ese protocolo se usa en las consultas de peticion y respuesta del tipo cliente-servidor y en las aplicaciones en las que la velocidad es más importante que la entrega precisa
+
+    Por lo tanto, las conexiones TCP garantizan la correcta recepción de los paquetes y las conexiones UDP son más rapidas pero no permiten la correccion de errores
+
+Puertos de comunicacion:
+    -Puertos conocidos: [0, 1023] Son puertos reservador a aplicaciones de uso standart
+        21- FTP
+        22- SSH
+        53- DNS
+        80- HTTP
+
+    -Puertos registrados [1024, 49151] Puertos asignados a un servicio o aplicacion especifica. Pueden ser usador por los usuarios libremente
+
+    -Puertos dinamicos [49152, 65535] Este rango de puertos no puede ser registrado y su uso se limita a conexiones temporales entre aplicacionesN
