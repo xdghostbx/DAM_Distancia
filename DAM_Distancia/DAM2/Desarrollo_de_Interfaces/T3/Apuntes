@@ -1,0 +1,13 @@
+Creación de Componentes Visuales
+
+    Un componente es una clase creada para ser reutilizada y que puede ser manipulada.
+    Se define por su estado, que almacena propuedades.
+    Tabien tiene un comportamiento y distintos metodos.
+
+    Para que una clase se considere componente debe cumplir ciertas normas:
+        -Debe poder modificarse
+        -Debe tener persistencia
+        -Debe tener introspeccion (que el ide pueda reconocer los elementos y devolver la informacion)
+        -Debe poder gestionar eventos
+
+    Tienen propiedades, para leer o modificar estas propiedades se usan los metodos get y set.

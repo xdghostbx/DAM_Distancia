@@ -5,4 +5,26 @@ POJO: Plain Old Java Object
 BO: Business Object, son jaba beans que se mapean a entidades de bases de datos
 
 Un ORM permite tomar un objeto Java y hacerlo persistente. Carga un objeto de la base de datos a memoria y permite hacer consultas a la base de datos
+    Facilitan este mapeo mediante xml que permiten establecer las relaciones entre la base de datos relacional y el modelo de objetos de una aplicacion
 
+    Ventajas:
+        -Ayudan a reducir el tiempo de desarrollo de software. El usuario crea la base de datos y el programa automaticamente lee las relaciones y las tablas y crea el modelo ajustado
+        -Abstraccion de la base de datos
+        -Reutilizacion
+        -Persistencia de objetos y generar el SQL correspondiente
+        -Recuperacion de objetos persistidos
+        -Lenguaje propio para las consultas
+        -Independecia de la base de datos
+        -portabilidad y escalabilidad de los programas
+
+    Desventajas:
+        -Tiempo usado en el aprendizaje
+        -Menor rendimiento
+        -Sistema complejo
+
+
+Herramientas ORM más usadas:
+    -Hibernate
+    -Java Persistence
+    -iBatis
+    

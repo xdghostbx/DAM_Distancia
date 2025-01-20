@@ -1,0 +1,70 @@
+Aplicaciones cliente-Servidor
+
+1.Paradigma Cliente/Servidor
+    Cliente: PRoceso que permite interactuar con el usuario, ralizar las peticiones, enviarlas al Servidor
+    mostrar los datos al cliente... Se comporta como la interfaz que usa el usuario para contactar con el Servidor
+    Las funciones que lleva a cabo el proceso cliente son:
+        -Interactuar con el usuario
+        -Procesar las peticiones para ver si son validas y evitar peticiones maliciosas al servidor
+        -Recibir los resultados del servidor
+        -Formatear y mostrar los resultados
+    Las funiones que lleva a cabo el servidor son:
+        -Aceptar las peticiones de los clientes
+        -Procesar las peticiones
+        -Formatear y enviar los resultados a los clientes
+        -Procesar la lógica de la aplicacion y realizar validaciones de datos
+        -Asegurar la consistencia de la informacion
+        -Evitar que las peticiones de los clientes interfieran entre si
+        -Mantener la seguridad del sistema
+
+    Las características de una arquitectura Cliente/Servidor son:
+        -Un cliente que interactua con un usuario y un servidor que interactua con recursos compartidos
+        -Todo el trabajo de precesamiento lo realiza el servidor y el cliente solo interactua con el usuario
+        -Relacion entre distintos procesos
+        -Distincion de funciones basadas en el concepto de "servicio"
+        -La relacion puede ser de "muchos a uno" en el que un unico servidor da servicio a muchos clientes
+        -Las comunicaciones son a traves del cambio de mensajes
+        -Los clientes pueden usar sistemas heterogeneos ya que se permite la conexion desde cluaquier plataforma
+
+    Principales ventajas del esquema Cliente/Servidor
+        -Uso de clientes ligeros ya que el servidor es el que realiza el procesamiento de la informacion
+        -Facil integracion entre distintos sistemas
+        -Favorece el uso de interfaces gráficas interactivas
+        -Rapido y sencillo mantenimiento
+        -Estructura modular, facilita integracion y crecimiento así como la escalabilidad
+        -Soluciones locales
+        -Accesoa los recursos centralizado
+        -Los clientes acceden a los datos compartiendo informacion entre si
+    
+    Principales desventajas del esquema Cliente/Servidor
+        -Dificil mantenimiento de los sistemas
+        -Deben existir estrategias para el manejo de errores
+        -Importante mantener la seguridad del sistema
+        -Garantizar la consistencia de la informacion
+
+    Modelos:
+        1 capa (1-tier): El proceso cliente/servidor se encuentra en el mismo equipo
+        2 capas (2-tiers): (Varios clientes a un unico servidor) Es el modelo tradicional. Tiene el principal
+                           problema que no permite la escalabilidad y puede sobrecargarse si existe un numero
+                           alto de peticiones por parte de los clientes
+        3 capas (3-tiers): Añade una nueva capa de servidores
+                           Servidor de Aplicacion: Encargado de interactuar con los clientes y enviar las peticiones
+                           Servidor de Datos: Recibe las peticiones, las procesa y le devuelve el resultado
+                           al servidor de aplicacion para que lo envie al cliente. Para mejorar el rendimiento
+                           es posible agregar los servidores de datos que sean necesarios
+        n capas (n-tiers): A partir del modelo anterior se pueden añadir capas adicionales a los servidores con el 
+                           objetivo de separar la funcionalidad de cada servidor y mejorar el rendimiento del
+                           sistema
+
+    Programacion
+        Los pasos que realiza el servidor para la comunicacion son:
+            -Publicar puerto
+            -Esperar peticiones, espera a que se conecte un cliente y se crea shocket del cliente
+            -Envio y recepcion de datos, se crea un stream de entrada y otro de salida. Procesa y envia al cliente
+            -Cierre del shocket del cliente
+        Los pasos que realiza el cliente son:
+            -COnectarse con el servidor, se crea el shocket de comunicacion
+            -Envio y recepcion de datos, con stream de entrada y de salida
+            -Finalizar la comunicacion y cerrar el shocket
+
+2.Optimizacion de Shockets

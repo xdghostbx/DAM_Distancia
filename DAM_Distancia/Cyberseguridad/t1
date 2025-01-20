@@ -1,0 +1,78 @@
+La ciberseguridad es el esfuerzo continuo para proteger a las personas, organizaciones y gobiernos de ataques digitales mediante la proteccion de sistemas y datos en red contra el uso o daño no autorizados
+
+Telepresencia: A nivel personal hay que proteger la identidad, datos y dispositivos
+
+Organizacional: A nivel corporativo hay que proteger la reputacion, datos y los clientes de la organizacion
+
+Gobierno: Seguridad nacional, estabilidad economica y seguridad y bienestar ciudadano
+
+Protegiendo sus Datos Personales
+
+    Los datos personales son cualquier informacion que se pueda usar para identificarnos tanto dentro como fuera de linea
+
+    Aunque no se usen redes sociales, si se usa la web, se tiene identidad en linea
+
+
+Su identidad en linea
+    
+    La identidad en linea es la informacion que se puede encontrar sobre nosotros en la web
+
+    La informacion que se comparte en linea puede ser usada para robar identidad, acosar, discriminar, estafar, etc
+
+Sus datos
+
+Donde estan sus datos?
+    
+    En la nube, en la web, en su dispositivo, en su organizacion, en el gobierno
+
+    En la nube: Google Drive, Dropbox, OneDrive, iCloud, etc
+
+    En la web: Redes sociales, foros, blogs, etc
+
+    En su dispositivo: Telefonos, tabletas, computadoras, etc
+
+    En su organizacion: Correos, bases de datos, etc
+
+    En el gobierno: Impuestos, seguridad social, etc
+
+Quien más quiere mis datos?
+    ISP: Proveedores de servicios de internet
+    Anunciantes: Publicidad
+    Motores de busqueda: Google, Bing, Yahoo
+    Redes sociales: Facebook, Twitter, Instagram, etc
+    Sitios web que visitamos: Amazon, eBay, etc
+
+
+Tipos de datos de la organizacion
+    Datos Tradicionales:
+        Datos transaccionales: detalles realacionados con la compraventa, produccion y operaciones organizativas basicas
+        Propiedad Intelectual: patentes, derechos de autor, marcas registradas, secretos comerciales
+        Datos financieros: informacion sobre ingresos, gastos, cuentas por cobrar y cuentas por pagar
+
+    Internet de las cosas (IoT) y Big Data:
+        Datos de sensores: datos de sensores de IoT
+        Datos de maquina a maquina: datos generados por maquinas
+        Datos de redes sociales: datos generados por redes sociales
+        Datos de transacciones: datos generados por transacciones
+
+EL cubo
+    McCumber Cube es un marco de modelo creado para ayudar a las organizaciones a establecer y evaluar iniciatuvas de seguridad de la informacion al considerar todos los factores que las afectan. Tiene 3 dimensiones
+        Los principios fundamentales para proteger los sistemas de informacion
+            COnfidencialidad
+            Integridad
+            Disponibilidad
+        La proteccion de la inforamcion en cada uno de sus estados posibles
+            Procesamiento
+            Almacenamiento
+            Transmision
+        Las medidas de seguridad usadas para proteger sus datos
+            COncienciacion
+            Tecnologia
+            Prolitica y procedimiento
+
+Las consecuencias de una violacion de seguridad
+    Daño a la reputacion
+    Vandalismo
+    RObo
+    Perdida de ingresos
+    Propiedad intelectual dañada
