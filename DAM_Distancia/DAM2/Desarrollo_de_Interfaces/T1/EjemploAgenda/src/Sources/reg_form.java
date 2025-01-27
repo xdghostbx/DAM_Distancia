@@ -308,3 +308,6 @@ public class reg_form extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre;
     // End of variables declaration//GEN-END:variables
 }
+
+
+sudo apt-get install -y python3-pip

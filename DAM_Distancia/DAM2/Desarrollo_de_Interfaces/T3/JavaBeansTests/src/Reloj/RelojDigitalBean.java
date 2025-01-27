@@ -125,7 +125,7 @@ public class RelojDigitalBean extends JLabel implements Serializable, ActionList
                     alarmaListener.capturarAlarma(new AlarmaEvent(this, textoAlarma));
                 }
                 
-                javax.swing.JOptionPane.showMessageDialog(this, "BIP BIP");
+                javax.swing.JOptionPane.showMessageDialog(this, textoAlarma);
                 activarAlarma = false;
             }
         }

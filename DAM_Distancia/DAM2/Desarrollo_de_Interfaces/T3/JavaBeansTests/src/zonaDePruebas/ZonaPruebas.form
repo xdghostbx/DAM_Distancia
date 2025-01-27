@@ -24,84 +24,23 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="relojDigitalBean2" min="-2" pref="67" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                      <Component id="relojDigitalBean1" min="-2" pref="59" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="editorDeTexto1" min="-2" max="-2" attributes="0"/>
-                          <Component id="editorDeTexto2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="editorDeTexto3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
+              <Component id="relojDigitalBean2" min="-2" pref="67" max="-2" attributes="0"/>
+              <EmptySpace pref="207" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-              <Component id="editorDeTexto3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="editorDeTexto2" min="-2" max="-2" attributes="0"/>
-                  <Component id="relojDigitalBean2" min="-2" pref="33" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="43" max="32767" attributes="0"/>
-              <Component id="relojDigitalBean1" min="-2" pref="27" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-              <Component id="editorDeTexto1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+              <Component id="relojDigitalBean2" min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace pref="134" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="EditorTexto.EditorDeTexto" name="editorDeTexto2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="editorDeTexto2"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editorDeTexto2ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="EditorTexto.EditorDeTexto" name="editorDeTexto1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Hola"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editorDeTexto1ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="EditorTexto.EditorDeTexto" name="editorDeTexto3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="editorDeTexto3"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editorDeTexto3ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="Reloj.RelojDigitalBean" name="relojDigitalBean1">
-      <Properties>
-        <Property name="activarAlarma" type="boolean" value="true"/>
-        <Property name="horaAlarma" type="int" value="20"/>
-        <Property name="minutoAlarma" type="int" value="54"/>
-      </Properties>
-    </Component>
     <Component class="Reloj.RelojDigitalBean" name="relojDigitalBean2">
       <Properties>
         <Property name="horaAlarma" type="int" value="20"/>

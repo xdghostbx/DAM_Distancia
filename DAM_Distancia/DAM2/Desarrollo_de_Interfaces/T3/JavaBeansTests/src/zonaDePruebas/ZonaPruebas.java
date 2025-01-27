@@ -26,38 +26,9 @@ public class ZonaPruebas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        editorDeTexto2 = new EditorTexto.EditorDeTexto();
-        editorDeTexto1 = new EditorTexto.EditorDeTexto();
-        editorDeTexto3 = new EditorTexto.EditorDeTexto();
-        relojDigitalBean1 = new Reloj.RelojDigitalBean();
         relojDigitalBean2 = new Reloj.RelojDigitalBean();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        editorDeTexto2.setText("editorDeTexto2");
-        editorDeTexto2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editorDeTexto2ActionPerformed(evt);
-            }
-        });
-
-        editorDeTexto1.setText("Hola");
-        editorDeTexto1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editorDeTexto1ActionPerformed(evt);
-            }
-        });
-
-        editorDeTexto3.setText("editorDeTexto3");
-        editorDeTexto3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editorDeTexto3ActionPerformed(evt);
-            }
-        });
-
-        relojDigitalBean1.setActivarAlarma(true);
-        relojDigitalBean1.setHoraAlarma(20);
-        relojDigitalBean1.setMinutoAlarma(54);
 
         relojDigitalBean2.setHoraAlarma(20);
         relojDigitalBean2.setMinutoAlarma(6);
@@ -67,54 +38,20 @@ public class ZonaPruebas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(relojDigitalBean1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(editorDeTexto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editorDeTexto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(editorDeTexto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41))))
+                .addGap(170, 170, 170)
+                .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(207, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(editorDeTexto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(editorDeTexto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(relojDigitalBean1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addComponent(editorDeTexto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addGap(129, 129, 129)
+                .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void editorDeTexto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editorDeTexto2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editorDeTexto2ActionPerformed
-
-    private void editorDeTexto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editorDeTexto1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editorDeTexto1ActionPerformed
-
-    private void editorDeTexto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editorDeTexto3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editorDeTexto3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,10 +89,6 @@ public class ZonaPruebas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private EditorTexto.EditorDeTexto editorDeTexto1;
-    private EditorTexto.EditorDeTexto editorDeTexto2;
-    private EditorTexto.EditorDeTexto editorDeTexto3;
-    private Reloj.RelojDigitalBean relojDigitalBean1;
     private Reloj.RelojDigitalBean relojDigitalBean2;
     // End of variables declaration//GEN-END:variables
 }
