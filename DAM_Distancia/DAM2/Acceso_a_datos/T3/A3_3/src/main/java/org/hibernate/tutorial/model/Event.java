@@ -24,25 +24,12 @@
 package org.hibernate.tutorial.model;
 
 import java.time.LocalDateTime;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "Events")
 public class Event {
-
-	@Id
-	@GeneratedValue
+	
     private Long id;
-
     private String title;
-
-	@Column(name = "eventDate")
     private LocalDateTime date;
-
 	public Event() {
 		// this form used by Hibernate
 	}

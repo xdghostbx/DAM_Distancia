@@ -30,9 +30,8 @@ import java.sql.SQLException;
 
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import org.hibernate.tutorial.SessionFactoryUtil;
 import org.hibernate.tutorial.model.Event;
 
 import junit.framework.TestCase;
@@ -50,20 +49,15 @@ public class HibernateIllustrationTest extends TestCase {
 	@Override
 	protected void setUp() {
 		// A SessionFactory is set up once for an application!
-		final StandardServiceRegistry registry =
-				new StandardServiceRegistryBuilder()
-						.build();
+		
 		try {
 			sessionFactory =
-					new MetadataSources(registry)
-							.addAnnotatedClass(Event.class)
-							.buildMetadata()
-							.buildSessionFactory();
+					SessionFactoryUtil.getSessionFactory();
 		}
 		catch (Exception e) {
 			// The registry would be destroyed by the SessionFactory, but we
 			// had trouble building the SessionFactory so destroy it manually.
-			StandardServiceRegistryBuilder.destroy(registry);
+			e.printStackTrace();
 		}
 	}
 
@@ -86,7 +80,6 @@ public class HibernateIllustrationTest extends TestCase {
 			session.createSelectionQuery("from Event", Event.class).getResultList()
 					.forEach(event -> out.println("Event (" + event.getDate() + ") : " + event.getTitle()));
 		});
-		//++ Para ver realmente el contenido de la Base de datos en memoria en depuración
 		
 
 	}
