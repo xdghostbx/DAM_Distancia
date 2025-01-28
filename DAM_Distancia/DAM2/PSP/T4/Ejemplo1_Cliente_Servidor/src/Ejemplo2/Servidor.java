@@ -46,34 +46,31 @@ class Servidor extends Thread {
 
     }
 
-public void run(){
+    public void run() {
 
         try {
 
-             // Creo los flujos de entrada y salida
+            // Creo los flujos de entrada y salida
 
-     DataInputStream flujo_entrada = new DataInputStream(skCliente.getInputStream());
+            DataInputStream flujo_entrada = new DataInputStream(skCliente.getInputStream());
 
-     DataOutputStream flujo_salida= new DataOutputStream(skCliente.getOutputStream());
+            DataOutputStream flujo_salida = new DataOutputStream(skCliente.getOutputStream());
 
+            // ATENDER PETICIÓN DEL CLIENTE
 
-    // ATENDER PETICIÓN DEL CLIENTE
+            flujo_salida.writeUTF("Se ha conectado el cliente de forma correcta");
 
-     flujo_salida.writeUTF("Se ha conectado el cliente de forma correcta");
+            // Se cierra la conexión
 
+            skCliente.close();
 
-     // Se cierra la conexión
+            System.out.println("Cliente desconectado");
 
-     skCliente.close();
+        } catch (Exception e) {
 
-     System.out.println("Cliente desconectado");
+            System.out.println(e.getMessage());
 
-
-     } catch( Exception e ) {
-
-         System.out.println( e.getMessage() );
-
-     }
+        }
 
     }
 

@@ -1,8 +1,11 @@
+package Ejemplo2;
 
 
 import java.io.*;
 
 import java.net.*;
+
+import Ejemplo2.Cliente;
 
 
 class Cliente {
