@@ -28,3 +28,43 @@ Herramientas ORM más usadas:
     -Java Persistence
     -iBatis
     
+
+    Hibernate está diseñado para ser flexible en cuanto al esquema de tables utilizado y al adaptarse a su uso sobre una base de datos ya existente
+
+    Hibernate usa una arquitectura basada en capas y consta de las siguientes interfaces:
+
+        -Configuration: archivo de configuracion o propiedades, requerido por hibernate. Este objeto de configuracion proporciona los componentes clave, la conexion a la base de datos y la configuracion del mapeado de clase
+
+        -SessionFactory: permite obtener un objeto "Session". Se necesita una sessionFactory por cada base de datos
+
+        -Session: Se usa para obtener una conexion fisica con una base de datos
+
+        -Transaction: Representa una unidad de trabajo con la base de datos. Las transacciones en hibernate son manejadas por un gestor de transacciones subyacente y de transaccion (JDBC o JTA)
+
+        -Query: Permite hacer consultas o modificaciones en la base de datos. Se usa HQL (Hibernate Query Language) o el SQL nativo de la base de datos
+
+
+    Configurar Hibernate con XML se ha perdido por el uso de anotaciones
+
+    Requisitos clases Persistentes o Entities
+        Las clases persistentes tienen la capacidad de definir objetos que pueden almacenarse y recuperarse de una almance persistente de datos
+
+        Para que una clase pueda ser una entidad para Hibernate, se consideran las siguientes pautas:
+            -La clase de entidad debe estar anotada con la anotacion "jakarta.persistence.Entity"
+            -La clase entidad debe tener un constructor publico o protegido sin argumentos
+            -La clase entidad no debe ser final. Tampoco debe tener metodos o variables finales
+            -Si una instancia de la entidad se va a usar de forma remota como un objeto separado, la clase entidad debe implementar "Serializable" 
+            -Las clases abstractas tambien pueden ser entidades
+            -Las clases tendran atributos privados con getter y setter publicos al estilo JavaBean
+
+    Contexto de persistencia
+        Distintos estados:
+            -Transient:
+                La entidad acaba de ser iniciada y no está aun asociada a un contexto persistente
+                Se hace un "new" de un objeto y solo está en memoria
+
+            -Managed o Persistent
+                La entidad tiene un identificador asociado y estña asociada a un contecto de persistencai. Puede que aun exista fisicamente en la base de datos o no
+
+            -Detached
+                La entidad 

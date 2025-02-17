@@ -35,3 +35,33 @@ Interfaz 2:
         Hay varios errores de carga de elemtos de la interfaz, que me llaman la atención. Lo situariía en el apartado de que la interfaz no es previsible.
         
     Qué elementos de la interfaz y estructura de la misma propondrías para aumentar la usabilidad de cada una.
+
+        Para mejorar la usabilidad empezaría por cambiar el color de fondo (azul) y el amarillo por otros, no tan saturados. Quizá algo más apagados en tonos.
+
+        En la estructura, habría que hacer un rediseño del menú, que destaque más, que tenga presencia. A la vez, intentaría que estuvise todo el menú en la misma zona, evitando tener que ir de arriba a abajo para lo que se quiera hacer.
+
+        Para el idioma, home y mail, cambiaría el texto por iconos, ya todo el mundo sabe que es lo que hace. 
+
+        El menu spinner lo cambiaría por un dropdown menu, que quede oculto cuando no tiene el foco en las tres rayas tipicas de estos menús.
+
+        Siguiendo con la estructura, sería de una sola culumna de texto, no tres.
+
+        De esta forma, los títulos tendrían hueco para tener más tamaño y destacar. También tendrían más espacio las imagenes, pudiendo insertarlas de algo más calidad.
+
+        Los enlaces, tendrían que tener otro colo, que invite a pinchar en ellos.
+
+        También modificar la cantidad de texto para que el usuario al leer no se arbume, aunque con el cambio de diseño pensado, puede que no haga falta. 
+
+
+Interfaz 1: (ELESPECTADOR)
+
+    Qué características básicas y atributos de usabilidad no se cumplen.
+
+        
+
+    Qué pautas de diseño usable no se han tenido en cuenta.
+
+    Qué principios básicos estructurales no se cumplen.
+
+    Qué elementos de la interfaz y estructura de la misma propondrías para aumentar la usabilidad de cada una.
+
