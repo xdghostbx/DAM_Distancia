@@ -1,0 +1,73 @@
+Tema 4: Diseño
+    Destacan como gestores de colocación
+        AbsoluteLayout (Depecated)
+        ConstraintLayout
+        FrameLayout
+        LinearLayout
+            Alinea todas sus vistas en una unica direccion
+        RelativeLayout
+            Coloca las vistas en una posicion relativa a otras elementos (arriba de otra vista, a la izquierda, etc)
+        TableLayout
+            Coloca las vistas en formato tabla, filas y columnas
+
+    Todos estos gestores han sido substituidos por el nuevo gestor, el ConstraintLayout
+    Aunque es posible meterlos en cascada, es mejor evitarlo
+
+    Ahora se usa la biblioteca JetPack de Android X
+    Para usar estas bibliotecas hay que compilar el proyecto usando el SDK 9 (api 21) o superior y definir como true las siguientes propiedades de Gradle en el fichero:
+        gradle.properties
+            android.useAndroidX
+            android.enableJetifier
+
+    Con estas opciones activadas podremos usar las siguientes restricciones:
+        Relative Positioning
+        Visibility behavior
+        Dimension Constraints
+        Chains
+        Vortual helpers objects
+        Optimizer
+
+Rercursos dibujables
+    Es un recurso para dibujar cosas en pantalla que el usuario no va a interactuar con ellas
+
+Tamaños de pantalla 
+    Android agrupa los tamaños en 4 grupos genericos
+        Pequeño
+        Normal
+        Grande
+        Extra grande
+
+    Para asegurar un diseño flexible se usan los valores
+        wrap_content
+        match_parent
+    
+    Hacer el proyecto 7 de orientacion vertical y horizontal (pagina 79 del pdf)
+
+    Para hacer un diseño adaptable se usan los siguientes recursos
+        res/layout
+        res/layout-land
+        res/layout-sw600dp
+        res/layout-sw600dp-land
+        res/layout-sw720dp
+        res/layout-sw720dp-land
+        res/layout-sw800dp
+        res/layout-sw800dp-land
+        res/layout-sw1200dp
+        res/layout-sw1200dp-land
+        res/layout-sw1600dp
+        res/layout-sw1600dp-land
+        res/layout-sw1920dp
+        res/layout-sw1920dp-land
+
+Buenas practicas:
+    mover todas las cadenas a Strings.xml
+    Seguir las directrices de Android para el uso de cadenas de interfaz de usuario
+    Proporcionar suficiente contexto para las cadenas declaradas (comentar que es lo que hacen o donde estan)
+    Marcar partes de mensajes que no deben ser traducidos
+    Diseñar la app para que funcione en cualqier localizacion
+    Asegurarnos de que la app incluye todos los recursos por defecto necesarios
+    Usar un diseño flexible
+    Evita crear más ficheros de recursos y cadenas de las que necesitas
+    Usa el objeto de contexto de Android para busqueda manual de localizacion
+
+    

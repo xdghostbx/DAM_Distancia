@@ -1,0 +1,150 @@
+Usabilidad
+
+Disciplina que estudia la forma de diseñar sitios webs y aplicacines para que los usuarios puedan interactuar con ellos de forma más facil, comoda e intuitiva posible
+
+Acecsibilidad:
+    El diseño de software sea tal que permite a personas discapacitadas acceder a sus contenidos
+
+Utilidad:
+    Concepto que mide el grado de satifaccion de las necesidades de los usuarios
+
+
+Las características más importantes de una interfaz usable son la siguientes:
+    -Util: cuplir tareas sencillas especificas para la cual se ha diseñado
+    -Facil de usar: eficiente, veloz y con la menor cantidad de errores posibles
+    -Facil de aprender: que no se tarde excesivo tiempo en aprender a trabajar con la aplicacion y que sea sencillo recordar su funcionamiento
+    -Elegante en su diseño: para favorecer la percepcion del usuario y sus emociones
+
+    Otras características importantes pero que nos e suelen tener en cuenta en el diseño son:
+        -Prevision de errores de los usuarios al navegar por la interfaz: proveer de mecanismos de recuperacion de errores y de reversibilidad de acciones
+        -Retroalimentacion de la interfaz ante acciones del usuario: para evitar que el usuario se sienta perdido
+        -Simplicidad de diseño: evitar la sobrecarga de informacion y de elementos en la interfaz
+
+
+    En resumen:
+        Usuario:
+            -Debe ser capaz de
+                iniciar las acciones y controlar las tareas
+                Personalizar la interfaz
+                Interactuar con la aplicacion
+                Acceder a todo el contenido
+        
+        Recuperacion de errores:
+            Minimizar riegos de acciones accidentales
+            Permitir deshacer acciones y recuperacion
+            Tener en cuenta los errores potenciales del usuario
+
+        Retroalimentacion:
+            Respuesta apropiada a las acciones del usuario
+            Estado del sistema siempre disponible
+
+        Simplicidad de diseño:
+            Evitar la sobrecarga con elementos innecesarios
+            La informacion sera la minima imprescindible
+            Interfaz simple y facil de aprender y recordar
+
+        Estetica de diseño:
+            Atributos visuales o auditivos concentran la atencion del usuario
+            Entorno agradable facilita el entendimiento
+        
+        Consistencia:
+            Facilidad de uso
+            Asociacion de ideas y rapido aprendizaje
+            Alta velocidad de uso
+
+Atributos de usabilidad:
+    -Facilidad de aprendizaje
+    -Eficiencia
+    -Facilidad de recordar
+    -Fiabilidad
+    -Satisfaccion del usuario
+
+    Los beneficion son
+        Reduccion de costes 
+        Optimizacion de costes
+        Disminucion de errores
+        Aumento de la satisfaccion del usuario
+
+Normas relacionadas con la usabilidad:
+    -ISO 25000 Calidad del software y metricas de evaluacion:
+    -ISO 9241 Requisitos del software en relacion a la calidad de uso:
+    -ISO 14915 Ergonomia del software para interfaces de usuarios multimedia:
+
+Medida de usabilidad en aplicaciones:
+    Las metricas de usabilidad son las caracteristicas de la interfaz que son medibles de forma objetiva. Estas caracteristicas se suelen dividir en
+        -Efectividad: grado en que los usuarios pueden alcanzar sus objetivos
+        -Eficiencia: grado en que los usuarios pueden alcanzar sus objetivos con el minimo esfuerzo
+        -Satisfaccion: grado en que los usuarios se sienten satisfechos con la aplicacion
+    Para medir las metricas anteriores es necesario contar con un grupo grande de usuarios y seguir las siguientes pautas:
+        -Definir las tareas que los usuarios deben realizar
+        -Establecer objetivos para las tareas seleccionadas
+        -Definir que variables se van a medir durante el proceso
+        -Planificar la recogida de datos
+
+Pruebas de expertos:
+    Su objetivo principal es detectar elementos de diseño de la interfaz que pueden confundir al usuario y restar calidad de la aplicacion.
+
+    Los tipos de pruebas son:
+        Heuristicas: se basan en la experiencia de los expertos
+        Revision de normas: se basan en las normas de usabilidad
+        Inspeccion de consistencia: se basan en la consistencia de la aplicacion
+        Inspeccion formal de usabilidad: se basan en la usabilidad de la aplicacion
+    Tambien existe otra tecnica de evaluacion que es la "Caminata Cognitiva" en la que el grupo de expertos simula el uso de la aplicacion y se evalua la facilidad de uso de la misma
+
+
+Pruebas con usuarios:
+
+
+Pautas de diseño de la interfaz de usuario:
+    Los diseñadores siempre dicen que la interfaz de usuario debería ser la primera cosa a diseñar a la hora de desarrollar una aplicacion
+
+    Las pautas de diseño pueden resumirse en:
+        -Organizar todos los elementos que conforman la interfaz de una manera clara y consistente
+        -Economiar elementos y contenidos para comunicar lo maximo co nla minima cantidad de elementos
+        -Comunicar, ajustando la presentacion de contenidos a las capacidades del usario
+
+        Las pautas de diseño que deben tenerse en cuenta son:
+            -Diseño visual: Un buen diseño visual está centrado en aumentar la comuinicacion
+            -Color: 
+            -Matiz, contraste y resplandor: opcion para personalizar la interfaz (usuarios con desordenes visuales)
+            -Disposicion de las ventanas tipo formulario: Disposicion limpia
+            Redaccion de texto en la interfaz:
+                -Brevedad
+                -Lenguaje claro y sencillo, con frases positivas, con retroalimentacion de errores
+
+    Estructura de la interfaz de usuario:
+        Familiaridad: la interfaz debe ser familiar para el usuario
+        Consistencia: la interfaz debe ser consistente
+        Legibilidad: la interfaz debe ser legible
+        Minima sorpresa: la interfaz debe ser predecible
+        Recuperacion de errores: la interfaz debe permitir recuperar errores
+
+
+        Distintos elementos que forman la estructura de la interfaz:
+            Menus
+            Ventanas
+            Cuadros de dialogo
+            Atajos de teclado
+
+    Aspecto de la interfaz de usuario:
+        -Colores
+        -Fuentes
+        -Iconos
+        -Distribucion de elementos
+
+    Elementos interactivos de la interfaz de usuario:
+        Botones de comando
+            Botones en relieve
+            Botones de confirmacion
+            Botones de radio
+        Listas desplegables
+        Etiquetas (label)
+
+    Presentacion de datos:
+
+    Diseño de la secuencia de control de la aplicacion:
+
+    Aseguramiento de la información:
+
+    Aplicaciones multimedia:
+    

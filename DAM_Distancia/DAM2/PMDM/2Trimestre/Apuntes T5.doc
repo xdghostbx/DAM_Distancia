@@ -1,0 +1,24 @@
+Tema 5: Interacciones entre clases y actividades
+
+Intents
+    Un intent es un objeto de accion para solicitar una accion de otro componente de la aplicacion
+    Tienen 3 casos de uso:
+        Comenzar una actividad
+        Iniciar un servicio
+        Entregar un mensaje
+
+    Tipos de Intents   
+        Explicitos:
+        Implicitos:
+
+    Creacion de una intent  
+        La informacion principal que contiene una intent es la siguiente:
+            Nombre del componente
+            accion
+            datos
+            categoría
+            extras
+            indicadores
+
+    VER EJEMPLO EJERCICIOS RESULTOS DE TODO EL TEMA
+

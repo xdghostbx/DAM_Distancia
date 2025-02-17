@@ -1,0 +1,37 @@
+Interfaz 2:
+
+    Qué características básicas y atributos de usabilidad no se cumplen.
+        De las características que se hablan en el tema, en cuanto al usuario:
+            Veo realmente difícil interactuar con esta aplicación. Tiene una sobrecarga de texto, con un diseño monotono en toda la aplicación que hace dificil leer, encotrar los distintos encabezados ya que se mezclan con los cuerpos. 
+
+            Por esta dificultad a la hora de leer los distintos apartados, me siento perdido, a simple vista de que es lo que hace la aplicación o a que se dedica la empresa.
+
+            Los distintos menús se confunden con el propio fondo. No dan sensación de ser botones, si no iconos. El menu tanto de busqueda como el desplegable son inconsistentes con el resto de la aplicación, quedando feos o fuera de lugar. Los menús de la parte de abajo, aparte de no parecer botones como les ocurre a los de la parte superior, tienen un error de diseño ya que tienen fondo blanco, queda feo.
+
+            Toda la página tiene un problema de interactividad con el usuario. No se diferencias los enlaces, imagenes "rotas" sin texto complementario... No invita a interactuar.
+
+    Qué pautas de diseño usable no se han tenido en cuenta.
+
+        Las pautas que no sa han tenido en cuenta, o la que yo considero son:
+            Los elementos no se muestran de uan forma clara y consistente: Tamaño de fuente para los titulos, color para los enlaces, el usuario tiene ante si un bloque de texto negro sobre un fondo blanco.
+
+            Redaccion del texto: El texto presentado no es breve. O lo es en cada sección independiente, pero como se presentan todas juntas y sin delimitación, abruma al usuario. No sabe donde empezar a leer y donde puede terminar.
+
+            No economiza los distintos elementos, puediendo mostrar en contenido en cascada o en forma de lista. Facilitando la lectura y la diferenciando los distintos bloques de texto.
+
+            Color: Quiero pensar que la eleccion de colores es por la imagen de marca, pero el fondo amarillo siempre dificulta la lectura, daña la vista. En los apuntes viene mencionado que es preferible usar colores apagador, tirando a oscuros. También, como mencionaba antes, debería haber una diferenciación en el color de fuente para los botones, enlaces y, ya dependiendo, de los titulos de las distintas secciones.
+
+    Qué principios básicos estructurales no se cumplen.
+
+    Estructura de la interfaz de usuario:
+        Familiaridad: la interfaz debe ser familiar para el usuario
+        Consistencia: la interfaz debe ser consistente
+        Legibilidad: la interfaz debe ser legible
+        Minima sorpresa: la interfaz debe ser predecible
+        Recuperacion de errores: la interfaz debe permitir recuperar errores
+
+        Considero que no se cumple la consistencia con el diseño. Ya mencionaba antes que el menu de busqueda, el menu desplegable o la barra de desplazamiento parecen externas al diseño presentado. 
+        No es legible, es dificil leer ya sea por el color o por la gran cantidad de texto con la misma fuente y color. 
+        Hay varios errores de carga de elemtos de la interfaz, que me llaman la atención. Lo situariía en el apartado de que la interfaz no es previsible.
+        
+    Qué elementos de la interfaz y estructura de la misma propondrías para aumentar la usabilidad de cada una.
