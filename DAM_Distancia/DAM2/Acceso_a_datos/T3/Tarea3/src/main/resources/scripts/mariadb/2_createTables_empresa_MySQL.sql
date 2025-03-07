@@ -1,0 +1,23 @@
+-- Switch to empresa database
+USE empresa;
+
+-- Create the DEPT table only if it doesn't already exist
+CREATE TABLE IF NOT EXISTS DEPT (
+    DEPTNO INT AUTO_INCREMENT PRIMARY KEY,
+    DNAME VARCHAR(20),
+    LOC VARCHAR(20)
+);
+
+-- Create the EMP table only if it doesn't already exist
+CREATE TABLE IF NOT EXISTS EMP (
+    EMPNO INT AUTO_INCREMENT PRIMARY KEY,
+    ENAME VARCHAR(20),
+    JOB VARCHAR(20),
+    MGR INT,
+    HIREDATE DATE,
+    SAL DECIMAL(15,2),
+    COMM DECIMAL(15,2),
+    DEPTNO INT,
+    FOREIGN KEY (MGR) REFERENCES EMP(EMPNO),
+    FOREIGN KEY (DEPTNO) REFERENCES DEPT(DEPTNO)
+);
