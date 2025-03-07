@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7bd2ce1a-5127-4647-ae0f-6ea64129f8f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select a.descripcion as Producto, SUM(d.unidades) as "Ventas totales"
+from articulos a
+join detalle_pedidos d on a.ID_articulo = d.ID_articulo
+GROUP BY a.ID_articulo;]]>
+	</queryString>
+	<field name="Producto" class="java.lang.String"/>
+	<field name="Ventas totales" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="249" y="25" width="100" height="20" uuid="cb53c697-097c-48eb-a5aa-8bdae11b129d"/>
+				<text><![CDATA[Gráfico de ventas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="9" width="100" height="20" uuid="ba29e047-b36f-4f63-bd1c-e8fab5fce097"/>
+				<text><![CDATA[Nombre del Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="9" width="100" height="20" uuid="3246a26e-9d7c-4a22-a732-c1e232e77a5f"/>
+				<text><![CDATA[Total de ventas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="24" width="100" height="20" uuid="b5fab967-ec60-438a-8a7a-57375b60f8cc"/>
+				<textFieldExpression><![CDATA[$F{Producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="24" width="100" height="20" uuid="28e6cac5-2245-47d0-9173-0247f5c6db74"/>
+				<textFieldExpression><![CDATA[$F{Ventas totales}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="166" splitType="Stretch">
+			<bar3DChart>
+				<chart>
+					<reportElement x="0" y="0" width="555" height="166" uuid="a9f90630-ea8d-4d05-b2b8-b8ea2f8e89a1"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[""]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{Producto}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Ventas totales}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="sp_test" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miInterfaz.SegundaVentanaController">
+   <children>
+      <Button fx:id="bton_cerrar" layoutX="254.0" layoutY="157.0" mnemonicParsing="false" onAction="#cerrar" text="Button" />
+      <DatePicker fx:id="dp_prueba" layoutX="57.0" layoutY="291.0" showWeekNumbers="true" />
+      <Spinner fx:id="sp_prueba" editable="true" layoutX="422.0" layoutY="91.0" />
+      <Spinner fx:id="sp_prueba1" editable="true" layoutX="254.0" layoutY="91.0" />
+      <Spinner fx:id="sp_prueba2" editable="true" layoutX="91.0" layoutY="91.0" />
+      <Label layoutX="130.0" layoutY="65.0" text="Dia" />
+      <Label layoutX="315.0" layoutY="65.0" text="Mes" />
+      <Label layoutX="483.0" layoutY="65.0" text="Año" />
+      <CheckBox layoutX="103.0" layoutY="182.0" mnemonicParsing="false" text="CheckBox" />
+      <RadioButton fx:id="color1" layoutX="338.0" layoutY="149.0" mnemonicParsing="false" onAction="#color1" selected="true" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="colores" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="color2" layoutX="338.0" layoutY="174.0" mnemonicParsing="false" onAction="#color2" text="RadioButton" toggleGroup="$colores" />
+      <RadioButton fx:id="color3" layoutX="338.0" layoutY="200.0" mnemonicParsing="false" onAction="#color3" text="RadioButton" toggleGroup="$colores" />
+   </children>
+</AnchorPane>
