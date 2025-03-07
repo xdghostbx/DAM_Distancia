@@ -1,0 +1,38 @@
+Tema 5: Generacion de servicios en Red
+
+Un sercio de red es un software que proporciona una determinada funcionalidad o utilidad al sistema. Por lo general, estos programas están basados en un conjunto de protocolos y estándares.
+
+Una clasificacion de los servicios en red segun su funcionalidad puede ser:
+    -Administracion/Configuracion: facilita la administradacion y gestion de las configuraciones de los distintos equipos en red
+    -Acceso y control remoto: se encargan de permitir la conexion de usuarios a la red desde lugares remotos, verificar su identidad y controlar el Acceso
+    -Ficheros: Consisten en ofrecer a la red grandes capacidades de almacenamiento para que los usuarios puedan almacenar como transferir archivos
+    -Impresion: Permiten compartir impresoras entre los distintos equipos de la red
+    -Informacion: Permiten el acceso a bases de datos, paginas web, etc
+    -Comunicacion: Facilitan la comunicacion entre los distintos equipos de la red
+
+En la gerarquía de los protocolos TCP/IP, la capa de aplicacion es la que ocupa el nivel superior y es la que incluye los protocolos de alto nivel relacionado con los servicios en red. Define las normas y reglas que usan las aplicaciones para el intercambio de datos.
+Algunos de los protocolos son:
+    -FTP: Protocolo de transferencia de archivos
+    -Telnet: Protocolo de acceso remoto
+    -SMTP: Protocolo de transferencia de correo
+    -HTTP: Protocolo de transferencia de hipertexto
+    -SSH: Protocolo seguro de acceso remoto
+    -NNTP: Protocolo de transferencia de noticias de red
+    -IRC: Protocolo de comunicacion en tiempo real
+    -DNS: Protocolo de resolucion de nombres de dominio
+
+El paquete principal de java para programar aplicaciones con servicios de red :
+    java.net
+Otros paquetes para comunicaciones y servicios en red son:
+    java.rmi
+    javax.mail
+
+El paquete java.net proporciona una api que se puede dividir en 2 niveles
+    -Api de bajo nivel: permite representar
+        -Direcciones IP
+        -SOckets
+        -Interfaces
+    Api de alto nivel: permite representar
+        -URLs
+        -Conexiones
+        -Protocolos

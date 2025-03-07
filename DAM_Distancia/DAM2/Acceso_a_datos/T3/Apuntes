@@ -67,4 +67,114 @@ Herramientas ORM más usadas:
                 La entidad tiene un identificador asociado y estña asociada a un contecto de persistencai. Puede que aun exista fisicamente en la base de datos o no
 
             -Detached
-                La entidad 
+                La entidad tiene un itendificador asociado pero ya no tiene contexto de persistencia, ya que este se cerro o la instancia fue expulsada del contexto
+
+            -Removed
+                La entidad tiene un identificador asociado y tiene contexto de persistencai, pero está programada su eliminacion de la base de datos
+
+        Operaciones sobre la Session:
+
+            ##Codigo de ejemplo
+
+                Session session = sessionFactory.openSession();
+                Transaction tx = null;
+                try {
+                    tx = session.beginTransaction();
+                    Event event1 = session.get(Event.class, 2L); //recuperamos el objeto
+                    event1.setTitle("New Title"); //se modifica
+
+                    tx.commit();//lanza flush automaticamente en modo flush auto (por defecto) para sincronizar la base de datos
+                } catch (Exception e) {
+                    if (tx != null) {
+                        tx.rollback();
+                    }
+                    throw e;
+                } finally {
+                    session.close();
+                }
+
+            Crear una entidad persistente a partir de un nuevo objeto en memoria
+
+                Person person = new Person();
+                person.setId(1L);
+                person.setName("John Doe");
+
+                session.persist(person);
+
+            Marcar una entidad para ser eliminada
+
+                session.remove(person);
+
+            Recuperar una entidad por ID
+
+                Person person = session.get(Person.class, personId);
+
+                    o
+                
+                Person person = session.byId(Person.class).load(personId);
+
+            Pasar una entidad con estado dettached a estado managed con los datos sincronizados
+
+                Person person = session.byId(Person.class).load(personId);
+                session.clear(); //se hace el clear para que la entidad se desenganche
+                person.setName("Mr. John Doe");
+
+                session.merge(person);
+
+        
+        ATENCION
+            metodos actualizados para hibernate
+
+                get() carga entidad por el identificador o devuelve null si no existe
+                
+                persist() hace persistente la nueva entidad, garantizando que se registre para insercion al final de la transaccion
+
+                merge() o persist() une el estado de la entidad con el contexto de persistencia actual
+
+                remove() marca la entidad como eliminada en el contexto de persistencia
+
+
+    Hibernate Query Language (HQL)
+
+        Es el lenguaje de consultas que usa hibernate para obtener los objetos de la base de datos
+        Las consultas se realizan en terminos de clases persistentes y sus propiedades en java, de tal forma que forman nuestro modelos y no sobre tsus tablas y columnas
+        Las consultas son independientes del lenguaje SQL especifico de la base de datos
+        Es posible tratar con colecciones de java
+        Es posible navegar entre los distintos objetos en la propia consulta
+
+        En la version 6.6 están disponibles 2 versiones para realizar consultas:
+
+        <R> Query <R> createQuery(String queryString, Class <R> resultClass)
+
+        <R> SelectionQuery <R> createSelectionQuery (String hqlString, Class <R> resultType)
+
+        por ejemplo para obtener los profesores de la tabla correspondiente:
+            List<Profesor> profesores = (List<Profesor>) session
+                    .createSelectionQuery(" select p FROM Profesor p ", Profesor.class)
+                    .getResultList();
+ 
+            List<Profesor> profesores = (List<Profesor>) session
+                                .createQuery(" select p FROM Profesor p ", Profesor.class)
+                                .getResultList();
+
+
+        Si esperamos un unico resultados usamos:
+            Profesor profesor = session.createSelectionQuery("SELECT p FROM Profesor p WHERE id=?1", Profesor.class)
+                    .setParameter(1, profeId)
+                    .uniqueResult();
+
+        En la versión 6.6 se prefiere el uso de createSelectionQuery para consultas (SELECT), puesto que createQuery permitiría también realizar modificación de datos (UPDATE, INSERT, DELETE).
+
+
+        Actividad 3.6 Relaciones 1.1
+
+            Las realciones 1:1 tienen 2 posibilidades
+
+            Asociacion de PK: la pk tiene el mismo valor en ambas relacioens
+
+            Asociacion con clave foranea y esta clave foranea tiene que ser unica: la tabla tiene una pk propia y la relacion con la otra tabla tiene que hacerse con una fk con constraint de unicidad. Esta forma genera una relacion 1:N pero del lado N solo existe un registro
+
+
+        Actividad 3.7 Herencia
+
+            En hibernate existen 4 estrategias para implementar 

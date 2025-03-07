@@ -1,0 +1,45 @@
+Informes:
+    Ques es un informe?
+        Es un documento que permite mostrar el contenido de un origen de datos aplicando un formato que permita a los usuarios adquirir informacion.
+
+        Un informe se genera a partir de un diseño en el que se determina la distribucion y configuracion de los elementos a mostrar. 
+
+    Informes incrustados y no generados
+        La forma de añadir el informe a la aplicacion dependerá de como se cree el informe, es necesario tener la definicion del informe y un origen de datos para rellenarlo, aunque se puede crear dentro de la aplicacion o tenerlo en un archivo independiente e insertarlo despues.
+
+            -Informe incrustado: un informe que se ha creado directamente en el proyecto o importado a el. Cuando se crea un informe incrustado, se crea una clase contenedora para este informe. Al compilar el proyecto, tanto el informe como su clase se incrustan en el ensamblado.
+
+            -Informe no incrustado: se genera con una herramienta aparte del proyecto y se almacena tambien de forma independiente. 
+
+    Generacion de informes de forma automática: Herramientas
+        Destacan las siguientes:
+            -Crystal Reports: Los informes se almacenan en archivos con extension .rpt y se pueden incrustar en la aplicacion o almacenarlos de forma independiente.
+            -JasperReport + iReport: Genera archivos xml que contienen el diseño del informe. La libreria permite combinar el diseño con el origen de datos para obtener el documento final mediente codigo java
+            -Eclipse Birt: 
+
+        JasperReports + iReports
+            JasperReports es una libreria de generacion de informes que permite crear informes en formato pdf, html, xls, csv, xml, etc. 
+            iReport es una herramienta visual que permite diseñar los informes de forma grafica y exportarlos a JasperReports. 
+
+            Los informes se generan a partir de un archivo xml que contiene el diseño del informe y se combina con el origen de datos para obtener el informe final. 
+
+            Para generar un informe con JasperReports se deben seguir los siguientes pasos:
+                -Diseñar el informe con iReport
+                -Exportar el informe a JasperReports
+                -Generar el informe con JasperReports
+        
+        Interfaz de Usuario de iReport
+            Inspector de Informes: Muestra la estructura completa del informe, que se compone por muchos objetos (campos, parametros, variables)
+            Diseñador de Informes: Permite diseñar el informe de forma visual, arrastrando, posicionando, alineando y cambiando el tamaño de los objetos del informe
+            Paleta de elementos: COntiene los elementos de diseño que pueden ser arrastrados dentro de una banda para mostrar los datos, para visualizarla se debe seleccionar la pestaña "Paleta"
+            Hoja de propiedades: Establece las propiedades del componente seleccionado en el informe
+            Ventana de informe de problemas: contienen el listado de errores encontrados al compilar el informe
+
+        Elementos estructurales de un informe
+            -Titulo: aparece solo al inicio del informe
+            -Encabezado de pagina: aparece al inicio de cada pagina, puede contener informacion como la fecha y hora, nombre de la organizacion, etc
+            -Encabezado de columna: Se usa para lustar los nombres de los campos que se van a presentar
+            -Detalle: Se despliegan los valores correspondientes a las entradas en campos definidas en las columnas
+            -Pie de columna: puede presentar la informacion resumida para cada uno de los campos
+            -Pie de pagina: aparece al final de cada pagina, puede contener informacion como el numero de pagina, el total de paginas, etc
+            -Resumen: aparece al final del informe y puede contener informacion resumida de los datos presentados

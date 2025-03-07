@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="94ab4f51-281a-474a-8ce3-ee40dce4333e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id cliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$F{ID_Cliente}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT p.ID_Cliente, p.ID_Pedido, p.Fecha_Pedido as "Fecha", SUM(precio * unidades) as "Precio total"
+FROM pedidos p
+JOIN detalle_pedidos dp on p.ID_Pedido = dp.ID_Pedido
+where ID_Cliente = $P{id cliente}
+GROUP BY ID_Pedido, ID_Cliente;]]>
+	</queryString>
+	<field name="ID_Cliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_Pedido" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha" class="java.time.LocalDateTime"/>
+	<field name="Precio total" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="716db25d-e2b0-4fe3-90a6-30dab04b0448"/>
+				<text><![CDATA[ID_Pedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="5d2a56bd-6f8c-405a-8ca1-5e45920f7ad4"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="24e22da4-00eb-4825-afd2-72d22aef6a1c"/>
+				<text><![CDATA[Precio Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d4631a29-403e-4284-9689-832c5723adcb"/>
+				<textFieldExpression><![CDATA[$F{ID_Pedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="996c56a0-c10a-4535-85cc-b2f7f3451c7f"/>
+				<textFieldExpression><![CDATA[$F{Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="fc06d11e-42e5-419d-992c-09bc068e3965"/>
+				<textFieldExpression><![CDATA[$F{Precio total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

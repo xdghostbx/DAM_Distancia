@@ -1,0 +1,7 @@
+Consulta SLQ usada:
+
+select c.nombre, c.ciudad, c.direccion, p.ID_Pedido
+,SUM(d.unidades * d.precio) as precio, p.fecha_pedido from clientes c
+join pedidos p on c.ID_Cliente = p.ID_Cliente
+join detalle_pedidos d on p.ID_Pedido = d.ID_Pedido
+GROUP BY c.ID_Cliente, p.ID_Pedido;

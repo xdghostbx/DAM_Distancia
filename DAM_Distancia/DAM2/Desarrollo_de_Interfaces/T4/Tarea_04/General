@@ -1,0 +1,46 @@
+1. Características básicas y atributos de usabilidad que podrían no cumplirse
+
+(Nielsen y Shneiderman son referencias clave aquí)
+
+    Facilidad de aprendizaje: La interfaz debe ser intuitiva y fácil de entender sin necesidad de instrucciones extensas.
+    Eficiencia: Los usuarios deben poder realizar tareas de manera rápida y con pocos pasos.
+    Memorabilidad: Si el usuario vuelve después de un tiempo, debería recordar cómo usar la interfaz sin volver a aprender desde cero.
+    Prevención de errores: Se deben evitar errores comunes mediante confirmaciones, mensajes claros o deshabilitando acciones erróneas.
+    Recuperación de errores: Si se comete un error, debe haber formas fáciles de corregirlo (deshacer, avisos claros, etc.).
+    Satisfacción del usuario: La experiencia debe ser agradable y no generar frustración.
+    Consistencia: Deben mantenerse estilos, iconos y estructuras similares en toda la aplicación.
+    Accesibilidad: La interfaz debe ser usable por personas con discapacidad (uso de colores adecuados, compatibilidad con lectores de pantalla, etc.).
+
+2. Pautas de diseño usable que podrían no haberse tenido en cuenta
+
+(Basadas en heurísticas de Nielsen y guías de diseño como Material Design o Human Interface Guidelines)
+
+    Visibilidad del estado del sistema: La interfaz debe informar al usuario sobre lo que está pasando (carga, procesos en ejecución, errores, etc.).
+    Control y libertad del usuario: Los usuarios deben poder deshacer acciones o salir de flujos sin dificultad.
+    Coherencia y estándares: Deben usarse convenciones de diseño conocidas para que los usuarios no tengan que aprender algo nuevo.
+    Prevención de errores: En lugar de mostrar errores, la interfaz debe evitar que los usuarios los cometan (botones deshabilitados, validaciones previas).
+    Reconocimiento antes que recuerdo: Se deben mostrar opciones en pantalla en lugar de obligar al usuario a recordarlas.
+    Flexibilidad y eficiencia: Atajos, personalización, y opciones avanzadas para usuarios expertos.
+    Estética y diseño minimalista: Evitar sobrecarga de información, manteniendo solo lo necesario.
+    Ayuda y documentación: Si la interfaz es compleja, debe haber ayuda contextual o guías claras.
+
+3. Principios básicos estructurales que podrían no cumplirse
+
+(Principios generales de arquitectura de interfaces)
+
+    Estructura clara: La disposición de los elementos debe seguir una jerarquía visual clara.
+    Agrupación lógica de elementos: Los elementos relacionados deben estar cerca unos de otros.
+    Flujo de interacción predecible: La secuencia de acciones debe ser lógica y coherente.
+    Feedback inmediato: Cada acción del usuario debe generar una respuesta visible o auditiva.
+    Reducción de carga cognitiva: Se debe minimizar la cantidad de información que el usuario debe procesar.
+    Diseño adaptable y responsive: La interfaz debe ajustarse a distintos tamaños de pantalla y dispositivos.
+
+4. Elementos de la interfaz y estructura para mejorar la usabilidad
+
+    Diseño limpio y minimalista: Reducir elementos innecesarios y mejorar la organización visual.
+    Botones y controles bien ubicados: Acciones principales deben ser fácilmente accesibles.
+    Mensajes de error claros: Explicar qué ocurrió y cómo solucionarlo.
+    Mejor uso del color y la tipografía: Evitar combinaciones que dificulten la lectura.
+    Navegación intuitiva: Implementar menús bien estructurados y accesibles.
+    Compatibilidad con teclado y accesibilidad: Permitir navegación con teclado, lectores de pantalla, etc.
+    Pruebas de usuario: Evaluar la interfaz con usuarios reales para detectar problemas.

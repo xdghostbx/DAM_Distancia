@@ -1,0 +1,74 @@
+Tema 3: Organizacion, consulta y tratamiento de la informacion
+
+1. Organizacion y consulta de la informacion
+    En Odoo la informacion de la base de datos, en nuestro caso de Empresas y Administracion, se llaman "Objetos"
+    Estos objetos, tienen una nomenclatura para poder identificar a que modulo pertenecen, dentro de esa base de datos.
+
+    Estos objetos guardan todos los elementos que forman parte de la aplicacion. En Odoo se puede acceder a los objetos
+
+    Ajustes-> Técnico -> Estructura de la base de datos -> Modelos
+
+    En Openbravo, todos los objetos con los que trabaja la aplicacion (metadatos) están dispobibles en el modulo "Diccionario de datos"
+
+    Lista de objetos principales en Odoo:
+        -Modelos: tablas con las que trabaja la aplicacion  
+        -Vistas: los ditintos tipos de formularios con los que muestra los datos los Modelos
+        -Menús: La estructura de menus con las que se llaman las distintas acciones para manejar los datos de los modelos de la aplicacion
+        -Acciones: metodos desde los que vamos a escribir nuestras vistas para trabajar en la aplicacion
+
+        Entonces, una tabla está formada por filas y columnas
+        cada fila es un registro
+        cada columna un campo  (como hasta ahora, esto no cambia)
+
+        En el ejemplo: 
+            res.users
+            cada registro sería un usuario independiente y cada columna sus datos
+
+        Como la base de datos puede ser enorme, se pueden hacer "Vistas" para que algunos usuarios puedan acceder a una vision parcial de los datos. Una vista es una tabla virtual, que se puede acceder como si fuese una tabla del esquema pero que no lo es
+
+        La vista es la tabla que se crea haciendo una consulta SQL por ejemplo
+
+2. Visualizacion de la información
+
+3. Tratamiento de la información
+    3.1 Calculos: Pedidos, albaranes, facturas, asientos predefinidos, trazabilidad y produccion
+        Entre los procesos que va a realizar el ERP se encuentran
+            COntabilidad:
+            Operaciones de compra:
+                -Crear orden o pedido de compra
+                -Recibir los bienes
+                -COntrolar la factura de compra
+                -Registrar el pago al proveedor
+            Operaciones de venta:
+                -crear orden o pedido de venta y recibir la informacion del cliente
+                -Praparar los bienes a enviar al cliente y realizar albaran de entrega
+                -realizar la factura de venta
+                -Registrar el cobro o pago de cliente
+            Trazabilidad: proceso de la entrada del producto hasta la salida del mismo
+
+    Odoo, al igual que lo que pasaba en Oracle SQL puede tener procedimientos o funciones preparadas para el usuario. 
+    Una funcion es una sentencia o conjunto de ellas que el usuario lanza que ya estaban preparadas y un procedimiento es una funcion que el propio sistema lanza cuando se cumple un disparador. Por ejemplo eliminar un envio de la tabla "pendiente" cuando se confirma recepcion
+
+4. Extracción de datos en sistemas ERP-CRM y almacenes de datos
+
+
+
+Tema 4: Implantacion de sistemas ERP-CRM
+    1. Introduccion
+        Las fases de un proceso de selección, implantación y puesta en marcha de un ERP son:
+            -Selección de ERP: Identificar los procesos clave del tipo de empresa, tareas que se repiten y puedan ser automatizadas, que modulos.La decisión la puede tomar la empresa o contratar a una empresa externa para que asesore
+            -Fase de implantación: Se realizan los cambios y adaptaciones en la aplicacion que necesite la empresa. Es muy importante que exista una planificacion de todo el proceso
+            -Fase de puesta en marcha: instalacion del programa en el entorno de produccion y solucion de posibles problemas de Implantacion
+            -Cierre y finalizacion del proyecto: revision final comprobando todo el funcionamiento
+
+        1.1 Tipos y necesidades de la Empresas
+
+            Entre los tipos de empresas subsceptibles de contratar un ERP nos encontraremos
+                -Pequeña y mediana empresa
+                -Sector servicios
+                -Tiendas y restaurantes
+                -Ayuntamientos
+                -Venta telefonica
+
+    2. Seleccion del sistema ERP y módulos a utilizar
+        
