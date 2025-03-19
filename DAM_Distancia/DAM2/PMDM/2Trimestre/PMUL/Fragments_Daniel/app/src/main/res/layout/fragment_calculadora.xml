@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculadoraFragent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_operando1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginBottom="623dp"
+            android:ems="10"
+            android:hint="Operando 1"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/et_operando2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="175dp"
+            android:layout_marginBottom="523dp"
+            android:ems="10"
+            android:hint="Operando 2"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_operando1" />
+
+        <Button
+            android:id="@+id/bt_operar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="127dp"
+            android:layout_marginEnd="193dp"
+            android:layout_marginBottom="286dp"
+            android:text="Operar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_resultado"
+            android:layout_width="133dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="254dp"
+            android:layout_marginBottom="228dp"
+            android:text="Resultado"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_operar" />
+
+        <RadioGroup
+            android:id="@+id/rg_grupo"
+            android:layout_width="375dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="67dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/bt_operar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_operando2">
+
+            <RadioButton
+                android:id="@+id/rb_sumar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sumar" />
+
+            <RadioButton
+                android:id="@+id/rb_restar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restar" />
+
+            <RadioButton
+                android:id="@+id/rb_mult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multiplicar" />
+
+            <RadioButton
+                android:id="@+id/rb_div"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dividir" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

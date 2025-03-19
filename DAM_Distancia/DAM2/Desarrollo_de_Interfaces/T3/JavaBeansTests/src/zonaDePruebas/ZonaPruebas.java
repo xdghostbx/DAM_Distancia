@@ -26,12 +26,32 @@ public class ZonaPruebas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cuentaAtrasBeanBeanInfo1 = new PruebasExamenDI.CuentaAtrasBeanBeanInfo();
         relojDigitalBean2 = new Reloj.RelojDigitalBean();
+        cuentaAtrasBean1 = new PruebasExamenDI.CuentaAtrasBean();
+        miRelojBean1 = new PruebasExamenDI.MiRelojBean.MiRelojBean();
+        miRelojBean3 = new PruebasExamenDI.MiRelojBean.MiRelojBean();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         relojDigitalBean2.setHoraAlarma(20);
         relojDigitalBean2.setMinutoAlarma(6);
+        relojDigitalBean2.addAlarmaListener(new Reloj.RelojDigitalBean.AlarmaListener() {
+            public void capturarAlarma(Reloj.AlarmaEvent evt) {
+                relojDigitalBean2CapturarAlarma(evt);
+            }
+        });
+
+        cuentaAtrasBean1.setActivo(true);
+
+        miRelojBean1.setAlarma(true);
+        miRelojBean1.sethAlarma(19);
+        miRelojBean1.setmAlarma(8);
+
+        miRelojBean3.setAlarma(true);
+        miRelojBean3.setF24h(false);
+        miRelojBean3.sethAlarma(7);
+        miRelojBean3.setmAlarma(7);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -40,18 +60,38 @@ public class ZonaPruebas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(170, 170, 170)
                 .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(miRelojBean1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(cuentaAtrasBean1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addComponent(miRelojBean3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(129, 129, 129)
                 .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cuentaAtrasBean1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(miRelojBean3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(miRelojBean1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void relojDigitalBean2CapturarAlarma(Reloj.AlarmaEvent evt) {//GEN-FIRST:event_relojDigitalBean2CapturarAlarma
+        // TODO add your handling code here:
+    }//GEN-LAST:event_relojDigitalBean2CapturarAlarma
 
     /**
      * @param args the command line arguments
@@ -89,6 +129,10 @@ public class ZonaPruebas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private PruebasExamenDI.CuentaAtrasBean cuentaAtrasBean1;
+    private PruebasExamenDI.CuentaAtrasBeanBeanInfo cuentaAtrasBeanBeanInfo1;
+    private PruebasExamenDI.MiRelojBean.MiRelojBean miRelojBean1;
+    private PruebasExamenDI.MiRelojBean.MiRelojBean miRelojBean3;
     private Reloj.RelojDigitalBean relojDigitalBean2;
     // End of variables declaration//GEN-END:variables
 }

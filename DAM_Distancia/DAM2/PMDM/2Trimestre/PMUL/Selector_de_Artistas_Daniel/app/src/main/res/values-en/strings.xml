@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Selector_Daniel</string>
+    <string name="afterlife">Image from the "Afterlife" album by Five Finger Death Punch</string>
+    <string name="weGot">Image from the "We Got the Moves" album by Electric Callboy</string>
+    <string name="saveRock">Image from the "Save Rock and Roll" album by Fall Out Boy</string>
+    <string name="hk">Image from the "Hollow Knight" album, from the video game of the same name</string>
+    <string name="info_cancion">Song info</string>
+    <string name="abrir_web">open WebView</string>
+</resources>

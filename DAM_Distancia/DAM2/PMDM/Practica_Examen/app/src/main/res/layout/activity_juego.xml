@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_max"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvPuntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Puntuación: 0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="434dp"
+        android:stretchColumns="*" />
+
+    <TextView
+        android:id="@+id/tvTiempo"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvMax"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>

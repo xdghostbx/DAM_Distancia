@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Selector_de_Artistas_Daniel</string>
+    <string name="afterlife">Imagen del album "Afterlife" de 5 Finger Death Punch</string>
+    <string name="weGot">Imagen del album "We Got the Moves" de Electric Callboy</string>
+    <string name="saveRock">Imagen del album "Save Rock and Roll" de Fall Out Boys</string>
+    <string name="hk">Imagen del album "Hollow Knight" del videojuego con el mismo nombre</string>
+    <string name="info_cancion">Informacion de la cancion</string>
+    <string name="abrir_web">Abrir WebView</string>
+</resources>

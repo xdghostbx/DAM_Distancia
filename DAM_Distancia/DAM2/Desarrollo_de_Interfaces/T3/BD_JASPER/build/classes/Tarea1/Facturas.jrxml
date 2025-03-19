@@ -32,7 +32,7 @@ GROUP BY c.ID_Cliente, p.ID_Pedido;]]>
 	<title>
 		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="346" y="16" width="156" height="40" uuid="d0187fdb-98e9-4fdc-895c-de741251df73"/>
+				<reportElement x="334" y="16" width="156" height="40" uuid="d0187fdb-98e9-4fdc-895c-de741251df73"/>
 				<textElement>
 					<font size="24"/>
 				</textElement>

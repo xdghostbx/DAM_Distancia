@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Lunes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lunes"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Martes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/martes"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Miercoles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/miercoles"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Jueves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jueves"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Viernes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viernes"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Sabado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sabado"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Domingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/domingo"
+        android:layout_margin="20dp"
+        android:background="@drawable/botones_estilo"/>
+
+</LinearLayout>
