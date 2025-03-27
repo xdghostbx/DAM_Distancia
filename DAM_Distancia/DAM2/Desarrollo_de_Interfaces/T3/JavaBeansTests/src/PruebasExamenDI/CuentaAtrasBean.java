@@ -18,6 +18,8 @@ public class CuentaAtrasBean extends JLabel implements Serializable {
     private final Timer temporizador;
     private final PropertyChangeSupport cambios;
     private boolean activo;
+    private String cabecera;
+    private String cuerpo;
 
     // 🔹 Constructor con valor por defecto de 5 segundos
     public CuentaAtrasBean() {
@@ -26,6 +28,8 @@ public class CuentaAtrasBean extends JLabel implements Serializable {
         this.tiempo = 5;
         this.cambios = new PropertyChangeSupport(this);
         this.activo = false;
+        this.cabecera ="";
+        this.cuerpo="";
         // Inicializamos el Timer con 1000 ms (1 segundo)
         this.temporizador = new Timer(1000, new ActionListener() {
             @Override
@@ -92,12 +96,33 @@ public class CuentaAtrasBean extends JLabel implements Serializable {
     private void mostrarAlarma() {
         JOptionPane.showMessageDialog(
             this, 
-            "¡Tiempo terminado!", 
-            "Alarma", 
+            cabecera ,
+            cuerpo, 
             JOptionPane.WARNING_MESSAGE
         );
     }
 
+    public String getCabecera() {
+        return cabecera;
+    }
+
+    public void setCabecera(String nuevaCabecera) {
+        String viejaCabecera = this.cabecera;
+        this.cabecera = nuevaCabecera;
+        cambios.firePropertyChange("cabecera", viejaCabecera, nuevaCabecera);
+    }
+
+    public String getCuerpo() {
+        return cuerpo;
+    }
+
+    public void setCuerpo(String nuevoCuerpo) {
+        String viejoCuerpo = this.cuerpo;
+        this.cuerpo = nuevoCuerpo;
+        cambios.firePropertyChange("cuerpo", viejoCuerpo, nuevoCuerpo);
+    }
+    
+    
     // 🔹 Métodos para agregar y eliminar PropertyChangeListeners
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         if (cambios != null) {  // 🔹 Se evita el error de `null`

@@ -10,9 +10,12 @@ Tema 3: Organizacion, consulta y tratamiento de la informacion
 
     En Openbravo, todos los objetos con los que trabaja la aplicacion (metadatos) están dispobibles en el modulo "Diccionario de datos"
 
+    Para entrar en Odoo se usa la ip:8069
+
     Lista de objetos principales en Odoo:
-        -Modelos: tablas con las que trabaja la aplicacion  
-        -Vistas: los ditintos tipos de formularios con los que muestra los datos los Modelos
+        -Modelos: tablas con las que trabaja la aplicacion
+        Una tabla es una estructura de datos organizada en filas y columnas, cada columna es un campo (atributo) y cada fila un registro
+        -Vistas: los ditintos tipos de formularios con los que muestra los datos los Modelos. Son una especie de tablas vituales. Como tendrémos tal cantidad de datos, sirven para agrupar que usuarios pueden acceder a que datos para tenerlos más organizados
         -Menús: La estructura de menus con las que se llaman las distintas acciones para manejar los datos de los modelos de la aplicacion
         -Acciones: metodos desde los que vamos a escribir nuestras vistas para trabajar en la aplicacion
 
@@ -26,9 +29,16 @@ Tema 3: Organizacion, consulta y tratamiento de la informacion
 
         Como la base de datos puede ser enorme, se pueden hacer "Vistas" para que algunos usuarios puedan acceder a una vision parcial de los datos. Una vista es una tabla virtual, que se puede acceder como si fuese una tabla del esquema pero que no lo es
 
-        La vista es la tabla que se crea haciendo una consulta SQL por ejemplo
 
 2. Visualizacion de la información
+
+    PAra ver la informacion en Odoo se crean las vistas estas
+    Esto es un mini modulo que habra que instalar, es un xml donde por python, no por sql, se recorren las tablas para poder ver estos datos de salida
+
+    Hay 3 formas principales de vista
+        Tipo Formulario: Muestra solo un registro a la vez, en la parte superior podemos pasar de un registro a otro comodamente
+        Tipo arbol: agrupa un conjunto de registros en modo lista, util para mostrar varios a la vez y hacer busquedas sobre ellos
+        Graficos: para una mejor visualizacion de la informacion
 
 3. Tratamiento de la información
     3.1 Calculos: Pedidos, albaranes, facturas, asientos predefinidos, trazabilidad y produccion
@@ -51,7 +61,23 @@ Tema 3: Organizacion, consulta y tratamiento de la informacion
 
 4. Extracción de datos en sistemas ERP-CRM y almacenes de datos
 
+    El formato de exportacion de datos es CSV, formato de texto en los que las columnas se separan por comas o punto y coma donde la , es el separador decimal (España) y las filas se definen por un salto de linea
 
+5. Monitorizacion de datos
+    En lynux para ver los datos del rendimiento del servidor existe la erramienta separador
+    Mediante el comando sar 1 3
+
+    Su instalacion se hace desde
+        sudo apt-get install sysstat
+
+    Donde el 1 es la frecuencia (s)
+    Donde el 3 es cuantas veces se lanza
+
+    Tambien existen los siguientes:
+        sar -P all : procesador
+        sar -r : memoria
+        sar -n DEV : interfaces de red 
+        sar -d : discos
 
 Tema 4: Implantacion de sistemas ERP-CRM
     1. Introduccion
@@ -64,11 +90,108 @@ Tema 4: Implantacion de sistemas ERP-CRM
         1.1 Tipos y necesidades de la Empresas
 
             Entre los tipos de empresas subsceptibles de contratar un ERP nos encontraremos
-                -Pequeña y mediana empresa
-                -Sector servicios
-                -Tiendas y restaurantes
-                -Ayuntamientos
-                -Venta telefonica
+                -Pequeña y mediana empresa: gestion de clientes,priveedores, productos y procesos de compra, venta y almacen
+                -Sector servicios: se basan en la gestion de proyectos por lo tanto modulo especifico para el control y seguimiento de proyectos
+                -Tiendas y restaurantes: venta de productos a traves de una terminal y lector de codigo de barras
+                -Ayuntamientos:
+                    -Gestion de proyectos y COntabilidad
+                    -Control de compras y stock
+                    -Gestion de recursos humanos
+                    -uso de CRM
+                    -Padron municipal
+                    -Gestion de tasas municipales
+                -Venta telefonica: modulo de CRM
 
     2. Seleccion del sistema ERP y módulos a utilizar
+
+        Seleccionar el sistema ERP necesita un analisis previo, donde se detallan los procesos que realiza cada area o departamento. Tambien es necesario identificar que iformacion y como se envia. Este analisis previo permite obtener un presupuesto más ajustado y facilita la toma de decisiones sobre que ERP usar 
+
+        El analisis previo da como resultado la eleccion de ERP y los modulos que mejor de adaptan a los requerimientos de proceso de la empresa 
+
+        Una de las primeras tareas a realizar es identificar que modulos ERP se van a usar, ya que toda la funcionalidad de la app está contenida en estos modulos. 
+        Estos modulos pueden ser:
+            -Modulo Base: se intala con la aplicacion y dispone de las opciones minimas para funcionar
+            -Modulos precargados: son cargados de forma automatica en la instalacion, están disponibles para instalar en cualquier momento
+            -Modulos no precargados: no aparecen en la lista de modulos para ser intalados , necesitas primero ser cargados para poder instalarlos
+
+    Analisis inicial:
+        En este analisis se estudian las areas mas importantes como
+            -compras
+            -Ventas
+            -Marketing y relacion con clientes
+            -Logistica
+            -RRHH
+
+        Este anilisis inicial debe cubrir los siguientes aspectos:
+            -Estructura de la informacion o datos maestros: estudiar los datos que necesita la app para poder trabajar con el sistema
+
+            -Procesos de negocio: estudiar que procesos realiza cada area de la empresa y que herramientas se usaran para la comunicacion entre ellas
+
+            -Informes necesarios: 
+
+            -Traspaso de la informacion: se hace una migracion de datos de los sistemas que usaba la empresa al ERP. Es un punto muy importante y se debe tener en cuenta
+                LA estructura y caracteristicas de los datos a traspasar
+                Identificar que campos necesita el ERP para funcionar
+                Verificar que todos los datos se introdujetos correctamente
+
+            -Planificacion de la Implantacion: llecar a cabo una adecuada gestion de la implantacion para que se realice de un modo sistematico y organizado
+
+        En resumen, debe reflejar como es cada proceso y que se espera que se pueda registras y centrarlizar en el ERP. Se debe esbozar la forma de gestionar la implantacion denrto de la estructura y organizacion de la empresa
+
+    Carga de Modulos:
+        LA carga de modulos si son de los precargados simplemente los buscamos y los instalamos en el sistema, por otra parte, si tenemos que descargalos de internet, tendremos que buscar el modulo y descargarlo.
+        El zip se descomprime u los archivos se poegan en la siguiente ruta 
+            C:Program Files (x86)/Odoo (version)/server/odoo/addons
+
+            o a la ruta donde apunte el parametro
+                addons_path dentro del fichero de configuracion de odoo 
+                (odoo.conf)
+
+            Luego, dentro de odoo ir a aplicaciones y actualizar la lista, pulsar sobre el modulo descargado y apretar instalar
+
+
+    3.0- Implantacion en la empresa
+        La parte mas importante del proyecto de implantacion del ERP es la adaptacion a los requerimientos detectados en el analisis, pero a demas se incluyen:
+            -Formacion de usuarios
+            -Traspaso de datos
+            -Configuracion del programa
+            -Pruebas con los usuarios
+            -Pruebas definitivas y revision de la configuracion
+
+        Todas las etapas deben estar adecuadamente planificades de forma que se minimicen los riesgos, como:
+            Finalizar fuera del plazo previsto
+            Sobrepasar el presupuesto
+            Funcionamiento no esperado de la app
         
+    3.1 Consultas necesarias para obtener informacion
+
+        El proveedor es responsable de: 
+            diseño y adaptacion del programa
+            puesta en marcha
+            soporte en la etapa final del proyecto
+
+        Casi todas las empresas necesitan consultar
+            -Datos de la empresa
+            -clientes
+            -Proveedores 
+            -Productos 
+            -Almacen 
+            -Info Compra/Venta
+            -Info financiera
+
+    Objetos, Tablas y vistas
+        Creacion de nuevos objetos:
+            Ajustes/Tecnicos/Estructura de la base/Objetos
+
+            Los objetos piden los siguientes datos:
+                Nombre: nombre en la aplicacion
+                Objeto: nombre en la base de datos
+                Descripcion de los campos: lista de los campos
+                Permisos de acceso: derecho de acceso a los objetos por parte de los usuarios
+
+            Al crear un objeto en odoo se crea una tabla en la base de datos
+
+            Una vista es una interfaz de entrada y visualizacion. Esta vista es como el resultado de la consulta
+            Este resultado puede venir en forma de grafico, este informe se puede hacer con el modulo "base_report_creator"
+
+    Traspaso de datos:

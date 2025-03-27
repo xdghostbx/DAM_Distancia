@@ -27,71 +27,47 @@ public class ZonaPruebas extends javax.swing.JFrame {
     private void initComponents() {
 
         cuentaAtrasBeanBeanInfo1 = new PruebasExamenDI.CuentaAtrasBeanBeanInfo();
-        relojDigitalBean2 = new Reloj.RelojDigitalBean();
-        cuentaAtrasBean1 = new PruebasExamenDI.CuentaAtrasBean();
-        miRelojBean1 = new PruebasExamenDI.MiRelojBean.MiRelojBean();
-        miRelojBean3 = new PruebasExamenDI.MiRelojBean.MiRelojBean();
+        cuentaAtrasBean2 = new PruebasExamenDI.CuentaAtrasBean();
+        reloj1 = new PruebasExamenDI.beanSuperCompleto.reloj();
+        reloj2 = new PruebasExamenDI.beanSuperCompleto.reloj();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        relojDigitalBean2.setHoraAlarma(20);
-        relojDigitalBean2.setMinutoAlarma(6);
-        relojDigitalBean2.addAlarmaListener(new Reloj.RelojDigitalBean.AlarmaListener() {
-            public void capturarAlarma(Reloj.AlarmaEvent evt) {
-                relojDigitalBean2CapturarAlarma(evt);
-            }
-        });
+        reloj1.setAlarma(true);
+        reloj1.setAlarmaMinuto(1);
 
-        cuentaAtrasBean1.setActivo(true);
-
-        miRelojBean1.setAlarma(true);
-        miRelojBean1.sethAlarma(19);
-        miRelojBean1.setmAlarma(8);
-
-        miRelojBean3.setAlarma(true);
-        miRelojBean3.setF24h(false);
-        miRelojBean3.sethAlarma(7);
-        miRelojBean3.setmAlarma(7);
+        reloj2.setForeground(new java.awt.Color(255, 0, 255));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(miRelojBean1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(cuentaAtrasBean1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addComponent(miRelojBean3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(104, 104, 104)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(reloj2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(reloj1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cuentaAtrasBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(90, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(relojDigitalBean2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cuentaAtrasBean1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(miRelojBean3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(142, Short.MAX_VALUE)
+                .addComponent(cuentaAtrasBean2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(miRelojBean1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(reloj1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reloj2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(74, 74, 74))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void relojDigitalBean2CapturarAlarma(Reloj.AlarmaEvent evt) {//GEN-FIRST:event_relojDigitalBean2CapturarAlarma
-        // TODO add your handling code here:
-    }//GEN-LAST:event_relojDigitalBean2CapturarAlarma
 
     /**
      * @param args the command line arguments
@@ -129,10 +105,9 @@ public class ZonaPruebas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private PruebasExamenDI.CuentaAtrasBean cuentaAtrasBean1;
+    private PruebasExamenDI.CuentaAtrasBean cuentaAtrasBean2;
     private PruebasExamenDI.CuentaAtrasBeanBeanInfo cuentaAtrasBeanBeanInfo1;
-    private PruebasExamenDI.MiRelojBean.MiRelojBean miRelojBean1;
-    private PruebasExamenDI.MiRelojBean.MiRelojBean miRelojBean3;
-    private Reloj.RelojDigitalBean relojDigitalBean2;
+    private PruebasExamenDI.beanSuperCompleto.reloj reloj1;
+    private PruebasExamenDI.beanSuperCompleto.reloj reloj2;
     // End of variables declaration//GEN-END:variables
 }

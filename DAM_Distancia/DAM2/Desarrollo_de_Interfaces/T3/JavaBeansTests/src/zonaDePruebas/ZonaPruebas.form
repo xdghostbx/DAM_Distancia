@@ -27,70 +27,52 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
-              <Component id="relojDigitalBean2" min="-2" pref="67" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="miRelojBean1" min="-2" pref="72" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-              <Component id="cuentaAtrasBean1" min="-2" pref="141" max="-2" attributes="0"/>
-              <EmptySpace pref="111" max="32767" attributes="0"/>
-              <Component id="miRelojBean3" min="-2" pref="72" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="reloj2" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="reloj1" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="cuentaAtrasBean2" min="-2" pref="250" max="-2" attributes="0"/>
+                      <EmptySpace pref="90" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-              <Component id="relojDigitalBean2" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="cuentaAtrasBean1" min="-2" max="-2" attributes="0"/>
-                  <Component id="miRelojBean3" min="-2" pref="71" max="-2" attributes="0"/>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="142" max="32767" attributes="0"/>
+              <Component id="cuentaAtrasBean2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="miRelojBean1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="reloj1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="reloj2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="Reloj.RelojDigitalBean" name="relojDigitalBean2">
-      <Properties>
-        <Property name="horaAlarma" type="int" value="20"/>
-        <Property name="minutoAlarma" type="int" value="6"/>
-      </Properties>
-      <Events>
-        <EventHandler event="capturarAlarma" listener="Reloj.RelojDigitalBean$AlarmaListener" parameters="Reloj.AlarmaEvent" handler="relojDigitalBean2CapturarAlarma"/>
-      </Events>
+    <Component class="PruebasExamenDI.CuentaAtrasBean" name="cuentaAtrasBean2">
     </Component>
-    <Component class="PruebasExamenDI.CuentaAtrasBean" name="cuentaAtrasBean1">
-      <Properties>
-        <Property name="activo" type="boolean" value="true"/>
-      </Properties>
-    </Component>
-    <Component class="PruebasExamenDI.MiRelojBean.MiRelojBean" name="miRelojBean1">
+    <Component class="PruebasExamenDI.beanSuperCompleto.reloj" name="reloj1">
       <Properties>
         <Property name="alarma" type="boolean" value="true"/>
-        <Property name="hAlarma" type="int" value="19"/>
-        <Property name="mAlarma" type="int" value="8"/>
+        <Property name="alarmaMinuto" type="int" value="1"/>
       </Properties>
     </Component>
-    <Component class="PruebasExamenDI.MiRelojBean.MiRelojBean" name="miRelojBean3">
+    <Component class="PruebasExamenDI.beanSuperCompleto.reloj" name="reloj2">
       <Properties>
-        <Property name="alarma" type="boolean" value="true"/>
-        <Property name="f24h" type="boolean" value="false"/>
-        <Property name="hAlarma" type="int" value="7"/>
-        <Property name="mAlarma" type="int" value="7"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="0" red="ff" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

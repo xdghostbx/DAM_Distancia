@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="848d4fe7-c13f-421c-aeac-d93252c0ac75">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_Cliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$F{ID_Cliente}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select ID_Pedido, ID_Cliente, Fecha_Pedido from pedidos
+WHERE ID_Cliente = $P{id_Cliente};]]>
+	</queryString>
+	<field name="ID_Pedido" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_Cliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_Pedido" class="java.time.LocalDateTime">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="29" width="100" height="20" uuid="cc5710cf-bc47-4837-a02f-6c86d8a0be77"/>
+				<text><![CDATA[ID PEDIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="29" width="100" height="20" uuid="8471e6e8-ab24-4499-8c02-6d6d1fba365b"/>
+				<text><![CDATA[Fecha Pedido]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="63" y="66" width="100" height="20" uuid="ef9395dc-5251-4e34-8d33-6a955f96acbf"/>
+				<textFieldExpression><![CDATA[$F{ID_Pedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="66" width="100" height="20" uuid="6f7239d0-ce85-4556-9985-7dbd960d6d98"/>
+				<textFieldExpression><![CDATA[$F{Fecha_Pedido}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
